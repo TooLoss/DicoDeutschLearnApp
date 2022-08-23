@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="translate_container" type="id" />
+    <item name="TranslateButton" type="id" />
+    <item name="LogoTranslate" type="id" />
+    <item name="WordFrench" type="id" />
+    <item name="SetWordFrench" type="id" />
+    <item name="ExercicesButton" type="id" />
+    <item name="LogoExercices" type="id" />
+    <item name="SwitchTranslate" type="id" />
+    <item name="EditTextWord" type="id" />
+</resources>
