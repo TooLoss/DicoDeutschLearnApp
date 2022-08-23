@@ -31,6 +31,9 @@ public class translate_search extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_translate_search);
 
+        ImageView firstTextView = (ImageView)findViewById(R.id.imageView2);
+        firstTextView.bringToFront();
+
         Button FindBtn = findViewById(R.id.WordSearchBtn);
         EditText FindContent = findViewById(R.id.WordSearchBar);
         ListView ItemList = findViewById(R.id.spinner);

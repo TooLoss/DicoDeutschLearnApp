@@ -9,4 +9,5 @@
     <item name="LogoExercices" type="id" />
     <item name="SwitchTranslate" type="id" />
     <item name="EditTextWord" type="id" />
+    <item name="fail_word" type="id" />
 </resources>

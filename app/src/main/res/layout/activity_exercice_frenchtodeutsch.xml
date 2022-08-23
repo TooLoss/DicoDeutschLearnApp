@@ -114,17 +114,27 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical">
+
                 <Button
                     android:id="@+id/WordSearchBtn"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="@drawable/rounded_edittext"
-                    android:text="Valider">
-                </Button>
+                    android:backgroundTint="@color/yellow"
+                    android:forceDarkAllowed="false"
+                    android:text="Valider" />
             </RelativeLayout>
 
         </LinearLayout>
 
     </LinearLayout>
+
+    <ListView
+        android:id="@id/fail_word"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/SearchContainer"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/white" />
 
 </RelativeLayout>

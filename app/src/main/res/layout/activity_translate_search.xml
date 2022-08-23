@@ -41,45 +41,53 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
-        android:weightSum="10"
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/LogoContainer"
-        android:layout_marginTop="30dp">
-        <RelativeLayout
-            android:layout_width="332dp"
+        android:layout_marginTop="30dp"
+        android:clipChildren="true"
+        android:measureWithLargestChild="true">
+
+        <EditText
+            android:id="@+id/WordSearchBar"
+            android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical">
-            <EditText
-                android:id="@+id/WordSearchBar"
-                android:layout_width="fill_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/rounded_edittext"
-                android:drawablePadding="15dp"
-                android:hint="Enter un mot ( verbe à l'infinitif + pas de déterminant)"
-                android:textColorHint="@color/dark_gray"
-                android:textStyle="italic"
-                android:textColor="@color/black"
-                android:textSize="12dp"
-                android:textAlignment="center"
-                android:autofillHints=""
-                android:inputType="text"/>
-        </RelativeLayout>
+            android:background="@drawable/rounded_edittext"
+            android:drawablePadding="15dp"
+            android:hint="Enter un mot ( verbe à l'infinitif + pas de déterminant)"
+            android:textColorHint="@color/dark_gray"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:textAlignment="center"
+            android:autofillHints=""
+            android:inputType="text"
+            android:layout_weight="1"/>
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical">
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="0"
+            android:layout_marginLeft="3dp">
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_ico_search"
+                android:contentDescription="Loupe"
+                android:translationZ="10dp"/>
             <Button
                 android:id="@+id/WordSearchBtn"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/rounded_edittext">
+                android:background="@drawable/rounded_edittext_yellow">
             </Button>
+
+
         </RelativeLayout>
     </LinearLayout>
-
     <ListView
         android:id="@+id/spinner"
         android:layout_width="match_parent"
