@@ -336,7 +336,7 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
         s = Normalizer.normalize(s, Normalizer.Form.NFD);
         s = s.replaceAll("[\\p{InCombiningDiacriticalMarks}]", "");
         if(s.contains("ß")) {
-            s.replaceAll("ß","ss");
+            s.replaceAll("ß","s");
         }
         return s;
     }
