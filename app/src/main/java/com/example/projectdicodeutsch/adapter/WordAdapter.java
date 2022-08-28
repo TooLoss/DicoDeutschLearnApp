@@ -1,6 +1,7 @@
 package com.example.projectdicodeutsch.adapter;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,11 +18,11 @@ import java.util.List;
 public class WordAdapter extends RecyclerView.Adapter<WordAdapter.ViewHolder> {
 
     private List<WordModel> wordsList;
-    private translate_search activity;
+    private Activity activity;
     private List<String> inputWordListFrench;
     private List<String> inputWordListGerman;
 
-    public WordAdapter(translate_search activity, List<String> WordListFrench, List<String> WordListGerman) {
+    public WordAdapter(Activity activity, List<String> WordListFrench, List<String> WordListGerman) {
         this.activity = activity;
         this.inputWordListFrench = WordListFrench;
         this.inputWordListGerman = WordListGerman;
@@ -41,7 +42,6 @@ public class WordAdapter extends RecyclerView.Adapter<WordAdapter.ViewHolder> {
         return inputWordListFrench.size();
     }
 
-    @SuppressLint("NotifyDataSetChanged")
     public void setWordsList(List<String> frenchWord, List<String> germanWord) {
         this.inputWordListFrench = frenchWord;
         this.inputWordListGerman = germanWord;

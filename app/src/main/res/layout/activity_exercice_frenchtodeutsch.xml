@@ -6,135 +6,278 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@color/dark">
+    android:background="@color/dark_gray">
 
     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
         android:id="@+id/LogoContainer"
-        android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:background="@color/dark_gray">
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:id="@+id/TranslateGotoMain"
-            android:src="@drawable/ic_arrowgauche"
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
-            android:padding="10dp"
-            android:clickable="true"
-            android:focusable="true">
-        </ImageView>
-
-        <TextView
-            android:id="@+id/imageView"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:fontFamily="@font/gilroy_bold"
-            android:gravity="center"
-            android:text="EXERCICES"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:id="@id/WordFrench"
-        android:layout_below="@id/LogoContainer"
-        android:layout_margin="10dp"
-        android:gravity="center"
-        android:background="@drawable/rounded_edittext">
-        <TextView
+        android:orientation="horizontal">
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@id/SetWordFrench"
-            android:textSize="20dp"
+            android:layout_height="fill_parent"
             android:gravity="center"
-            android:text="MOT FRANCAIS"
-            android:textColor="@color/dark"
-            android:fontFamily="@font/gilroy_light">
-        </TextView>
-    </RelativeLayout>
-    <LinearLayout
-        android:id="@+id/SearchContainer"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:weightSum="10"
-        android:orientation="vertical"
-        android:gravity="center_vertical"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/WordFrench"
-        android:layout_marginTop="10dp">
-        <LinearLayout
+            android:layout_margin="20dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+                <Button
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/white_rounded"
+                    android:onClick="goToHomePage">
+                </Button>
+            </RelativeLayout>
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/ic_arrow"
+                android:backgroundTint="@color/dark_gray"
+                android:rotation="180"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+            </ImageView>
+        </RelativeLayout>
+        <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
-            <EditText
-                android:id="@id/EditTextWord"
-                android:layout_width="fill_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/rounded_edittext"
-                android:drawablePadding="15dp"
-                android:hint="Enter un mot allemand. ß = ss et particule séparale en 1e"
-                android:textColorHint="@color/dark_gray"
-                android:textStyle="italic"
-                android:textColor="@color/black"
-                android:textSize="12dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/imageView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="entrainement"
+                android:fontFamily="@font/megabyte_black_normal"
+                android:textColor="@color/white"
                 android:textAlignment="center"
-                android:autofillHints=""
-                android:inputType="text"/>
-        </LinearLayout>
+                android:textSize="23sp"
+                android:layout_marginVertical="28dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/appContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/LogoContainer"
+        android:background='@drawable/black_rounded_top'
+        android:orientation="vertical"
+        app:layout_constraintWidth_max="10dp"
+        app:layout_constrainedWidth="true"
+        android:translationZ="-10dp"
+        android:paddingHorizontal="18dp">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:background="@drawable/rounded_edittext"
-                android:layout_weight="1"
-                android:backgroundTint="@color/dark_gray">
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/Giveup"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:textColor="@color/white"
-                    android:background="#0000"
-                    android:text="Abandonner"
-                    android:fontFamily="@font/gilroy_light" />
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center_vertical">
+                android:fontFamily="@font/megabyte_black_normal"
+                android:letterSpacing=".02"
+                android:text="nature des mots"
+                android:textColor="@color/white"
+                android:textSize="23dp">
 
-                <Button
-                    android:id="@+id/WordSearchBtn"
+            </TextView>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/megabyte_regular"
+                android:text="séléctionnez le type de mot qui peut apparaitre"
+                android:textColor="@color/light_gray"
+                android:textSize="10dp">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <RelativeLayout
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/rounded_edittext"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/dark_gray"
+                    android:layout_marginEnd="5dp">
+
+                    <ToggleButton
+                        android:id="@+id/toggleVerbesForts"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:backgroundTint="@color/red"
+                        android:textOff="verbes forts"
+                        android:textOn="verbes forts (Incomplet)"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/megabyte_regular"
+                        android:tag="0"
+                        android:onClick="disableWordVerbeFort"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp">
+
+                    <ToggleButton
+                        android:id="@+id/toggleVerbesConjugues"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:backgroundTint="@color/red"
+                        android:textOff="verbes conjugués"
+                        android:textOn="verbes conjugués"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/megabyte_regular"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp">
+
+                    <ToggleButton
+                        android:id="@+id/toggleWordRest"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:backgroundTint="@color/green"
+                        android:textOff="NOM / ADJ / ..."
+                        android:textOn="NOM / ADJ / ..."
+                        android:checked="true"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/megabyte_regular"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@id/WordFrench"
+            android:layout_below="@id/LogoContainer"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_edittext">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@id/SetWordFrench"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:text="mot français"
+                android:textColor="@color/dark"
+                android:fontFamily="@font/megabyte_regular">
+            </TextView>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/SearchContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:weightSum="10"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/WordFrench"
+            android:layout_marginTop="10dp">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <EditText
+                    android:id="@id/EditTextWord"
+                    android:layout_width="fill_parent"
                     android:layout_height="40dp"
                     android:background="@drawable/rounded_edittext"
-                    android:backgroundTint="@color/yellow"
-                    android:forceDarkAllowed="false"
-                    android:text="Valider" />
-            </RelativeLayout>
+                    android:drawablePadding="15dp"
+                    android:hint="Entez un mot allemand. ß = ss et particule séparale en 1e"
+                    android:textColorHint="@color/dark_gray"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:textAlignment="center"
+                    android:autofillHints=""
+                    android:inputType="text"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/rounded_edittext"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/dark_gray"
+                    android:layout_marginEnd="5dp">
 
+                    <Button
+                        android:id="@+id/Giveup"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textColor="@color/white"
+                        android:background="#0000"
+                        android:text="Abandonner"
+                        android:fontFamily="@font/gilroy_light"
+                        android:textStyle="italic"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp">
+
+                    <Button
+                        android:id="@+id/WordSearchBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:backgroundTint="@color/yellow"
+                        android:forceDarkAllowed="false"
+                        android:text="Valider"
+                        android:fontFamily="@font/gilroy_bold"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="-1">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/SearchContainer"
+                    android:layout_weight="-1">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@id/fail_word"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="40dp"
+                        android:textColor="@color/white" />
+                </ScrollView>
+            </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
-
-    <ListView
-        android:id="@id/fail_word"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@+id/SearchContainer"
-        android:layout_marginTop="50dp"
-        android:textColor="@color/white" />
-
 </RelativeLayout>

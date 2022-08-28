@@ -1,26 +1,28 @@
 package com.example.projectdicodeutsch;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import android.animation.ArgbEvaluator;
-import android.animation.ValueAnimator;
-import android.content.Context;
+import android.app.Activity;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
-import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.graphics.drawable.AnimationDrawable;
-import android.os.Bundle;
-import android.widget.ImageView;
-import org.w3c.dom.Text;
+import android.widget.ToggleButton;
+
+import com.example.projectdicodeutsch.adapter.WordAdapter;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -29,7 +31,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 import java.nio.charset.StandardCharsets;
 import java.text.Normalizer;
 import java.util.ArrayList;
@@ -37,6 +38,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 
 public class Exercice_frenchtodeutsch extends AppCompatActivity {
 
@@ -47,6 +49,20 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
     ArrayList<String> recentFailWord = new ArrayList<String>();
     ArrayList<String> recentFailWordReversed = new ArrayList<String>();
 
+    int lineExercice = 1;
+
+    private boolean useVerbeFort = false;
+    private boolean useVerbeConjugue = false;
+    private boolean useReste = true;
+
+    private RecyclerView wordRecyclerView;
+    private WordAdapter wordAdapter;
+    List<String> failFrenchWordList = new ArrayList<String>();
+    List<String> failGermanWordList = new ArrayList<String>();
+    List<String> failWordTypeList = new ArrayList<String>();
+
+    public Activity thisActivity = this;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +70,6 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
 
         // VARIABLES
         TextView WordFrench = findViewById(R.id.SetWordFrench);
-        ListView recentFailWordList = findViewById(R.id.fail_word);
         Button FindBtn = findViewById(R.id.WordSearchBtn);
         Button Giveup = findViewById(R.id.Giveup);
         RelativeLayout FrenchBox = findViewById(R.id.WordFrench);
@@ -62,6 +77,10 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
 
         FrenchBox.setBackgroundResource(R.drawable.color_animation);
         ColorAnimation = (AnimationDrawable) FrenchBox.getBackground();
+
+        // Recycler View Init
+        wordRecyclerView = findViewById(R.id.fail_word);
+        wordRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         try {
             ExercicesWords = RefindWord(WordFrench, "wordlist_dicodeutsch");
@@ -105,21 +124,85 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
                 try {
                     writeToFile(ExercicesWords);
                     recentFailWord.add(String.join(" > ", ExercicesWords));
-                    if(recentFailWord.size() > 20) {
-                        recentFailWord.remove(0);
-                    }
-                    if(!recentFailWord.isEmpty()) {
-                        recentFailWordReversed = recentFailWord;
-                        Collections.reverse(recentFailWordReversed);
-                        ArrayAdapter<String> ArrayAdapter = new ArrayAdapter<String>(Exercice_frenchtodeutsch.this, android.R.layout.simple_list_item_1, recentFailWordReversed);
-                        recentFailWordList.setAdapter(ArrayAdapter);
-                    }
+
+                    failFrenchWordList.add(ExercicesWords[0]);
+                    failGermanWordList.add(ExercicesWords[1]);
+                    failWordTypeList.add(ExercicesWords[2]);
+
+                    List<String> recentFailWordFrenchReversed = failFrenchWordList;
+                    List<String> recentFailWordGermanReversed = failGermanWordList;
+                    Collections.reverse(recentFailWordFrenchReversed);
+                    Collections.reverse(recentFailWordGermanReversed);
+
+                    wordAdapter = new WordAdapter(thisActivity, recentFailWordFrenchReversed, recentFailWordGermanReversed);
+                    wordRecyclerView.setAdapter(wordAdapter);
+
+                    ExercicesWords = RefindWord(WordFrench, "fail_word_file");
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });;
+
+        // Toggle Verbes Forts
+
+        ToggleButton toggleVerbeFort = (ToggleButton) findViewById(R.id.toggleVerbesForts);
+        toggleVerbeFort.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                useVerbeFort = toggleVerbeFort.isChecked();
+                toggleButtonSwitchColor(toggleVerbeFort);
+                try {
                     ExercicesWords = RefindWord(WordFrench, "fail_word_file");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
         });;
+
+        // Toggle Verbe Conjugues
+
+        ToggleButton toggleVerbeConjug = (ToggleButton) findViewById(R.id.toggleVerbesConjugues);
+        toggleVerbeConjug.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                useVerbeConjugue = toggleVerbeConjug.isChecked();
+                toggleButtonSwitchColor(toggleVerbeConjug);
+                try {
+                    ExercicesWords = RefindWord(WordFrench, "fail_word_file");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });;
+
+
+        ToggleButton toggleWordRest = (ToggleButton) findViewById(R.id.toggleWordRest);
+        toggleWordRest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                useReste = toggleWordRest.isChecked();
+                toggleButtonSwitchColor(toggleWordRest);
+                try {
+                    ExercicesWords = RefindWord(WordFrench, "fail_word_file");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });;
+    }
+
+    private void toggleButtonSwitchColor(ToggleButton button) {
+        if(button.isChecked()) {
+            int colorInt = getResources().getColor(R.color.green);
+            ColorStateList csl = ColorStateList.valueOf(colorInt);
+            button.setBackgroundTintList(csl);
+        } else {
+            int colorInt = getResources().getColor(R.color.red);
+            ColorStateList csl = ColorStateList.valueOf(colorInt);
+            button.setBackgroundTintList(csl);
+        }
     }
 
     private void writeToFile(String[] data) {
@@ -140,39 +223,6 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
         }
     }
 
-    private String[] GetFailedWord() throws IOException {
-
-        List<String> FrenchLine = new ArrayList<>();
-        List<String> DeutschLine = new ArrayList<>();
-        List<String> Wordtype = new ArrayList<>();
-        List<String> WordConjugate = new ArrayList<>();
-
-        String line = null;
-        InputStream InputStream = getResources().openRawResource(R.raw.fail_word_file);
-        BufferedReader reader = new BufferedReader(
-                new InputStreamReader(InputStream, StandardCharsets.UTF_8)
-        );
-        int NumLine = 0;
-
-        while ((line = reader.readLine()) != null) {
-            String[] values = line.split(",", 4);
-            ++NumLine;
-
-            FrenchLine.add(values[1]);
-            DeutschLine.add(values[2]);
-            Wordtype.add(values[0]);
-        }
-        int RandomLineInRange = getRandomNumber(0,NumLine);
-
-        String[] ReturnWords = new String[3];
-
-        ReturnWords[0] = stripAccents(FrenchLine.get(RandomLineInRange));
-        ReturnWords[1] = stripAccents(DeutschLine.get(RandomLineInRange));
-        ReturnWords[2] = Wordtype.get(RandomLineInRange);
-
-        return ReturnWords;
-    }
-
     private String[] GetRandomFrenchWord(String csvFileName) throws IOException {
 
         List<String> FrenchLine = new ArrayList<>();
@@ -181,7 +231,7 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
         List<String> WordConjugate = new ArrayList<>();
 
         String line = null;
-        InputStream InputStream = getResources().openRawResource(R.raw.wordlist_dicodeutsch);
+        InputStream InputStream = getResources().openRawResource(R.raw.wordlist_trainmode);
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(InputStream, StandardCharsets.UTF_8)
         );
@@ -189,28 +239,89 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
 
         while ((line = reader.readLine()) != null) {
             String[] values = line.split(",", 4);
-            ++NumLine;
 
-            FrenchLine.add(values[1]);
-            DeutschLine.add(values[2]);
-            Wordtype.add(values[0]);
+            switch (values[0]) {
+                case "VCF":
+                    if (useVerbeFort) {
+                        FrenchLine.add(values[1]);
+                        DeutschLine.add(values[2]);
+                        Wordtype.add(values[0]);
+                        ++NumLine;
+                    }
+                    break;
+                case "VC":
+                    if (useVerbeConjugue) {
+                        FrenchLine.add(values[1]);
+                        DeutschLine.add(values[2]);
+                        Wordtype.add(values[0]);
+                        ++NumLine;
+                    }
+                    break;
+                default:
+                    if (useReste) {
+                        FrenchLine.add(values[1]);
+                        DeutschLine.add(values[2]);
+                        Wordtype.add(values[0]);
+                        ++NumLine;
+                    }
+                    break;
+            }
         }
         int RandomLineInRange = getRandomNumber(0,NumLine);
 
         String[] ReturnWords = new String[3];
 
-        ReturnWords[0] = stripAccents(FrenchLine.get(RandomLineInRange));
-        ReturnWords[1] = stripAccents(DeutschLine.get(RandomLineInRange));
-        ReturnWords[2] = Wordtype.get(RandomLineInRange);
+        if(NumLine > 0) {
+            ReturnWords[0] = stripAccents(FrenchLine.get(RandomLineInRange));
+            ReturnWords[1] = stripAccents(DeutschLine.get(RandomLineInRange));
+            ReturnWords[2] = Wordtype.get(RandomLineInRange);
+        } else {
+            ReturnWords[0] = "Aucun mot ne correspond, activez une nature";
+            ReturnWords[1] = "ㅤ";
+            ReturnWords[2] = "E";
+        }
 
-        if(getRandomNumber(0,3) == 0 && recentFailWord.size() > 3) {
+        if(getRandomNumber(0,4) == 0 && failFrenchWordList.size() > 3) {
             // Remettre les mots raté avec une plus grande probabilité.
-            int indexRecentFailWordRandom = getRandomNumber(0, recentFailWord.size() - 1);
-            List<String> FailedList = new ArrayList<String>(Arrays.asList(recentFailWord.get(indexRecentFailWordRandom).split(" > ")));
-            ReturnWords[0] = FailedList.get(0);
-            ReturnWords[1] = FailedList.get(1);
-            ReturnWords[2] = FailedList.get(2);
-            recentFailWord.remove(indexRecentFailWordRandom);
+            int indexRecentFailWordRandom = getRandomNumber(0, failFrenchWordList.size() - 1);
+
+            if ((!useVerbeFort && failWordTypeList.get(indexRecentFailWordRandom) != "VF") || (!useVerbeConjugue && failWordTypeList.get(indexRecentFailWordRandom) != "VC")) {
+                switch (failWordTypeList.get(indexRecentFailWordRandom)) {
+                    case "VCF":
+                        if (useVerbeFort) {
+                            ReturnWords[0] = failFrenchWordList.get(indexRecentFailWordRandom);
+                            ReturnWords[1] = failGermanWordList.get(indexRecentFailWordRandom);
+                            ReturnWords[2] = failWordTypeList.get(indexRecentFailWordRandom);
+
+                            failFrenchWordList.remove(indexRecentFailWordRandom);
+                            failGermanWordList.remove(indexRecentFailWordRandom);
+                            failWordTypeList.remove(indexRecentFailWordRandom);
+                        }
+                        break;
+                    case "VC":
+                        if (useVerbeConjugue) {
+                            ReturnWords[0] = failFrenchWordList.get(indexRecentFailWordRandom);
+                            ReturnWords[1] = failGermanWordList.get(indexRecentFailWordRandom);
+                            ReturnWords[2] = failWordTypeList.get(indexRecentFailWordRandom);
+
+                            failFrenchWordList.remove(indexRecentFailWordRandom);
+                            failGermanWordList.remove(indexRecentFailWordRandom);
+                            failWordTypeList.remove(indexRecentFailWordRandom);
+                        }
+                        break;
+                    default:
+                        if (useReste) {
+                            ReturnWords[0] = failFrenchWordList.get(indexRecentFailWordRandom);
+                            ReturnWords[1] = failGermanWordList.get(indexRecentFailWordRandom);
+                            ReturnWords[2] = failWordTypeList.get(indexRecentFailWordRandom);
+
+                            failFrenchWordList.remove(indexRecentFailWordRandom);
+                            failGermanWordList.remove(indexRecentFailWordRandom);
+                            failWordTypeList.remove(indexRecentFailWordRandom);
+                        }
+                        break;
+                }
+            }
         }
 
         return ReturnWords;
@@ -244,4 +355,19 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
            e.printStackTrace();
        }
    }
+
+    public void disableWordVerbeFort(View view) {
+
+        ToggleButton toggleButton = findViewById(R.id.toggleVerbesForts);
+        int tag = (Integer) view.getTag();
+        boolean isButtonEnable = toggleButton.isChecked();
+
+        if(isButtonEnable) {
+            toggleButton.setChecked(!toggleButton.isChecked());
+        }
+   }
+
+    public void goToHomePage(View view) {
+        finish();
+    }
 }
