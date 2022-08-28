@@ -1,19 +1,22 @@
 package com.example.projectdicodeutsch;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.ClipData;
+import android.app.ActivityOptions;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Spinner;
-import android.widget.Toast;
+
+import com.example.projectdicodeutsch.adapter.WordAdapter;
+import com.example.projectdicodeutsch.model.WordModel;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -22,9 +25,21 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.text.Normalizer;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class translate_search extends AppCompatActivity {
+
+    private RecyclerView wordRecyclerView;
+    private WordAdapter wordAdapter;
+
+    private List<WordModel> wordsList;
+    public EditText FindContent;
+    private List<String> frenchWordList;
+    private List<String> germanWordList;
+    int rowFrenchWord = 1;
+
+    public translate_search thisActivity = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,48 +50,52 @@ public class translate_search extends AppCompatActivity {
         firstTextView.bringToFront();
 
         Button FindBtn = findViewById(R.id.WordSearchBtn);
-        EditText FindContent = findViewById(R.id.WordSearchBar);
-        ListView ItemList = findViewById(R.id.spinner);
-        ImageView ReturnBtn = findViewById(R.id.TranslateGotoMain);
-        //  PLACE DES MOTS DANS LE CSV
-        int ColumnFrenchWord = 1;
+        FindContent = findViewById(R.id.WordSearchBar);
+
+        thisActivity = this;
+        rowFrenchWord = 1;
+
+        // Liste des mots affichées
+        wordRecyclerView = findViewById(R.id.recyclerView);
+        wordRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        wordsList = new ArrayList<>();
 
         FindBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String WordSearch = FindContent.getText().toString();
-
                 try {
                     if(WordSearch.length() > 2) {
-                        ArrayList<String> ArrayListResult = new ArrayList<String>(searchCsvLine(ColumnFrenchWord, WordSearch));
-                        if(!ArrayListResult.isEmpty())  {
-                            int ArraySize = ArrayListResult.size();
-                            ArrayAdapter<String> ArrayAdapter = new ArrayAdapter<String>(translate_search.this, android.R.layout.simple_list_item_1, ArrayListResult);
-                            ItemList.setAdapter(ArrayAdapter);
+                        int numOfWord = searchCsvLine(rowFrenchWord, WordSearch);
+                        if(numOfWord > 0)  {
+                            wordAdapter = new WordAdapter(thisActivity, frenchWordList, germanWordList);
+                            wordRecyclerView.setAdapter(wordAdapter);
                         }
                     }
                 } catch (IOException e) {
-                    Toast.makeText(getApplicationContext(), "Par Trouvé", Toast.LENGTH_LONG).show();
                     e.printStackTrace();
                 }
             }
         });
-        ReturnBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
     }
 
-    private ArrayList<String> searchCsvLine(int searchColumnIndex, String searchString) throws IOException {
-        ArrayList<String> resultRow = new ArrayList<String>();
+    private int searchCsvLine(int searchColumnIndex, String searchString) throws IOException {
 
-        InputStream InputStream = getResources().openRawResource(R.raw.wordlist_dicodeutsch);
+        // Variables
+        WordModel wordLine = new WordModel();
+        List<WordModel> functionWordList = new ArrayList<>();
+
+        List<String> functionGermanList = new ArrayList<>();
+        List<String> functionFrenchList = new ArrayList<>();
+
+        // Ouverture du fichier csv
+        InputStream InputStream = getResources().openRawResource(R.raw.wordlist_two_line);
         BufferedReader br = new BufferedReader(
                 new InputStreamReader(InputStream, StandardCharsets.UTF_8)
         );
 
+        // Simplification du texte
         searchString = searchString.toLowerCase();
         searchString = stripAccents(searchString);
 
@@ -85,30 +104,24 @@ public class translate_search extends AppCompatActivity {
         while ( (line = br.readLine()) != null ) {
             String[] values = line.split(",");
 
+            Log.e("errorvalue", Integer.toString(searchColumnIndex));
+            Log.e("finderror", values[1]);
+
             String CompareValue = values[searchColumnIndex].toLowerCase();
             CompareValue = stripAccents(CompareValue);
 
             if(CompareValue.indexOf(searchString) != -1) {
-                String AppendReturnLine = "";
-                if(values[3].equals(" ")) {
-                    AppendReturnLine = values[1] + " > " + values[2];
-                }
-                else if(values[4].equals(" ")) {
-                    AppendReturnLine = values[1] + " > " + values[2] + " : " + values[3];
-                }
-                else {
-                    AppendReturnLine = values[1] + " > " + values[2] + " : " + values[3] + values[4];
-                }
-                resultRow.add(AppendReturnLine);
+
+                functionFrenchList.add(values[1]);
+                functionGermanList.add(values[2]);
             }
         }
-        br.close();
-        return resultRow;
-    }
 
-    private void SwitchHomeActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        germanWordList = functionGermanList;
+        frenchWordList = functionFrenchList;
+
+        br.close();
+        return functionFrenchList.size();
     }
 
 
@@ -117,5 +130,9 @@ public class translate_search extends AppCompatActivity {
         s = Normalizer.normalize(s, Normalizer.Form.NFD);
         s = s.replaceAll("[\\p{InCombiningDiacriticalMarks}]", "");
         return s;
+    }
+
+    public void goToHomePage(View view) {
+        finish();
     }
 }

@@ -6,94 +6,166 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@color/dark">
+    android:background="@color/dark_gray">
 
     <RelativeLayout
-        android:id="@+id/LogoContainer"
         android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:background="@color/dark_gray">
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:id="@+id/TranslateGotoMain"
-            android:src="@drawable/ic_arrowgauche"
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
-            android:padding="10dp"
-            android:clickable="true"
-            android:focusable="true">
-        </ImageView>
-        <TextView
-            android:id="@+id/imageView"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:gravity="center"
-            android:fontFamily="@font/gilroy_bold"
-            android:textSize="25dp"
-            android:text="TRADUCTION"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"/>
-    </RelativeLayout>
-    <LinearLayout
-        android:id="@+id/SearchContainer"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/LogoContainer"
-        android:layout_marginTop="30dp"
-        android:clipChildren="true"
-        android:measureWithLargestChild="true">
-
-        <EditText
-            android:id="@+id/WordSearchBar"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:background="@drawable/rounded_edittext"
-            android:drawablePadding="15dp"
-            android:hint="Enter un mot ( verbe à l'infinitif + pas de déterminant)"
-            android:textColorHint="@color/dark_gray"
-            android:textStyle="italic"
-            android:textColor="@color/black"
-            android:textSize="12dp"
-            android:textAlignment="center"
-            android:autofillHints=""
-            android:inputType="text"
-            android:layout_weight="1"/>
+        android:layout_height="90dp"
+        android:id="@+id/LogoContainer"
+        android:orientation="horizontal">
         <RelativeLayout
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_weight="0"
-            android:layout_marginLeft="3dp">
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_margin="20dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+                <Button
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/white_rounded"
+                    android:onClick="goToHomePage">
+                </Button>
+            </RelativeLayout>
             <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/ic_arrow"
+                android:backgroundTint="@color/dark_gray"
+                android:rotation="180"
                 android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                app:srcCompat="@drawable/ic_ico_search"
-                android:contentDescription="Loupe"
-                android:translationZ="10dp"/>
-            <Button
-                android:id="@+id/WordSearchBtn"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/rounded_edittext_yellow">
-            </Button>
-
-
+                android:layout_centerVertical="true">
+            </ImageView>
         </RelativeLayout>
-    </LinearLayout>
-    <ListView
-        android:id="@+id/spinner"
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/imageView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="traduction"
+                android:fontFamily="@font/megabyte_black_normal"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="23sp"
+                android:layout_marginVertical="28dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/appContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/LogoContainer"
+        android:background='@drawable/black_rounded_top'
+        android:orientation="vertical"
+        app:layout_constraintWidth_max="10dp"
+        app:layout_constrainedWidth="true"
+        android:translationZ="-10dp"
+        android:paddingHorizontal="18dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/megabyte_black_normal"
+                android:letterSpacing=".02"
+                android:text="rechercher un mot"
+                android:textColor="@color/white"
+                android:textSize="23dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/megabyte_regular"
+                android:text="entrez un mot à l'infinitif sans déterminant"
+                android:textColor="@color/light_gray"
+                android:textSize="10dp">
+
+            </TextView>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/SearchContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:clipChildren="true"
+                android:measureWithLargestChild="true">
+
+                <EditText
+                    android:id="@+id/WordSearchBar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/rounded_edittext"
+                    android:drawablePadding="15dp"
+                    android:hint="Entez un mot"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/light_gray"
+                    android:textSize="10dp"
+                    android:fontFamily="@font/megabyte_regular"
+                    android:paddingHorizontal="12dp"
+                    android:autofillHints=""
+                    android:inputType="text"
+                    android:layout_weight="1"/>
+                <RelativeLayout
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0"
+                    android:layout_marginLeft="10dp">
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_ico_search"
+                        android:backgroundTint="@color/dark"
+                        android:contentDescription="Loupe"
+                        android:translationZ="10dp"/>
+                    <Button
+                        android:id="@+id/WordSearchBtn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rounded_edittext_yellow"
+                        android:onClick="findWord">
+                    </Button>
+
+
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@+id/SearchContainer"
-        android:textColor="@color/white"
-        android:layout_marginTop="30dp"/>
-
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/SearchContainer">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/recyclerView"
+            android:textColor="@color/white"
+            android:layout_marginTop="30dp"/>
+    </ScrollView>
+    </LinearLayout>
 </RelativeLayout>

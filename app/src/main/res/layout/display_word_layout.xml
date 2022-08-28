@@ -1,0 +1,39 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardBackgroundColor="@color/dark_gray"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="9dp">
+
+        <TextView
+            android:id="@+id/upWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="manger"
+            android:fontFamily="@font/megabyte_black_normal"
+            android:textColor="@color/white"
+            android:textSize="12sp">
+        </TextView>
+        <TextView
+            android:id="@+id/downWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="essen : er isst - er ass - er hat gegessen"
+            android:fontFamily="@font/megabyte_regular"
+            android:textColor="@color/white"
+            android:textSize="12sp">
+        </TextView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
