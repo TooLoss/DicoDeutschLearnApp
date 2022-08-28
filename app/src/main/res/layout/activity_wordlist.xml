@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/megabyte_black_normal"
                 android:letterSpacing=".02"
-                android:text="liste des mot"
+                android:text="liste des mots"
                 android:textColor="@color/white"
                 android:textSize="23dp">
 
