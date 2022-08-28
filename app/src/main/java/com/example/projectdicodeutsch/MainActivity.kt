@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    val pageList = listOf(translate_search::class.java, Exercice_frenchtodeutsch::class.java)
+    val pageList = listOf(translate_search::class.java, Exercice_frenchtodeutsch::class.java, wordlist::class.java)
 
     fun goToPage(v: View) {
         val tagString = v.tag.toString()

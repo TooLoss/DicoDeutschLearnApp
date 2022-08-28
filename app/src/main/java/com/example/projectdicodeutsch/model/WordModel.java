@@ -4,6 +4,16 @@ public class WordModel {
     private int id, status;
     private String upWord, downWord;
 
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    private int number;
+
     public int getId() {
         return id;
     }

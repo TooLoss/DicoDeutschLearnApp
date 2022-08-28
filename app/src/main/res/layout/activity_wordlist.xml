@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/dark_gray">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:id="@+id/LogoContainer"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_margin="20dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+                <Button
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/white_rounded"
+                    android:onClick="goToHomePage">
+                </Button>
+            </RelativeLayout>
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/ic_arrow"
+                android:backgroundTint="@color/dark_gray"
+                android:rotation="180"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+            </ImageView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/imageView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="liste"
+                android:fontFamily="@font/megabyte_black_normal"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="23sp"
+                android:layout_marginVertical="28dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/appContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/LogoContainer"
+        android:background='@drawable/black_rounded_top'
+        android:orientation="vertical"
+        app:layout_constraintWidth_max="10dp"
+        app:layout_constrainedWidth="true"
+        android:translationZ="-10dp"
+        android:paddingHorizontal="18dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/megabyte_black_normal"
+                android:letterSpacing=".02"
+                android:text="liste des mot"
+                android:textColor="@color/white"
+                android:textSize="23dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/megabyte_regular"
+                android:text="liste complète des mots dans l'application"
+                android:textColor="@color/light_gray"
+                android:textSize="10dp">
+
+            </TextView>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="10dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/wordListComplete"
+                android:textColor="@color/white"
+                android:layout_marginTop="30dp"/>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

@@ -69,7 +69,7 @@ public class translate_search extends AppCompatActivity {
                     if(WordSearch.length() > 2) {
                         int numOfWord = searchCsvLine(rowFrenchWord, WordSearch);
                         if(numOfWord > 0)  {
-                            wordAdapter = new WordAdapter(thisActivity, frenchWordList, germanWordList);
+                            wordAdapter = new WordAdapter(thisActivity, frenchWordList, germanWordList, false);
                             wordRecyclerView.setAdapter(wordAdapter);
                         }
                     }
@@ -83,9 +83,6 @@ public class translate_search extends AppCompatActivity {
     private int searchCsvLine(int searchColumnIndex, String searchString) throws IOException {
 
         // Variables
-        WordModel wordLine = new WordModel();
-        List<WordModel> functionWordList = new ArrayList<>();
-
         List<String> functionGermanList = new ArrayList<>();
         List<String> functionFrenchList = new ArrayList<>();
 

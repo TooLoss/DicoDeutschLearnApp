@@ -10,30 +10,51 @@
     android:layout_marginVertical="4dp">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="9dp">
-
-        <TextView
-            android:id="@+id/upWord"
-            android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:padding="9dp"
+        android:gravity="center_vertical">
+        <LinearLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="manger"
-            android:fontFamily="@font/megabyte_black_normal"
-            android:textColor="@color/white"
-            android:textSize="12sp">
-        </TextView>
-        <TextView
-            android:id="@+id/downWord"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/upWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="manger"
+                android:fontFamily="@font/megabyte_black_normal"
+                android:textColor="@color/white"
+                android:textSize="12sp">
+            </TextView>
+            <TextView
+                android:id="@+id/downWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="essen : er isst - er ass - er hat gegessen"
+                android:fontFamily="@font/megabyte_regular"
+                android:textColor="@color/white"
+                android:textSize="12sp">
+            </TextView>
+        </LinearLayout>
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="essen : er isst - er ass - er hat gegessen"
-            android:fontFamily="@font/megabyte_regular"
-            android:textColor="@color/white"
-            android:textSize="12sp">
-        </TextView>
-
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_weight="0">
+            <TextView
+                android:id="@+id/numberShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:fontFamily="@font/megabyte_black_normal"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:gravity="center_vertical"
+                android:layout_marginStart="5dp">
+            </TextView>
+        </RelativeLayout>
     </LinearLayout>
-
 </androidx.cardview.widget.CardView>

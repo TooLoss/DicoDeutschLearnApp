@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectDicoDeutsch">
         <activity
-            android:name=".Exercice_frenchtodeutsch"
+            android:name=".wordlist"
             android:exported="false"
             android:theme="@style/Theme.ProjectDicoDeutsch.NoActionBar"/>
+        <activity
+            android:name=".Exercice_frenchtodeutsch"
+            android:exported="false"
+            android:theme="@style/Theme.ProjectDicoDeutsch.NoActionBar" />
         <activity
             android:name=".translate_search"
             android:exported="false"

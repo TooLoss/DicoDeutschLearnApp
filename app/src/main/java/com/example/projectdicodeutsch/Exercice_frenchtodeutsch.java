@@ -134,7 +134,7 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
                     Collections.reverse(recentFailWordFrenchReversed);
                     Collections.reverse(recentFailWordGermanReversed);
 
-                    wordAdapter = new WordAdapter(thisActivity, recentFailWordFrenchReversed, recentFailWordGermanReversed);
+                    wordAdapter = new WordAdapter(thisActivity, recentFailWordFrenchReversed, recentFailWordGermanReversed, false);
                     wordRecyclerView.setAdapter(wordAdapter);
 
                     ExercicesWords = RefindWord(WordFrench, "fail_word_file");
