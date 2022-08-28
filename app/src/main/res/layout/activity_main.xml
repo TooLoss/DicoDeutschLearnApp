@@ -68,7 +68,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/gilroy_bold"
                         android:gravity="start"
-                        android:text="SOON"
+                        android:text="0   (bientôt disponible)"
                         android:textColor="@color/dark"
                         android:textSize="20dp">
                     </TextView>
@@ -78,7 +78,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/megabyte_regular"
                         android:gravity="start"
-                        android:text="mot trouvées aujourd'hui"
+                        android:text="mot(s) trouvé(s) cette semaine"
                         android:textColor="@color/dark"
                         android:textSize="10dp">
                     </TextView>
