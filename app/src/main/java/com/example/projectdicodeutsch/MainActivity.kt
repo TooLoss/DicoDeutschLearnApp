@@ -1,7 +1,9 @@
 package com.example.projectdicodeutsch
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
@@ -10,17 +12,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        // Déclarer les variables
-        var SwitchTranslateBtn = findViewById<Button>(R.id.SwitchTranslate) as Button
-        var SwitchExercicesBtn = findViewById<Button>(R.id.SwitchExercices) as Button
-        // QUAND TRANSLATE BUTTON EST CLIQUE
-        SwitchTranslateBtn.setOnClickListener {
-            val intent = Intent(this, translate_search::class.java)
-            startActivity(intent)
-        }
-        SwitchExercicesBtn.setOnClickListener {
-            val intent = Intent(this, Exercice_frenchtodeutsch::class.java)
-            startActivity(intent)
-        }
+    }
+
+    val pageList = listOf(translate_search::class.java, Exercice_frenchtodeutsch::class.java)
+
+    fun goToPage(v: View) {
+        val tagString = v.tag.toString()
+        val pageNumber = Integer.valueOf(tagString)
+        val intent = Intent(this, pageList[pageNumber])
+        startActivity(intent)
     }
 }
