@@ -102,7 +102,7 @@ public class translate_search extends AppCompatActivity {
         String line;
         boolean Found = false;
         while ( (line = br.readLine()) != null ) {
-            String[] values = line.split(",");
+            String[] values = line.split(";");
 
             Log.e("errorvalue", Integer.toString(searchColumnIndex));
             Log.e("finderror", values[1]);
