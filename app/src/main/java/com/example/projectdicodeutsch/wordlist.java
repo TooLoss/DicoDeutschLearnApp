@@ -55,7 +55,7 @@ public class wordlist extends AppCompatActivity {
 
         String line;
         while ( (line = br.readLine()) != null ) {
-            String[] values = line.split(";");
+            String[] values = line.split(",");
             frenchListComplete.add(values[1]);
             germanListComplete.add(values[2]);
         }
