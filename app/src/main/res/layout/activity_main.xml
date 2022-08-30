@@ -350,5 +350,18 @@
                 </GridLayout>
             </RelativeLayout>
         </ScrollView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Version de la liste de mots : 2022-08-30"
+                android:textColor="@color/light_gray"
+                android:fontFamily="@font/megabyte_regular"
+                android:textSize="10sp"
+                android:padding="5dp">
+            </TextView>
+        </RelativeLayout>
     </LinearLayout>
 </RelativeLayout>
