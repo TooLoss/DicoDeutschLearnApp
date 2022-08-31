@@ -9,8 +9,8 @@ A,constamment,ständig
 A,curieux,neugierig auf + ACC
 A,déçu,enttäuscht
 A,désespéré,verzweifelt
-A,différent concepte,verschieden
-A,différent les un des autres,anders
+A,différent relatif à un fait,verschieden
+A,différent par rapport aux autres,anders
 A,diversité,Die Vielfalt
 A,doucement,leise
 A,en fait,eigentlich
@@ -32,7 +32,7 @@ A,même égale,gleich
 A,mince,dünn
 A,moins,weniger
 A,original,ausgefallen
-A,particulier,besonders
+A,particulièrement,besonders
 A,partout,überall
 A,pauvre,arm
 A,pensif,nachdenklich
@@ -49,6 +49,15 @@ A,vrai réel,echt
 A,indépendant,unabhänigig
 A,à l'exterieur,drauẞen
 A,à l'interieur,drinnen
+A,c'est pourquoi,deshalb
+A,c'est pourquoi,deswegen
+A,égalité des droits,Gleichberechtigung
+A,toujours,immer
+A,gentil,nett
+A,performant,leistungsfähig
+A,sens,Sinn
+A,différament,unterschiedlich
+A,beaucoup,viel
 N,absurdité,Der Unsinn
 N,allié,Der Verbündete -n
 N,amour,Die Liebe
@@ -79,15 +88,15 @@ N,domaine,Der Bereich -e
 N,eau,Das Wasser
 N,eau gazeuse,Das Sprudelwasser
 N,effet,Der Wirkung
-N,endroit lieu,Der Ort -e
+N,endroit,Der Ort -e
 N,environnement,Die Umwelt
 N,être là l'un pour l'autre,füreinander da sein
 N,évolution,Die Entwicklung
-N,expérience,Die Erfahrung : -en
+N,expérience,Die Erfahrung -en
 N,addition facture,Die Rechnung -en
 N,famille,Die Familie -n
 N,frère,Das Bruder
-N,frontière,Die Genze -n
+N,frontière,Die Grenze -n
 N,fuite,Die Flucht
 N,graffiti,Der Das Graffito -ti
 N,grêve,Der Streik -s
@@ -102,7 +111,7 @@ N,l'acteur,Der Schauspieler
 N,l'affiche,Das Plakat -e
 N,l'aventure,Das Abenteuer
 N,l'espoir,Die Hoffnung -en
-N,l'exposition,Die Ausstellung -e
+N,l'exposition,Die Ausstellung -en
 N,l'oeuvre d'art,Das Kunstwerk -e
 N,liberté,Die Freiheit -en
 N,manifestation,Die Demonstration -en
@@ -112,7 +121,7 @@ N,message,Die Botschaft -en
 N,mouvement,Die Bewegung -en
 N,ordinateur,Der Computer
 N,parents,Die Eltern
-N,passé,Die Vergangenheit
+N,le passé,Die Vergangenheit
 N,pauvreté,Die Armut
 N,peinture,Das Bild -er
 N,peinture,Das Gemäld -n
@@ -123,7 +132,7 @@ N,possibilité,Die Möglichkeit -en
 N,présent,Die Gegenwart
 N,prix,Der Preis -e
 N,progrès,Der Fortschritt -e
-N,question,die Frage -n
+N,question,Die Frage -n
 N,récit rapport,Der Bericht -e
 N,réponse,Antwort -en
 N,restaurant,Das Gasthaus -ä -er
@@ -139,7 +148,7 @@ N,société,Die Gesellschaft -en
 N,soif,Der Durst
 N,souffrance,Das Leid
 N,spectateur,Der Zuschauer
-N,succès,Der Erfolg
+N,succès,Der Erfolg -e
 N,temps,Die Zeit -en
 N,tension,Die Spannung -er
 N,thé,Der Tee
@@ -151,181 +160,209 @@ N,visiteur,Der Besucher
 N,voisin,Der Nachbar -n
 N,cause chose,die Sache -n
 N,abus dérive,der Miẞstand -ä -e
-N,devoir physique,die Aufgabe -n
+N,devoir (physique),die Aufgabe -n
 N,exploitation,die Ausnutzung
 N,jus,Der Saft
 N,tribunal,Das Gericht -e
 N,le plat,Das Gericht -e
 N,salaire,Der Lohn -ö -e
 N,cohésion,der zusammen halt
-N,manifestant,Der demonstrat - begleitete - hat begleitet
-V,accompagner,begleiten : er begleitet - handelte - hat gehandelt
-V,agir,handeln : er handelt - liebte - hat geliebt
-V,aimer,lieben : er liebt - mochte - hat gemocht
-V,aimer bien,mögen : er mag - ging - ist gegangen
-V,aller à pied,gehen : er geht - fuhr - ist gefahren
-V,aller en vehicule,fahren : er fährt - verbesserte - hat verbessert
-V,améliorer,verbessern : er verbessert - brachte - hat gebracht
+N,manifestant,Der Demonstrant
+N,protection,Der schutz
+N,invention,Die Erfindung
+N,argent,Das Geld
+N,artiste,Die Künstlerin
+N,artificiel,künstlich
+N,peintre,Der Maler
+N,fatigue,Die Müdigkeit
+N,devoir,Die Pflicht
+N,droit,Das Recht -e
+N,position,Stellung
+N,partie,Der Teil
+N,monde,Welt
+N,quotidien,Der Alltag
+N,paysage,Die Landschaft -en
+N,consommation,Der Konsum
+N,début,Der Anfang -ä -e
+V,accompagner,begleiten : er begleitet - begleitete - hat begleitet
+V,agir,handeln : er handelt - handelte - hat gehandelt
+V,aimer,lieben : er liebt - liebte - hat geliebt
+V,aimer bien,mögen : er mag - mochte - hat gemocht
+V,aller à pied,gehen : er geht - ging - ist gegangen
+V,améliorer,verbessern : er verbessert - verbesserte - hat verbessert
 V,apporter,beobachten : er bringt - brachte - hat gebracht
-V,apporter,bringen : er bringt - erfuhr - hat erfahren
-V,apprendre (sur qqc),erfahren : er erfährt - setzte sich - hat gesetzt
-V,assoir,sich setzen : er setzt sich - stieg - ist gestiegen
-V,augmenter,steigen : er steigt - hatte - hat gehabt
-V,avoir,haben : er hat
-V,avoir besoin,brauchen - schämte - hat sich geschämt für +acc
-V,avoir honte,sich schämen : er schämt sich - durfte - hat gedurft
-V,avoir le droit,dürfen : er darf - schlug - hat geschlagen
-V,battre frapper,schlagen : er schlägt - schien - hat geschienen
-V,briller,scheinen : er scheint - brach - hat gebrochen
-V,casser,brechen : er bricht - änderte - hat geändert
-V,changer,ändern : er ändert - sang - hat gesungen
-V,chanter,singen : er singt - er lud hoch - et hat hochgeladen
-V,charger uploader,hoch laden : er lädt hoch - suchte - hat gesucht
-V,chercher,suchen : er sucht - wählte - hat gewählt
-V,choisir élire,wählen : er wählt - begann - hat gebonnen
-V,commencer,beginnen : er beginnt - verglich - hat verglichen
-V,comparer,vergleichen : er vergleicht - verstand - hat verstanden
-V,comprendre,verstehen : er versteht - vertraute - hat vertraut
-V,confiance,vertrauen : er vertraut
-V,confirmer,bestätigen - verwechselte - hat verwechsekt
-V,confondre,verwechseln : er verwechselt - kannte - hat gekann
-V,connaître,kennen : er kennt - riet - hat geraten
-V,conseiller deviner,raten : rät - verbrauchte - hat verbraucht
-V,consommer,verbrauchen : er verbraucht - kopierte - hat gekopiert
-V,copier,kopieren : er kopiert - lief - hat gelaufen
-V,courir marcher,laufen : er läuft - kostete - hat gekostet
-V,coûter,kosten : es kostet - schuf - hat geschaffen
-V,crée,schaffen : er schafft - wuchs - ist gewachsen
-V,croître grandir,wachsen : er wächst - kochte - hat gekocht
-V,cuisiner bouillir,kochen : et kocht - entdeckte - hat entdeckt
-V,découvrir,entdecken : er entdeckt - fragte - hat gefragt
-V,demander,fragen  : er fragt - preangerte an - hat geprangert
-V,dénoncer,an prangern : er prangert an
+V,apporter,bringen : er bringt - brachte - hat gebracht
+V,apprendre une info,erfahren : er erfährt - erfuhr - hat erfahren
+V,assoir,sich setzen : er setzt sich - setzte sich - hat gesetzt
+V,augmenter,steigen : er steigt - stieg - ist gestiegen
+V,avoir,haben : er hat - hatte - hat gehabt
+V,avoir besoin,brauchen
+V,avoir honte,sich schämen : er schämt sich - schämte - hat sich geschämt für +acc
+V,avoir le droit,dürfen : er darf - durfte - hat gedurft
+V,battre frapper,schlagen : er schlägt - schlug - hat geschlagen
+V,changer,ändern : er ändert - änderte - hat geändert
+V,chanter,singen : er singt - sang - hat gesungen
+V,charger uploader,hoch laden : er lädt hoch - er lud hoch - et hat hochgeladen
+V,chercher,suchen : er sucht - suchte - hat gesucht
+V,choisir élire,wählen : er wählt - wählte - hat gewählt
+V,comparer,vergleichen : er vergleicht - verglich - hat verglichen
+V,comprendre,verstehen : er versteht - verstand - hat verstanden
+V,confiance,vertrauen : er vertraut - vertraute - hat vertraut
+V,confirmer,bestätigen
+V,confondre,verwechseln : er verwechselt - verwechselte - hat verwechsekt
+V,connaître,kennen : er kennt - kannte - hat gekann
+V,conseiller deviner,raten : rät - riet - hat geraten
+V,consommer,verbrauchen : er verbraucht - verbrauchte - hat verbraucht
+V,copier,kopieren : er kopiert - kopierte - hat gekopiert
+V,coûter,kosten : es kostet - kostete - hat gekostet
+V,crée,schaffen : er schafft - schuf - hat geschaffen
+V,cuisiner bouillir,kochen : et kocht - kochte - hat gekocht
+V,découvrir,entdecken : er entdeckt - entdeckte - hat entdeckt
+V,demander,fragen  : er fragt - fragte - hat gefragt
+V,dénoncer,an prangern : er prangert an - preangerte an - hat geprangert
 V,désirer aimer,möchte
-V,développer,entwickeln - wurde - ist geworden
-V,devenir,werden : er wird - musste - het gemusst
-V,devoir,müssen : er muss - sollte - hat gesollt
-V,devoir,sollen : er soll - verbreitete - hat verbreitet
-V,diffuser répondre,verbreiten : er verbreitet
-V,diminuer,sinken - sagte - hat gesagt
-V,dire,sagen : er sagt - steuerte - hat gesteuert
-V,diriger,steuern : er steuert - unterhielt - hat sich unterhalten / mit +dat
-V,discuter papoter,unterhalten : er unterhält sich - stritt sich - hat sich gestritten
-V,disputer,streiten : er streitet sich - gab - hat gebeben
-V,donner,geben : er gibt - schielf - hat geschlafen
-V,dormir,schlafen : er schläft - hörte - hat gehört
-V,écouter,hören : er hört - schrieb - hat geschrieben
-V,écrir,schreiben : er schreibt - er nervte - hat genervt
-V,énerver,nerven : er nervt - unterrichtete - hat unterrichtet
-V,enseigner,unterrichten : er unterrichtet - versuchte - hat versucht
-V,essayer,versuchen : er versucht - war - ist geworden
-V,être,sein : er ist - saß - hat gesessen
-V,être assis,sitzen : er sitzt - schloss aus - hat ausgeschlossen
-V,exclure,aus schließen : er schließt aus - erklärte - hat erklärt
-V,expliquer,erklären : er erklärt - er drückte aus - hat ausgedrückt
-V,exprimer,ausdrücken : er drückt aus - machte - hat gemacht
-V,faire,machen : er marcht - schloss - hat geschlossen
-V,fermer,schließen : er schließt - bezahlte - hat bezahlt
-V,foyer,bezahlen : er bezahlt - floh - ist geflohen
-V,fuir,fliehen : er fliecht - gewann - hat gewonnen
-V,gagner,gewinnen : er gewinnt
-V,gagner,verdienen - streikte - hat gestreikt
-V,grever,streiken : er streikt - wohnte - hat gewohnt
-V,habiter,wohnen : er wohnt - mobbte - hat gemobbt
-V,harceler,mobben : er mobbt - handelte sich (um + dat)
-V,il s'agit de,es handelt sich : es handelt sich - beeindruckte - hat beeindruckt
-V,impressioner,beeindrucken : er beeindruckt - beeinflusste - hat beeinflusst
-V,influencer,beeinflussen : er beeinflusst - beleidigte - hat gebeleidigt
-V,insulter,beleidigen : er beleidigt - erfand - hat erfunden
-V,inventer,erfinden : er erfindet - spielte - hat gespielt
-V,jouer,spielen : er spielt - ließ - hat gelassen
-V,laisser faire,lassen : er lässt - wusch - hat gewaschen
-V,laver,waschen : er wäscht - wusch - hat gewaschen
-V,laver,waschen : er wächt - er ass - er hat gegessen
-V,manger,essen : er isst
-V,manifester,demonstrieren - zeigte - hat gezeigt
-V,montrer,zeigen : er zeigt - schwamm - ist geschwommen
-V,nager,schwimmen : er schwimmt - befahl - hat befohlen
-V,ordonner,befehlen : er befiehlt - vergass - hat vergessen
-V,oublier,vergessen : er vergisst - öffnete - hat geöffnet
-V,ouvrir,öffnen : er öffnet - redete - hat geredet
-V,parler,reden : er reden - verbrachte - hat verbreitet
-V,passer (du temps),verbringen : er verbringt
-V,peindre,malen - verlor - hat verloren
-V,perdre,verlieren : er verliert - fotografierte - hat fotographiert
-V,photographier,fotografieren : er fotografiert - plante - hat geplant
-V,planifier,planen : er plant - trug - hat getragen
-V,porter,tragen : er trägt - stellte - hat gestellt
-V,poser,stellen : er stellt - du kannst - er kann
-V,pouvoir,können : ich kann - bewirkte - hat bewirkt
-V,produire (un effet),bewirken : es bewirkt - schützte - hat geschützt
-V,protéger,schützen : er schützt - erzählte - hat erzählt
-V,raconter,erzählen : er erzählt - empfahlt - hat empfohlen
-V,recommander,empfehlen : er empfiehlt - traf - hat getroffen
-V,rencontrer,treffen : er trifft - antwortete - hat geantwortet (auf + acc)
-V,répondre,antworten : er antwortet - empfand - hat empfunden
-V,ressentir,empfinden : er empfindet - blieb - ist geblieben
-V,rester,bleiben : er bleibt
-V,s'amuser,Spaß haben : er hat Spaß - hieß - hat geheißen
-V,s'appeller,heißen : er heißt - langweilte sich - hat sich gelangweilt
-V,s'ennuyer,sich langweilen : er langweilt sich - kümmerte - hat sich gekümmert +Acc
-V,s'occuper de,sich kümmern um : er kümmert - wusste - hat gewusst
-V,savoir,wissen : er weiß - kämpfte
-V,se battre / lutter,kampfen : er kämpft
+V,développer,entwickeln
+V,devenir,werden : er wird - wurde - ist geworden
+V,devoir,müssen : er muss - musste - het gemusst
+V,devoir,sollen : er soll - sollte - hat gesollt
+V,diffuser répondre,verbreiten : er verbreitet - verbreitete - hat verbreitet
+V,diminuer,sinken
+V,dire,sagen : er sagt - sagte - hat gesagt
+V,diriger,steuern : er steuert - steuerte - hat gesteuert
+V,discuter papoter,unterhalten : er unterhält sich - unterhielt - hat sich unterhalten / mit +dat
+V,disputer,streiten : er streitet sich - stritt sich - hat sich gestritten
+V,dormir,schlafen : er schläft - schielf - hat geschlafen
+V,écouter,hören : er hört - hörte - hat gehört
+V,écrir,schreiben : er schreibt - schrieb - hat geschrieben
+V,énerver,nerven : er nervt - er nervte - hat genervt
+V,enseigner,unterrichten : er unterrichtet - unterrichtete - hat unterrichtet
+V,essayer,versuchen : er versucht - versuchte - hat versucht
+V,être,sein : er ist - war - ist geworden
+V,être assis,sitzen : er sitzt - saß - hat gesessen
+V,exclure,aus schließen : er schließt aus - schloss aus - hat ausgeschlossen
+V,expliquer,erklären : er erklärt - erklärte - hat erklärt
+V,exprimer quelque chose,aus drücken : er drückt aus - er drückte aus - hat ausgedrückt
+V,faire,machen : er marcht - machte - hat gemacht
+V,payer,bezahlen : er bezahlt - bezahlte - hat bezahlt
+V,fuir,fliehen : er fliecht - floh - ist geflohen
+V,gagner (de l'argent),verdienen
+V,grever,streiken : er streikt - streikte - hat gestreikt
+V,habiter,wohnen : er wohnt - wohnte - hat gewohnt
+V,harceler,mobben : er mobbt - mobbte - hat gemobbt
+V,il s'agit de,es handelt sich um + ACC : es handelt sich - handelte sich (um + dat)
+V,impressioner,beeindrucken : er beeindruckt - beeindruckte - hat beeindruckt
+V,influencer,beeinflussen : er beeinflusst - beeinflusste - hat beeinflusst
+V,insulter,beleidigen : er beleidigt - beleidigte - hat gebeleidigt
+V,inventer,erfinden : er erfindet - erfand - hat erfunden
+V,jouer,spielen : er spielt - spielte - hat gespielt
+V,manifester,demonstrieren
+V,montrer,zeigen : er zeigt - zeigte - hat gezeigt
+V,ouvrir,öffnen : er öffnet - öffnete - hat geöffnet
+V,parler s'exprimer,reden : er reden - redete - hat geredet
+V,passer (du temps),verbringen : er verbringt - verbrachte - hat verbreitet
+V,photographier,fotografieren : er fotografiert - fotografierte - hat fotographiert
+V,peindre,malen
+V,planifier,planen : er plant - plante - hat geplant
+V,porter,tragen : er trägt - trug - hat getragen
+V,poser,stellen : er stellt - stellte - hat gestellt
+V,pouvoir,können : ich kann - du kannst - er kann
+V,produire (un effet),bewirken : es bewirkt - bewirkte - hat bewirkt
+V,protéger,schützen : er schützt - schützte - hat geschützt
+V,raconter,erzählen : er erzählt - erzählte - hat erzählt
+V,recommander,empfehlen : er empfiehlt - empfahlt - hat empfohlen
+V,répondre,antworten : er antwortet - antwortete - hat geantwortet (auf + acc)
+V,s'amuser,Spaß haben : er hat Spaß
+V,s'appeller,heißen : er heißt - hieß - hat geheißen
+V,s'ennuyer,sich langweilen : er langweilt sich - langweilte sich - hat sich gelangweilt
+V,s'occuper de,sich kümmern um : er kümmert - kümmerte - hat sich gekümmert +Acc
+V,savoir,wissen : er weiß - wusste - hat gewusst
+V,se battre / lutter,kämpfen : er kämpft - kämpfte
 V,se détendre,chillen
-V,se moquer,sich lustig machen - geschah - ist geschehen
-V,se passer,geschehen : er geschieht - erinnerte sich - hat sich erinnert +Acc
-V,se rappeler,sich erinnern an : er erinnert - fühlte - hat sich gefühlte
-V,se sentir,sich fühlen : er fühlt sich - sie hielten zusammen - sie haben zusammengehalten
-V,se tenir les coudes,zusammen halten : sie halten zusammen - bedeutete - hat bedeutet
-V,signifier,bedeuten : es bedeutet
-V,souffrire,leiden - hielt - hat gehalten
-V,tenir arrêter,halten : er hält - hielt fest - hat festgehalten
-V,tenir serré dans ses bras,fest halten : er hält fest - field - ist gefallen
-V,tomber,fallen : er fällt - verwandelte - hat verwandelt
-V,transformer,verwandeln : er verwandelt - vermittelte - hat vermittelt
-V,transmettre,vermitteln : er vermittelt - nutze - hat genutzt
-V,utiliser mettre à profit,nutzen : er nutz - kam - ist gekommen
-V,venir,kommen : er kommt - besuchte - hat besucht
-V,visiter,besuchen : er besucht - erlebte - hat erlebt
-V,vivre (une expérience),erleben : er erlebt - sah - hat gesehen
-V,voir,sehen : er sieht - stahl - hat gestohlen
-V,voler,stehlen : er stiehlt - flog - hat geflogen
-V,voler,fliegen : er fliegt - reiste - hat geredet
-V,voyager,reisen : er reist - er setzte sie ein - er hat sich eingesetzt
-V,se mobiliser,sich für setzen : er setzt sich ein - er gehörte zu - er hat zu [...] gehört
-V,à partir de / faire partie de,gehören zu : er gehört zu - er bedrohte - er hat bedroht
-V,menacer,bedrohen : er bedroht
+V,se moquer,sich lustig machen
+V,se passer,geschehen : er geschieht - geschah - ist geschehen
+V,se rappeler,sich erinnern an : er erinnert - erinnerte sich - hat sich erinnert +Acc
+V,se sentir,sich fühlen : er fühlt sich - fühlte - hat sich gefühlte
+V,se tenir les coudes,zusammen halten : sie halten zusammen - sie hielten zusammen - sie haben zusammengehalten
+V,signifier,bedeuten : es bedeutet - bedeutete - hat bedeutet
+V,souffrire,leiden
+V,tenir serré dans ses bras,fest halten : er hält fest - hielt fest - hat festgehalten
+V,transformer,verwandeln : er verwandelt - verwandelte - hat verwandelt
+V,transmettre,vermitteln : er vermittelt - vermittelte - hat vermittelt
+V,utiliser mettre à profit,nutzen : er nutz - nutze - hat genutzt
+V,venir,kommen : er kommt - kam - ist gekommen
+V,visiter,besuchen : er besucht - besuchte - hat besucht
+V,vivre (une expérience),erleben : er erlebt - erlebte - hat erlebt
+V,voir,sehen : er sieht - sah - hat gesehen
+V,voler (haram),stehlen : er stiehlt - stahl - hat gestohlen
+V,voyager,reisen : er reist - reiste - hat geredet
+V,se mobiliser,sich für setzen : er setzt sich ein - er setzte sie ein - er hat sich eingesetzt
+V,à partir de / faire partie de,gehören zu : er gehört zu - er gehörte zu - er hat zu [...] gehört
+V,menacer,bedrohen : er bedroht - er bedrohte - er hat bedroht
 V,commander,bestellen
 V,avoir du goût,schmecken
 V,travailler,arbeiten
-V,kampfen,combattre - er kümmerte sich - er hat sich gekümmert + Acc
-V,occuper,sich kümmern um : er kümmert sich
-V,protection,schutz - half - hat geholfen
-VF,aider,helfen : er hilft - schrie - hat geschrien
-VF,crier,schreien : er schreit - verschwand - ist verschwunden
-VF,disparaître,verschwinden : er verschwindet - warb - hat geworben
-VF,faire de la pub,werben : er wirbt - er hob hervor - hat hervorgehoben
-VF,insister signaler,hervor heben : er hebt hervor - warf - hat geworfen
-VF,jeter,werfen : er wirft - lieh - hat geliehen
-VF,location,leihen : er leiht - starb - hat gestorben
-VF,mourir,sterben : er stirbt - zwang - hat gezwungen
-VF,obliger,zwingen : er zwingt - bot - hat geboten
-VF,offrir enchérir,bieten : er bietet - sprach - hat gesprochen
-VF,parler,sprechen : er spricht - verlor - hat verloren
-VF,perdre,verlieren : er verliert - nahm - hat genommen
-VF,prendre,nehmen : er nimmt - genoss - hat genossen
-VF,profiter (de qqc),genießen : er genießt - sprang - hat gesprungen
-VF,sauter,springen : er springt - schwieg - hat geschwiegen
-VF,se taire,schweigen : er schweigt - zog - hat gezogen
-VF,tirer infuser,ziehen : er zieht - galt - hat gegolten
-VF,valoir,gelten : er gilt - gefiel - hat gefallen
-VF,plaire,gefallen : er gefällt - trank - hat getrunken
-VF,boire,trinken : er trinkt - las - hat gelesen
-VF,lire,lesen : er liest - stieg - ist gestiegen
-VF,monter,steigen : er steigt - fand statt - hat stattgefunden
-VF,avoir lieu,Statt finden : es findet statt - fand - hat gefunden
-VF,trouver,finden : er findet - dachte an - hat gedacht an
-VF,penser à,denken an + ACC : er denkt an - dachte - hat gedacht
-VF,penser,denken : er denkt - nahm ernst - hat ernstgenommen
-VF,prendre au sérieux,ernst nehmen : er nimmt ernst
+V,kampfen,combattre
+V,occuper,sich kümmern um : er kümmert sich - er kümmerte sich - er hat sich gekümmert + Acc
+V,désavantager,benachteiligen
+V,représenter,dar stellen
+V,poser une question,fragen stellen
+V,éteindre,her unterfahren
+V,mettre en avant,hochfahren
+V,allumer,her vorheben
+V,éspérer,hoffen
+V,regarder,schauen
+V,assurer,sichern
+V,s'imaginer / se présenter,vorstellen
+VF,aller en vehicule,fahren : er fährt - fuhr - ist gefahren
+VF,briller paraître,scheinen : er scheint - schien - hat geschienen
+VF,casser,brechen : er bricht - brach - hat gebrochen
+VF,commencer,beginnen : er beginnt - begann - hat begonnen
+VF,courir marcher,laufen : er läuft - lief - hat gelaufen
+VF,croître grandir,wachsen : er wächst - wuchs - ist gewachsen
+VF,donner,geben : er gibt - gab - hat gebeben
+VF,fermer,schließen : er schließt - schloss - hat geschlossen
+VF,gagner,gewinnen : er gewinnt - gewann - hat gewonnen
+VF,laisser / faire qqc,lassen : er lässt - ließ - hat gelassen
+VF,laver,waschen : er wäscht - wusch - hat gewaschen
+VF,manger,essen : er isst - er ass - er hat gegessen
+VF,nager,schwimmen : er schwimmt - schwamm - ist geschwommen
+VF,ordonner,befehlen : er befiehlt - befahl - hat befohlen
+VF,oublier,vergessen : er vergisst - vergass - hat vergessen
+VF,rencontrer / cibler,treffen : er trifft - traf - hat getroffen
+VF,ressentir,empfinden : er empfindet - empfand - hat empfunden
+VF,rester,bleiben : er bleibt - blieb - ist geblieben
+VF,tenir s'arrêter,halten : er hält - hielt - hat gehalten
+VF,tomber,fallen : er fällt - field - ist gefallen
+VF,voler (halal),fliegen : er fliegt - flog - hat geflogen
+VF,aider,helfen : er hilft - half - hat geholfen
+VF,crier,schreien : er schreit - schrie - hat geschrien
+VF,disparaître,verschwinden : er verschwindet - verschwand - ist verschwunden
+VF,faire de la pub,werben : er wirbt - warb - hat geworben
+VF,insister signaler,hervor heben : er hebt hervor - er hob hervor - hat hervorgehoben
+VF,jeter,werfen : er wirft - warf - hat geworfen
+VF,préter,leihen : er leiht - lieh - hat geliehen
+VF,mourir,sterben : er stirbt - starb - hat gestorben
+VF,obliger,zwingen : er zwingt - zwang - hat gezwungen
+VF,offrir enchérir,bieten : er bietet - bot - hat geboten
+VF,parler,sprechen : er spricht - sprach - hat gesprochen
+VF,perdre,verlieren : er verliert - verlor - hat verloren
+VF,prendre,nehmen : er nimmt - nahm - hat genommen
+VF,profiter (de qqc),genießen : er genießt - genoss - hat genossen
+VF,sauter,springen : er springt - sprang - hat gesprungen
+VF,se taire,schweigen : er schweigt - schwieg - hat geschwiegen
+VF,tirer infuser,ziehen : er zieht - zog - hat gezogen
+VF,valoir,gelten : er gilt - galt - hat gegolten
+VF,plaire,gefallen : er gefällt - gefiel - hat gefallen
+VF,boire,trinken : er trinkt - trank - hat getrunken
+VF,lire,lesen : er liest - las - hat gelesen
+VF,monter,steigen : er steigt - stieg - ist gestiegen
+VF,avoir lieu,Statt finden : es findet statt - fand statt - hat stattgefunden
+VF,trouver,finden : er findet - fand - hat gefunden
+VF,penser à,denken an + ACC : er denkt an - dachte an - hat gedacht an
+VF,penser,denken : er denkt - dachte - hat gedacht
+VF,prendre au sérieux,ernst nehmen : er nimmt ernst - nahm ernst - hat ernstgenommen
+VF,se trouver / être couché,liegen : er liegt - lag - hat gelegen
+VF,mentir,lügen : er lügt - log - hat gelogen
+VF,appeler,rufen : er ruft - rief - hat gerufen
+VF,être debout,stehen : er steht - stand - hat gestanden
+VF,faire,tun : er tut - tat - hat getan
