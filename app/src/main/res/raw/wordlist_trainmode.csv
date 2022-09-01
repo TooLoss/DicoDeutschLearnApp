@@ -1,368 +1,368 @@
-A,assez,genug
-A,à mon avis,meiner Meinung nach
-A,beau,schön
-A,bon,gut
-A,bruyant,laut
-A,célèbre,berühmt
-A,cher,teuer
-A,constamment,ständig
-A,curieux,neugierig
-A,déçu,enttäuscht
-A,désespéré,verzweifelt
-A,différent relatif à un fait,verschieden
-A,différent par rapport aux autres,anders
-A,diversité,Die Vielfalt
-A,doucement,leise
-A,en fait,eigentlich
-A,ennuyeux,langweilig
-A,enthousiaste,begeistert
-A,étrange,seltsam
-A,faible,schwach
-A,fatigué,müde
-A,fiable,zuverlässig
-A,fort,stark
-A,gros,dick
-A,important,wichtig
-A,jaloux,eifersüchtig
-A,libre,frei
-A,lourd,schwer
-A,mal mauvais,böse
-A,mauvais,schlecht
-A,même égale,gleich
-A,mince,dünn
-A,moins,weniger
-A,original,ausgefallen
-A,particulièrement,besonders
-A,partout,überall
-A,pauvre,arm
-A,pensif,nachdenklich
-A,performant,leistrungfähig
-A,peu,wenig
-A,peut-être,vielleicht
-A,possible,möglich
-A,racoller,reißerisch
-A,souvent,oft
-A,sûr / sûrement,sicher
-A,triste,traurig
-A,violent,gewalt
-A,vrai réel,echt
-A,indépendant,unabhänigig
-A,à l'exterieur,drauẞen
-A,à l'interieur,drinnen
-A,c'est pourquoi,deshalb
-A,c'est pourquoi,deswegen
-A,égalité des droits,Gleichberechtigung
-A,toujours,immer
-A,gentil,nett
-A,performant,leistungsfähig
-A,sens,Sinn
-A,différament,unterschiedlich
-A,beaucoup,viel
-N,absurdité,Der Unsinn
-N,allié,Der Verbündete
-N,amour,Die Liebe
-N,art,Die Kunst
-N,artiste,Der Künstler
-N,avantage,Der Vorteil
-N,avenir future,Die Zukunft
-N,avis opignon,Die Meinung
-N,bar glacé,Das Eiskafé
-N,boisson,Das Getrank
-N,bouteille,Die Flasche
-N,but,Das Ziel
-N,café,Das Café
-N,choix éléction,Die Wahl
-N,climat,Das Klima
-N,Coca,Die Cola
-N,colère contre,wütend
-N,combat,Der Kampf
-N,condition,Die Bedingung
-N,congé,Der Urlaub
-N,couleur,Die Farbe
-N,courage,Der Mut
-N,cours,Der Unterricht
-N,danger,Die Gefahr
-N,décision,Die Entscheidung
-N,disponible,verfügbar
-N,domaine,Der Bereich
-N,eau,Das Wasser
-N,eau gazeuse,Das Sprudelwasser
-N,effet,Der Wirkung
-N,endroit,Der Ort
-N,environnement,Die Umwelt
-N,être là l'un pour l'autre,füreinander da sein
-N,évolution,Die Entwicklung
-N,expérience,Die Erfahrung
-N,addition facture,Die Rechnung
-N,famille,Die Familie
-N,frère,Das Bruder
-N,frontière,Die Grenze
-N,fuite,Die Flucht
-N,graffiti,Der Das Graffito
-N,grêve,Der Streik
-N,histoire,Die Geschichte
-N,inaction,Die Untätigkeit
-N,inconvénient,Der Nachteil
-N,information,Die Nachricht
-N,Intelligence Artificiel IA,Künstliche Intelligenz
-N,jour,Der Tag
-N,justrice,Die Gerechtigkeit
-N,l'acteur,Der Schauspieler
-N,l'affiche,Das Plakat
-N,l'aventure,Das Abenteuer
-N,l'espoir,Die Hoffnung
-N,l'exposition,Die Ausstellung
-N,l'oeuvre d'art,Das Kunstwerk
-N,liberté,Die Freiheit
-N,manifestation,Die Demonstration
-N,merci bien,danke shöne
-N,mère,Die Mutter
-N,message,Die Botschaft
-N,mouvement,Die Bewegung
-N,ordinateur,Der Computer
-N,parents,Die Eltern
-N,le passé,Die Vergangenheit
-N,pauvreté,Die Armut
-N,peinture,Das Bild
-N,peinture,Das Gemäld
-N,père,der Vater
-N,performance,Die Leistung
-N,photo,Das Foto
-N,possibilité,Die Möglichkeit
-N,présent,Die Gegenwart
-N,prix,Der Preis
-N,progrès,Der Fortschritt
-N,question,Die Frage
-N,récit rapport,Der Bericht
-N,réponse,Antwort
-N,restaurant,Das Gasthaus
-N,restaurant,Das Restaurant
-N,retraite,Die Rente
-N,revenue,Das Einkommen
-N,rigolo marrant,lustig
-N,salut au revoir,tschüss
-N,sculture,Die Skulptur
-N,semaine,Die Woche
-N,seul psycologique,einsam
-N,société,Die Gesellschaft
-N,soif,Der Durst
-N,souffrance,Das Leid
-N,spectateur,Der Zuschauer
-N,succès,Der Erfolg
-N,temps,Die Zeit
-N,tension,Die Spannung
-N,thé,Der Tee
-N,travail,Die Arbeit
-N,vacances,Die Ferien
-N,valeur,Der Wert
-N,victime,Das Opfer
-N,visiteur,Der Besucher
-N,voisin,Der Nachbar
-N,cause chose,die Sache
-N,abus dérive,der Miẞstand
-N,devoir (physique),die Aufgabe
-N,exploitation,die Ausnutzung
-N,jus,Der Saft
-N,tribunal,Das Gericht
-N,le plat,Das Gericht
-N,salaire,Der Lohn
-N,cohésion,der zusammen halt
-N,manifestant,Der Demonstrant
-N,protection,Der schutz
-N,invention,Die Erfindung
-N,argent,Das Geld
-N,artiste,Die Künstlerin
-N,artificiel,künstlich
-N,peintre,Der Maler
-N,fatigue,Die Müdigkeit
-N,devoir,Die Pflicht
-N,droit,Das Recht
-N,position,Stellung
-N,partie,Der Teil
-N,monde,Welt
-N,quotidien,Der Alltag
-N,paysage,Die Landschaft
-N,consommation,Der Konsum
-N,début,Der Anfang
-V,accompagner,begleiten
-V,agir,handeln
-V,aimer,lieben
-V,aimer bien,mögen
-V,aller à pied,gehen
-V,améliorer,verbessern
-V,apporter,beobachten
-V,apporter,bringen
-V,apprendre une info,erfahren
-V,assoir,sich setzen
-V,augmenter,steigen
-V,avoir,haben
-V,avoir besoin,brauchen
-V,avoir honte,sich schämen
-V,avoir le droit,dürfen
-V,battre frapper,schlagen
-V,changer,ändern
-V,chanter,singen
-V,charger uploader,hoch laden
-V,chercher,suchen
-V,choisir élire,wählen
-V,comparer,vergleichen
-V,comprendre,verstehen
-V,confiance,vertrauen
-V,confirmer,bestätigen
-V,confondre,verwechseln
-V,connaître,kennen
-V,conseiller deviner,raten
-V,consommer,verbrauchen
-V,copier,kopieren
-V,coûter,kosten
-V,crée,schaffen
-V,cuisiner bouillir,kochen
-V,découvrir,entdecken
-V,demander,fragen 
-V,dénoncer,an prangern
-V,désirer aimer,möchte
-V,développer,entwickeln
-V,devenir,werden
-V,devoir,müssen
-V,devoir,sollen
-V,diffuser répondre,verbreiten
-V,diminuer,sinken
-V,dire,sagen
-V,diriger,steuern
-V,discuter papoter,unterhalten
-V,disputer,streiten
-V,dormir,schlafen
-V,écouter,hören
-V,écrir,schreiben
-V,énerver,nerven
-V,enseigner,unterrichten
-V,essayer,versuchen
-V,être,sein
-V,être assis,sitzen
-V,exclure,aus schließen
-V,expliquer,erklären
-V,exprimer quelque chose,aus drücken
-V,faire,machen
-V,payer,bezahlen
-V,fuir,fliehen
-V,gagner (de l'argent),verdienen
-V,grever,streiken
-V,habiter,wohnen
-V,harceler,mobben
-V,il s'agit de,es handelt sich
-V,impressioner,beeindrucken
-V,influencer,beeinflussen
-V,insulter,beleidigen
-V,inventer,erfinden
-V,jouer,spielen
-V,manifester,demonstrieren
-V,montrer,zeigen
-V,ouvrir,öffnen
-V,parler s'exprimer,reden
-V,passer (du temps),verbringen
-V,photographier,fotografieren
-V,peindre,malen
-V,planifier,planen
-V,porter,tragen
-V,poser,stellen
-V,pouvoir,können
-V,produire (un effet),bewirken
-V,protéger,schützen
-V,raconter,erzählen
-V,recommander,empfehlen
-V,répondre,antworten
-V,s'amuser,Spaß haben
-V,s'appeller,heißen
-V,s'ennuyer,sich langweilen
-V,s'occuper de,sich kümmern um
-V,savoir,wissen
-V,se battre / lutter,kämpfen
-V,se détendre,chillen
-V,se moquer,sich lustig machen
-V,se passer,geschehen
-V,se rappeler,sich erinnern an
-V,se sentir,sich fühlen
-V,se tenir les coudes,zusammen halten
-V,signifier,bedeuten
-V,souffrire,leiden
-V,tenir serré dans ses bras,fest halten
-V,transformer,verwandeln
-V,transmettre,vermitteln
-V,utiliser mettre à profit,nutzen
-V,venir,kommen
-V,visiter,besuchen
-V,vivre (une expérience),erleben
-V,voir,sehen
-V,voler (haram),stehlen
-V,voyager,reisen
-V,se mobiliser,sich für setzen
-V,à partir de / faire partie de,gehören zu
-V,menacer,bedrohen
-V,commander,bestellen
-V,avoir du goût,schmecken
-V,travailler,arbeiten
-V,kampfen,combattre
-V,occuper,sich kümmern um
-V,désavantager,benachteiligen
-V,représenter,dar stellen
-V,poser une question,fragen stellen
-V,éteindre,her unterfahren
-V,mettre en avant,hochfahren
-V,allumer,her vorheben
-V,éspérer,hoffen
-V,regarder,schauen
-V,assurer,sichern
-V,s'imaginer / se présenter,vorstellen
-VFC,aller en vehicule conjugé (il) : er ...,er fährt
-VFC,briller paraître conjugé (il) : er ...,er scheint
-VFC,casser conjugé (il) : er ...,er bricht
-VFC,commencer conjugé (il) : er ...,er beginnt
-VFC,courir marcher conjugé (il) : er ...,er läuft
-VFC,croître grandir conjugé (il) : er ...,er wächst
-VFC,donner conjugé (il) : er ...,er gibt
-VFC,fermer conjugé (il) : er ...,er schließt
-VFC,gagner conjugé (il) : er ...,er gewinnt
-VFC,laisser / faire qqc conjugé (il) : er ...,er lässt
-VFC,laver conjugé (il) : er ...,er wäscht
-VFC,manger conjugé (il) : er ...,er isst
-VFC,nager conjugé (il) : er ...,er schwimmt
-VFC,ordonner conjugé (il) : er ...,er befiehlt
-VFC,oublier conjugé (il) : er ...,er vergisst
-VFC,rencontrer / cibler conjugé (il) : er ...,er trifft
-VFC,ressentir conjugé (il) : er ...,er empfindet
-VFC,rester conjugé (il) : er ...,er bleibt
-VFC,tenir s'arrêter conjugé (il) : er ...,er hält
-VFC,tomber conjugé (il) : er ...,er fällt
-VFC,voler (halal) conjugé (il) : er ...,er fliegt
-VFC,aider conjugé (il) : er ...,er hilft
-VFC,crier conjugé (il) : er ...,er schreit
-VFC,disparaître conjugé (il) : er ...,er verschwindet
-VFC,faire de la pub conjugé (il) : er ...,er wirbt
-VFC,insister signaler conjugé (il) : er ...,er hebt hervor
-VFC,jeter conjugé (il) : er ...,er wirft
-VFC,préter conjugé (il) : er ...,er leiht
-VFC,mourir conjugé (il) : er ...,er stirbt
-VFC,obliger conjugé (il) : er ...,er zwingt
-VFC,offrir enchérir conjugé (il) : er ...,er bietet
-VFC,parler conjugé (il) : er ...,er spricht
-VFC,perdre conjugé (il) : er ...,er verliert
-VFC,prendre conjugé (il) : er ...,er nimmt
-VFC,profiter (de qqc) conjugé (il) : er ...,er genießt
-VFC,sauter conjugé (il) : er ...,er springt
-VFC,se taire conjugé (il) : er ...,er schweigt
-VFC,tirer infuser conjugé (il) : er ...,er zieht
-VFC,valoir conjugé (il) : er ...,er gilt
-VFC,plaire conjugé (il) : er ...,er gefällt
-VFC,boire conjugé (il) : er ...,er trinkt
-VFC,lire conjugé (il) : er ...,er liest
-VFC,monter conjugé (il) : er ...,er steigt
-VFC,avoir lieu conjugé (il) : er ...,es findet statt
-VFC,trouver conjugé (il) : er ...,er findet
-VFC,penser à conjugé (il) : er ...,er denkt an
-VFC,penser conjugé (il) : er ...,er denkt
-VFC,prendre au sérieux conjugé (il) : er ...,er nimmt ernst
-VFC,se trouver / être couché conjugé (il) : er ...,er liegt
-VFC,mentir conjugé (il) : er ...,er lügt
-VFC,appeler conjugé (il) : er ...,er ruft
-VFC,être debout conjugé (il) : er ...,er steht
-VFC,faire conjugé (il) : er ...,er tut
+A,assez,genug,,
+A,à mon avis,meiner Meinung nach,,
+A,beau,schön,,
+A,bon,gut,,
+A,bruyant,laut,,
+A,célèbre,berühmt,,
+A,cher,teuer,,
+A,constamment,ständig,,
+A,curieux,neugierig,,
+A,déçu,enttäuscht,,
+A,désespéré,verzweifelt,,
+A,différent relatif à un fait,verschieden,,
+A,différent par rapport aux autres,anders,,
+A,diversité,Die Vielfalt,,
+A,doucement,leise,,
+A,en fait,eigentlich,,
+A,ennuyeux,langweilig,,
+A,enthousiaste,begeistert,,
+A,étrange,seltsam,,
+A,faible,schwach,,
+A,fatigué,müde,,
+A,fiable,zuverlässig,,
+A,fort,stark,,
+A,gros,dick,,
+A,important,wichtig,,
+A,jaloux,eifersüchtig,,
+A,libre,frei,,
+A,lourd,schwer,,
+A,mal mauvais,böse,,
+A,mauvais,schlecht,,
+A,même égale,gleich,,
+A,mince,dünn,,
+A,moins,weniger,,
+A,original,ausgefallen,,
+A,particulièrement,besonders,,
+A,partout,überall,,
+A,pauvre,arm,,
+A,pensif,nachdenklich,,
+A,performant,leistrungfähig,,
+A,peu,wenig,,
+A,peut-être,vielleicht,,
+A,possible,möglich,,
+A,racoller,reißerisch,,
+A,souvent,oft,,
+A,sûr / sûrement,sicher,,
+A,triste,traurig,,
+A,violent,gewalt,,
+A,vrai réel,echt,,
+A,indépendant,unabhänigig,,
+A,à l'exterieur,drauẞen,,
+A,à l'interieur,drinnen,,
+A,c'est pourquoi,deshalb,,
+A,c'est pourquoi,deswegen,,
+A,égalité des droits,Gleichberechtigung,,
+A,toujours,immer,,
+A,gentil,nett,,
+A,performant,leistungsfähig,,
+A,sens,Sinn,,
+A,différament,unterschiedlich,,
+A,beaucoup,viel,,
+N,absurdité,Der Unsinn,,
+N,allié,Der Verbündete,,
+N,amour,Die Liebe,,
+N,art,Die Kunst,,
+N,artiste,Der Künstler,,
+N,avantage,Der Vorteil,,
+N,avenir future,Die Zukunft,,
+N,avis opignon,Die Meinung,,
+N,bar glacé,Das Eiskafé,,
+N,boisson,Das Getrank,,
+N,bouteille,Die Flasche,,
+N,but,Das Ziel,,
+N,café,Das Café,,
+N,choix éléction,Die Wahl,,
+N,climat,Das Klima,,
+N,Coca,Die Cola,,
+N,colère contre,wütend,,
+N,combat,Der Kampf,,
+N,condition,Die Bedingung,,
+N,congé,Der Urlaub,,
+N,couleur,Die Farbe,,
+N,courage,Der Mut,,
+N,cours,Der Unterricht,,
+N,danger,Die Gefahr,,
+N,décision,Die Entscheidung,,
+N,disponible,verfügbar,,
+N,domaine,Der Bereich,,
+N,eau,Das Wasser,,
+N,eau gazeuse,Das Sprudelwasser,,
+N,effet,Der Wirkung,,
+N,endroit,Der Ort,,
+N,environnement,Die Umwelt,,
+N,être là l'un pour l'autre,füreinander da sein,,
+N,évolution,Die Entwicklung,,
+N,expérience,Die Erfahrung,,
+N,addition facture,Die Rechnung,,
+N,famille,Die Familie,,
+N,frère,Das Bruder,,
+N,frontière,Die Grenze,,
+N,fuite,Die Flucht,,
+N,graffiti,Der Das Graffito,,
+N,grêve,Der Streik,,
+N,histoire,Die Geschichte,,
+N,inaction,Die Untätigkeit,,
+N,inconvénient,Der Nachteil,,
+N,information,Die Nachricht,,
+N,Intelligence Artificiel IA,Künstliche Intelligenz,,
+N,jour,Der Tag,,
+N,justrice,Die Gerechtigkeit,,
+N,l'acteur,Der Schauspieler,,
+N,l'affiche,Das Plakat,,
+N,l'aventure,Das Abenteuer,,
+N,l'espoir,Die Hoffnung,,
+N,l'exposition,Die Ausstellung,,
+N,l'oeuvre d'art,Das Kunstwerk,,
+N,liberté,Die Freiheit,,
+N,manifestation,Die Demonstration,,
+N,merci bien,danke shöne,,
+N,mère,Die Mutter,,
+N,message,Die Botschaft,,
+N,mouvement,Die Bewegung,,
+N,ordinateur,Der Computer,,
+N,parents,Die Eltern,,
+N,le passé,Die Vergangenheit,,
+N,pauvreté,Die Armut,,
+N,peinture,Das Bild,,
+N,peinture,Das Gemäld,,
+N,père,der Vater,,
+N,performance,Die Leistung,,
+N,photo,Das Foto,,
+N,possibilité,Die Möglichkeit,,
+N,présent,Die Gegenwart,,
+N,prix,Der Preis,,
+N,progrès,Der Fortschritt,,
+N,question,Die Frage,,
+N,récit rapport,Der Bericht,,
+N,réponse,Antwort,,
+N,restaurant,Das Gasthaus,,
+N,restaurant,Das Restaurant,,
+N,retraite,Die Rente,,
+N,revenue,Das Einkommen,,
+N,rigolo marrant,lustig,,
+N,salut au revoir,tschüss,,
+N,sculture,Die Skulptur,,
+N,semaine,Die Woche,,
+N,seul psycologique,einsam,,
+N,société,Die Gesellschaft,,
+N,soif,Der Durst,,
+N,souffrance,Das Leid,,
+N,spectateur,Der Zuschauer,,
+N,succès,Der Erfolg,,
+N,temps,Die Zeit,,
+N,tension,Die Spannung,,
+N,thé,Der Tee,,
+N,travail,Die Arbeit,,
+N,vacances,Die Ferien,,
+N,valeur,Der Wert,,
+N,victime,Das Opfer,,
+N,visiteur,Der Besucher,,
+N,voisin,Der Nachbar,,
+N,cause chose,die Sache,,
+N,abus dérive,der Miẞstand,,
+N,devoir (physique),die Aufgabe,,
+N,exploitation,die Ausnutzung,,
+N,jus,Der Saft,,
+N,tribunal,Das Gericht,,
+N,le plat,Das Gericht,,
+N,salaire,Der Lohn,,
+N,cohésion,der zusammen halt,,
+N,manifestant,Der Demonstrant,,
+N,protection,Der schutz,,
+N,invention,Die Erfindung,,
+N,argent,Das Geld,,
+N,artiste,Die Künstlerin,,
+N,artificiel,künstlich,,
+N,peintre,Der Maler,,
+N,fatigue,Die Müdigkeit,,
+N,devoir,Die Pflicht,,
+N,droit,Das Recht,,
+N,position,Stellung,,
+N,partie,Der Teil,,
+N,monde,Welt,,
+N,quotidien,Der Alltag,,
+N,paysage,Die Landschaft,,
+N,consommation,Der Konsum,,
+N,début,Der Anfang,,
+V,accompagner,begleiten,,
+V,agir,handeln,,
+V,aimer,lieben,,
+V,aimer bien,mögen,,
+V,aller à pied,gehen,,
+V,améliorer,verbessern,,
+V,apporter,beobachten,,
+V,apporter,bringen,,
+V,apprendre une info,erfahren,,
+V,assoir,sich setzen,,
+V,augmenter,steigen,,
+V,avoir,haben,,
+V,avoir besoin,brauchen,,
+V,avoir honte,sich schämen,,
+V,avoir le droit,dürfen,,
+V,battre frapper,schlagen,,
+V,changer,ändern,,
+V,chanter,singen,,
+V,charger uploader,hoch laden,,
+V,chercher,suchen,,
+V,choisir élire,wählen,,
+V,comparer,vergleichen,,
+V,comprendre,verstehen,,
+V,confiance,vertrauen,,
+V,confirmer,bestätigen,,
+V,confondre,verwechseln,,
+V,connaître,kennen,,
+V,conseiller deviner,raten,,
+V,consommer,verbrauchen,,
+V,copier,kopieren,,
+V,coûter,kosten,,
+V,crée,schaffen,,
+V,cuisiner bouillir,kochen,,
+V,découvrir,entdecken,,
+V,demander,fragen ,,
+V,dénoncer,an prangern,,
+V,désirer aimer,möchte,,
+V,développer,entwickeln,,
+V,devenir,werden,,
+V,devoir,müssen,,
+V,devoir,sollen,,
+V,diffuser répondre,verbreiten,,
+V,diminuer,sinken,,
+V,dire,sagen,,
+V,diriger,steuern,,
+V,discuter papoter,unterhalten,,
+V,disputer,streiten,,
+V,dormir,schlafen,,
+V,écouter,hören,,
+V,écrir,schreiben,,
+V,énerver,nerven,,
+V,enseigner,unterrichten,,
+V,essayer,versuchen,,
+V,être,sein,,
+V,être assis,sitzen,,
+V,exclure,aus schließen,,
+V,expliquer,erklären,,
+V,exprimer quelque chose,aus drücken,,
+V,faire,machen,,
+V,payer,bezahlen,,
+V,fuir,fliehen,,
+V,gagner (de l'argent),verdienen,,
+V,grever,streiken,,
+V,habiter,wohnen,,
+V,harceler,mobben,,
+V,il s'agit de,es handelt sich,,
+V,impressioner,beeindrucken,,
+V,influencer,beeinflussen,,
+V,insulter,beleidigen,,
+V,inventer,erfinden,,
+V,jouer,spielen,,
+V,manifester,demonstrieren,,
+V,montrer,zeigen,,
+V,ouvrir,öffnen,,
+V,parler s'exprimer,reden,,
+V,passer (du temps),verbringen,,
+V,photographier,fotografieren,,
+V,peindre,malen,,
+V,planifier,planen,,
+V,porter,tragen,,
+V,poser,stellen,,
+V,pouvoir,können,,
+V,produire (un effet),bewirken,,
+V,protéger,schützen,,
+V,raconter,erzählen,,
+V,recommander,empfehlen,,
+V,répondre,antworten,,
+V,s'amuser,Spaß haben,,
+V,s'appeller,heißen,,
+V,s'ennuyer,sich langweilen,,
+V,s'occuper de,sich kümmern um,,
+V,savoir,wissen,,
+V,se battre / lutter,kämpfen,,
+V,se détendre,chillen,,
+V,se moquer,sich lustig machen,,
+V,se passer,geschehen,,
+V,se rappeler,sich erinnern an,,
+V,se sentir,sich fühlen,,
+V,se tenir les coudes,zusammen halten,,
+V,signifier,bedeuten,,
+V,souffrire,leiden,,
+V,tenir serré dans ses bras,fest halten,,
+V,transformer,verwandeln,,
+V,transmettre,vermitteln,,
+V,utiliser mettre à profit,nutzen,,
+V,venir,kommen,,
+V,visiter,besuchen,,
+V,vivre (une expérience),erleben,,
+V,voir,sehen,,
+V,voler (haram),stehlen,,
+V,voyager,reisen,,
+V,se mobiliser,sich für setzen,,
+V,à partir de / faire partie de,gehören zu,,
+V,menacer,bedrohen,,
+V,commander,bestellen,,
+V,avoir du goût,schmecken,,
+V,travailler,arbeiten,,
+V,kampfen,combattre,,
+V,occuper,sich kümmern um,,
+V,désavantager,benachteiligen,,
+V,représenter,dar stellen,,
+V,poser une question,fragen stellen,,
+V,éteindre,her unterfahren,,
+V,mettre en avant,hochfahren,,
+V,allumer,her vorheben,,
+V,éspérer,hoffen,,
+V,regarder,schauen,,
+V,assurer,sichern,,
+V,s'imaginer / se présenter,vorstellen,,
+VFC,aller en vehicule,fährt,fuhr,ist gefahren
+VFC,briller paraître,scheint,schien,hat geschienen
+VFC,casser,bricht,brach,hat gebrochen
+VFC,commencer,beginnt,begann,hat begonnen
+VFC,courir marcher,läuft,lief,hat gelaufen
+VFC,croître grandir,wächst,wuchs,ist gewachsen
+VFC,donner,gibt,gab,hat gebeben
+VFC,fermer,schließt,schloss,hat geschlossen
+VFC,gagner,gewinnt,gewann,hat gewonnen
+VFC,laisser / faire qqc,lässt,ließ,hat gelassen
+VFC,laver,wäscht,wusch,hat gewaschen
+VFC,manger,isst,er ass,er hat gegessen
+VFC,nager,schwimmt,schwamm,ist geschwommen
+VFC,ordonner,befiehlt,befahl,hat befohlen
+VFC,oublier,vergisst,vergass,hat vergessen
+VFC,rencontrer / cibler,trifft,traf,hat getroffen
+VFC,ressentir,empfindet,empfand,hat empfunden
+VFC,rester,bleibt,blieb,ist geblieben
+VFC,tenir s'arrêter,hält,hielt,hat gehalten
+VFC,tomber,fällt,field,ist gefallen
+VFC,voler (halal),fliegt,flog,hat geflogen
+VFC,aider,hilft,half,hat geholfen
+VFC,crier,schreit,schrie,hat geschrien
+VFC,disparaître,verschwindet,verschwand,ist verschwunden
+VFC,faire de la pub,wirbt,warb,hat geworben
+VFC,insister signaler,hebt hervor,er hob hervor,hat hervorgehoben
+VFC,jeter,wirft,warf,hat geworfen
+VFC,préter,leiht,lieh,hat geliehen
+VFC,mourir,stirbt,starb,hat gestorben
+VFC,obliger,zwingt,zwang,hat gezwungen
+VFC,offrir enchérir,bietet,bot,hat geboten
+VFC,parler,spricht,sprach,hat gesprochen
+VFC,perdre,verliert,verlor,hat verloren
+VFC,prendre,nimmt,nahm,hat genommen
+VFC,profiter (de qqc),genießt,genoss,hat genossen
+VFC,sauter,springt,sprang,hat gesprungen
+VFC,se taire,schweigt,schwieg,hat geschwiegen
+VFC,tirer infuser,zieht,zog,hat gezogen
+VFC,valoir,gilt,galt,hat gegolten
+VFC,plaire,gefällt,gefiel,hat gefallen
+VFC,boire,trinkt,trank,hat getrunken
+VFC,lire,liest,las,hat gelesen
+VFC,monter,steigt,stieg,ist gestiegen
+VFC,avoir lieu,findet statt,fand statt,hat stattgefunden
+VFC,trouver,findet,fand,hat gefunden
+VFC,penser à,denkt an,dachte an,hat gedacht an
+VFC,penser,denkt,dachte,hat gedacht
+VFC,prendre au sérieux,nimmt ernst,nahm ernst,hat ernstgenommen
+VFC,se trouver / être couché,liegt,lag,hat gelegen
+VFC,mentir,lügt,log,hat gelogen
+VFC,appeler,ruft,rief,hat gerufen
+VFC,être debout,steht,stand,hat gestanden
+VFC,faire,tut,tat,hat getan
