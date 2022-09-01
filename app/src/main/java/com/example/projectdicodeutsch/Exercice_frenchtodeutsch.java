@@ -11,12 +11,14 @@ import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.PopupMenu;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -43,13 +45,9 @@ import java.util.Objects;
 public class Exercice_frenchtodeutsch extends AppCompatActivity {
 
     String[] ExercicesWords = new String[3];
-    InputStream inputStream;
     AnimationDrawable ColorAnimation;
     String failWordFile = "fail_word_file";
     ArrayList<String> recentFailWord = new ArrayList<String>();
-    ArrayList<String> recentFailWordReversed = new ArrayList<String>();
-
-    int lineExercice = 1;
 
     private boolean useVerbeFort = false;
     private boolean useVerbeConjugue = false;
@@ -62,6 +60,11 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
     List<String> failWordTypeList = new ArrayList<String>();
 
     public Activity thisActivity = this;
+
+    // Variable pour choisir le temps des verbes forts
+    public boolean usePresent = true;
+    public boolean useParfait = false;
+    public boolean usePreterit = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,9 +123,8 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
             //
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), ExercicesWords[1] , Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), ExercicesWords[1] , Toast.LENGTH_SHORT).show();
                 try {
-                    writeToFile(ExercicesWords);
                     recentFailWord.add(String.join(" > ", ExercicesWords));
 
                     failFrenchWordList.add(ExercicesWords[0]);
@@ -158,25 +160,13 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+                failFrenchWordList.clear();
+                failGermanWordList.clear();
+                failWordTypeList.clear();
+                wordAdapter = new WordAdapter(thisActivity, failFrenchWordList, failGermanWordList, false);
+                wordRecyclerView.setAdapter(wordAdapter);
             }
         });;
-
-        // Toggle Verbe Conjugues
-
-        ToggleButton toggleVerbeConjug = (ToggleButton) findViewById(R.id.toggleVerbesConjugues);
-        toggleVerbeConjug.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                useVerbeConjugue = toggleVerbeConjug.isChecked();
-                toggleButtonSwitchColor(toggleVerbeConjug);
-                try {
-                    ExercicesWords = RefindWord(WordFrench, "fail_word_file");
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        });;
-
 
         ToggleButton toggleWordRest = (ToggleButton) findViewById(R.id.toggleWordRest);
         toggleWordRest.setOnClickListener(new View.OnClickListener() {
@@ -189,6 +179,11 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+                failFrenchWordList.clear();
+                failGermanWordList.clear();
+                failWordTypeList.clear();
+                wordAdapter = new WordAdapter(thisActivity, failFrenchWordList, failGermanWordList, false);
+                wordRecyclerView.setAdapter(wordAdapter);
             }
         });;
     }
@@ -202,24 +197,6 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
             int colorInt = getResources().getColor(R.color.red);
             ColorStateList csl = ColorStateList.valueOf(colorInt);
             button.setBackgroundTintList(csl);
-        }
-    }
-
-    private void writeToFile(String[] data) {
-        try {
-            File file = new File(failWordFile +".csv");
-            // if file doesnt exists, then create it
-            if (!file.exists()) {
-                file.createNewFile();
-            }
-
-            FileWriter fw = new FileWriter(file.getAbsoluteFile());
-            BufferedWriter bw = new BufferedWriter(fw);
-            bw.write(Arrays.toString(data));
-            bw.close();
-
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
@@ -238,13 +215,21 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
         int NumLine = 0;
 
         while ((line = reader.readLine()) != null) {
-            String[] values = line.split(",", 4);
+            String[] values = line.split(",", 10);
 
             switch (values[0]) {
-                case "VCF":
+                case "VFC":
                     if (useVerbeFort) {
-                        FrenchLine.add(values[1]);
-                        DeutschLine.add(values[2]);
+                        if (usePresent) {
+                            DeutschLine.add(values[2]);
+                            FrenchLine.add(values[1] + " > conjugé au présent : er ...");
+                        } else if (usePreterit) {
+                            DeutschLine.add(values[3]);
+                            FrenchLine.add(values[1] + " > conjugé au prétérit : er ...");
+                        } else if (useParfait) {
+                            DeutschLine.add(values[4]);
+                            FrenchLine.add(values[1] + " > conjugé au parfait : er ...");
+                        }
                         Wordtype.add(values[0]);
                         ++NumLine;
                     }
@@ -287,7 +272,7 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
 
             if ((!useVerbeFort && failWordTypeList.get(indexRecentFailWordRandom) != "VF") || (!useVerbeConjugue && failWordTypeList.get(indexRecentFailWordRandom) != "VC")) {
                 switch (failWordTypeList.get(indexRecentFailWordRandom)) {
-                    case "VCF":
+                    case "VFC":
                         if (useVerbeFort) {
                             ReturnWords[0] = failFrenchWordList.get(indexRecentFailWordRandom);
                             ReturnWords[1] = failGermanWordList.get(indexRecentFailWordRandom);
@@ -343,10 +328,29 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
 
     private String[] RefindWord(TextView TextViewObject, String csvFileName) throws IOException {
         String[] ExercicesWords = GetRandomFrenchWord(csvFileName);
-        TextViewObject.setText(ExercicesWords[0]);
+        String wordtype = "";
+
+        // Ecrire le type de mot au début
+
+        switch (ExercicesWords[2]) {
+            case "V":
+                wordtype = "Verbe : ";
+                break;
+            case "VFC":
+                wordtype = "Verbe fort : ";
+                break;
+            case "N":
+                wordtype = "Nom : ";
+                break;
+            default:
+                wordtype = "";
+        }
+
+        TextViewObject.setText(wordtype + ExercicesWords[0]);
         return ExercicesWords;
     }
-   private void Win(EditText FindContent, TextView WordFrench, String csvFileName) {
+
+    private void Win(EditText FindContent, TextView WordFrench, String csvFileName) {
        FindContent.setText("");
        ColorAnimation.start();
        try {
@@ -354,7 +358,7 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
        } catch (IOException e) {
            e.printStackTrace();
        }
-   }
+    }
 
     public void disableWordVerbeFort(View view) {
 
@@ -370,4 +374,45 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
     public void goToHomePage(View view) {
         finish();
     }
+
+    public void openConjugationMenu(View view) {
+        PopupMenu popupMenu = new PopupMenu(this, view);
+        popupMenu.getMenuInflater().inflate(R.menu.menu_conjugation_time, popupMenu.getMenu());
+
+        // Set state value
+        popupMenu.getMenu().findItem(R.id.usePresent).setChecked(usePresent);
+        popupMenu.getMenu().findItem(R.id.usePreterit).setChecked(usePreterit);
+        popupMenu.getMenu().findItem(R.id.useParfait).setChecked(useParfait);
+
+        popupMenu.show();
+
+        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.usePresent:
+                        menuItem.setChecked(!usePresent);
+                        usePresent = true;
+                        usePreterit = false;
+                        useParfait = false;
+                        return true;
+                    case R.id.usePreterit:
+                        menuItem.setChecked(!usePreterit);
+                        usePresent = false;
+                        usePreterit = true;
+                        useParfait = false;
+                        return true;
+                    case R.id.useParfait:
+                        menuItem.setChecked(!useParfait);
+                        usePresent = false;
+                        usePreterit = false;
+                        useParfait = true;
+                        return true;
+                    default:
+                        return false;
+                }
+            }
+        });
+    }
 }
+

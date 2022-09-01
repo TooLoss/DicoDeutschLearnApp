@@ -196,55 +196,64 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal"
-                android:weightSum="3">
-                <RelativeLayout
+                android:weightSum="2">
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:layout_gravity="center_vertical"
-                    android:background="@drawable/rounded_edittext"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/dark_gray"
                     android:layout_marginEnd="5dp">
-
-                    <ToggleButton
-                        android:id="@+id/toggleVerbesForts"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:background="@drawable/rounded_edittext"
-                        android:backgroundTint="@color/red"
-                        android:textOff="verbes forts"
-                        android:textOn="verbes forts (Incomplet)"
-                        android:textColor="@color/white"
-                        android:textSize="10sp"
-                        android:fontFamily="@font/megabyte_regular"
-                        android:tag="0"
-                        android:onClick="disableWordVerbeFort"/>
-                </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_centerHorizontal="true"
+                        android:clipChildren="true"
+                        android:measureWithLargestChild="true">
+                        <ToggleButton
+                            android:id="@+id/toggleVerbesForts"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/rounded_edittext"
+                            android:backgroundTint="@color/red"
+                            android:textOff="verbes forts"
+                            android:textOn="verbes forts (Incomplet)"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:fontFamily="@font/megabyte_regular"
+                            android:tag="0"
+                            android:onClick="disableWordVerbeFort"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="3dp"/>
+                        <RelativeLayout
+                            android:layout_width="30dp"
+                            android:layout_height="30dp">
+                            <Button
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:gravity="center"
+                                android:alpha="0"
+                                android:onClick="openConjugationMenu">
+                            </Button>
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:background="@drawable/ic_baseline_settings_24"
+                                android:backgroundTint="@color/white"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true">
+                            </ImageView>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="5dp">
-
-                    <ToggleButton
-                        android:id="@+id/toggleVerbesConjugues"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:background="@drawable/rounded_edittext"
-                        android:backgroundTint="@color/red"
-                        android:textOff="verbes conjugués"
-                        android:textOn="verbes conjugués"
-                        android:textColor="@color/white"
-                        android:textSize="10sp"
-                        android:fontFamily="@font/megabyte_regular"/>
-                </RelativeLayout>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="5dp">
+                    android:layout_marginStart="10dp">
 
                     <ToggleButton
                         android:id="@+id/toggleWordRest"

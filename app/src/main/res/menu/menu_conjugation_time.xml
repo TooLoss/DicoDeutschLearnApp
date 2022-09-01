@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:id="@+id/groupConjugation"
+        android:checkableBehavior="all">
+        <item android:id="@+id/usePresent"
+            android:title="Utiliser du présent"
+            android:orderInCategory="1"
+            app:showAsAction="always">
+        </item>
+        <item android:id="@+id/usePreterit"
+            android:title="Utiliser du prétérit"
+            android:orderInCategory="2"
+            app:showAsAction="always">
+        </item>
+        <item android:id="@+id/useParfait"
+            android:title="Utiliser du parfait"
+            android:orderInCategory="3"
+            app:showAsAction="always">
+        </item>
+    </group>
+</menu>
