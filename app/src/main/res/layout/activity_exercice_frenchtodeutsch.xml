@@ -72,7 +72,7 @@
         android:paddingHorizontal="18dp">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:id="@id/WordFrench"
             android:layout_below="@id/LogoContainer"
             android:layout_margin="10dp"
