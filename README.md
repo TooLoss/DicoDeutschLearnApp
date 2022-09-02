@@ -15,7 +15,7 @@
 
 Dicodeutsch est une application Android pour apprendre l'Allemand. Build depuis Android Studio en Java.
 
-[Preview](#Preview-de-l'application) •
+[Preview](#Preview-de-l'application)
 
 </div>
 
