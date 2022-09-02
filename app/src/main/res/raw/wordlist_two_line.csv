@@ -301,7 +301,7 @@ V,menacer,bedrohen : er bedroht - er bedrohte - er hat bedroht
 V,commander,bestellen
 V,avoir du goût,schmecken
 V,travailler,arbeiten
-V,kampfen,combattre
+V,combattre,kampfen : er kampft
 V,occuper,sich kümmern um : er kümmert sich - er kümmerte sich - er hat sich gekümmert + Acc
 V,désavantager,benachteiligen
 V,représenter,dar stellen
