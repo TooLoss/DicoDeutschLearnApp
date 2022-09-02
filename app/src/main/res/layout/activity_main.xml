@@ -355,6 +355,7 @@
             android:layout_height="wrap_content"
             android:gravity="center">
             <TextView
+                android:id="@+id/versionText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Version de la liste de mots : 2022-08-31"
