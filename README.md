@@ -9,7 +9,7 @@
 
 <div align="center">
 
-# DicoDeutsch App
+![Banner](https://user-images.githubusercontent.com/43108590/188202144-dc08abff-2108-4dd2-9ad0-36ae968c220a.png)
 
 [![Télécharger][downloads-badge]][releases]
 
