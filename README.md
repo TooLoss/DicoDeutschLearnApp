@@ -19,7 +19,7 @@ Dicodeutsch est une application Android pour apprendre l'Allemand. Build depuis 
 
 </div>
 
-DicoDeutsch contiens :<br />
+### DicoDeutsch contiens :<br />
 - Une fonctionnalité entrainement : des mots sont générés aléatoirement et il faut les traduire en français.
 - Une fonctionnalité de recherche de mots : entrées vos mots en français et l'application la traduit selon la liste de mots.
 - Une fonctionnalité d'affichage linéaire de tous les mots présents dans l'application.
