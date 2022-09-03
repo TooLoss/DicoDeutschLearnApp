@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RadioButton;
 
 import com.example.projectdicodeutsch.adapter.WordAdapter;
 import com.example.projectdicodeutsch.model.WordModel;
@@ -37,9 +39,15 @@ public class translate_search extends AppCompatActivity {
     public EditText FindContent;
     private List<String> frenchWordList;
     private List<String> germanWordList;
-    int rowFrenchWord = 1;
+    int rowFindWord = 1;
 
     public translate_search thisActivity = this;
+
+    boolean useFrenchTranslation = false;
+    boolean useGermanTranslation = true;
+
+    RadioButton useGermanTranslationSwitch;
+    RadioButton useFrenchTranslationSwitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +61,10 @@ public class translate_search extends AppCompatActivity {
         FindContent = findViewById(R.id.WordSearchBar);
 
         thisActivity = this;
-        rowFrenchWord = 1;
+        rowFindWord = 1;
+
+        useGermanTranslationSwitch = findViewById(R.id.translateGerman);
+        useFrenchTranslationSwitch = findViewById(R.id.translateFrench);
 
         // Liste des mots affichées
         wordRecyclerView = findViewById(R.id.recyclerView);
@@ -67,7 +78,7 @@ public class translate_search extends AppCompatActivity {
                 String WordSearch = FindContent.getText().toString();
                 try {
                     if(WordSearch.length() > 2) {
-                        int numOfWord = searchCsvLine(rowFrenchWord, WordSearch);
+                        int numOfWord = searchCsvLine(rowFindWord, WordSearch);
                         if(numOfWord > 0)  {
                             wordAdapter = new WordAdapter(thisActivity, frenchWordList, germanWordList, false);
                             wordRecyclerView.setAdapter(wordAdapter);
@@ -131,5 +142,36 @@ public class translate_search extends AppCompatActivity {
 
     public void goToHomePage(View view) {
         finish();
+    }
+
+    public void switchTranslation(View view) {
+        int colorInt;
+        ColorStateList csl;
+        switch (view.getId()) {
+            case R.id.translateFrench:
+                useFrenchTranslation = true;
+                useGermanTranslation = false;
+                rowFindWord = 2;
+
+                colorInt = getResources().getColor(R.color.primary);
+                csl = ColorStateList.valueOf(colorInt);
+                view.setBackgroundTintList(csl);
+                colorInt = getResources().getColor(R.color.white);
+                csl = ColorStateList.valueOf(colorInt);
+                useGermanTranslationSwitch.setBackgroundTintList(csl);
+                break;
+            case R.id.translateGerman:
+                useFrenchTranslation = false;
+                useGermanTranslation = true;
+                rowFindWord = 1;
+
+                colorInt = getResources().getColor(R.color.primary);
+                csl = ColorStateList.valueOf(colorInt);
+                view.setBackgroundTintList(csl);
+                colorInt = getResources().getColor(R.color.white);
+                csl = ColorStateList.valueOf(colorInt);
+                useFrenchTranslationSwitch.setBackgroundTintList(csl);
+                break;
+        }
     }
 }

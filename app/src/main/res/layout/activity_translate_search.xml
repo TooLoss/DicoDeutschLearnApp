@@ -58,6 +58,7 @@
         </RelativeLayout>
     </RelativeLayout>
 
+
     <LinearLayout
         android:id="@+id/appContainer"
         android:layout_width="fill_parent"
@@ -65,10 +66,10 @@
         android:layout_below="@id/LogoContainer"
         android:background='@drawable/black_rounded_top'
         android:orientation="vertical"
-        app:layout_constraintWidth_max="10dp"
-        app:layout_constrainedWidth="true"
+        android:paddingHorizontal="10dp"
         android:translationZ="-10dp"
-        android:paddingHorizontal="10dp">
+        app:layout_constrainedWidth="true"
+        app:layout_constraintWidth_max="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -92,47 +93,101 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/megabyte_regular"
-                android:text="entrez un mot à l'infinitif sans déterminant"
+                android:text="choisir entre une traduction en français ou allemand."
                 android:textColor="@color/light_gray"
                 android:textSize="10dp">
 
             </TextView>
         </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/toggle"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/white_rounded"
+            android:backgroundTint="@color/dark_gray"
+            android:checkedButton="@+id/offer"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <RadioButton
+                android:id="@+id/translateGerman"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/white_rounded"
+                android:backgroundTint="@color/primary"
+                android:button="@null"
+                android:fontFamily="@font/megabyte_regular"
+                android:gravity="center"
+                android:text="🇫🇷 ➡ 🇩🇪"
+                android:textColor="@color/dark"
+                android:textSize="12sp"
+                android:onClick="switchTranslation"/>
+
+            <RadioButton
+                android:id="@+id/translateFrench"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/white_rounded"
+                android:backgroundTint="@color/white"
+                android:button="@null"
+                android:fontFamily="@font/megabyte_regular"
+                android:gravity="center"
+                android:text="🇩🇪 ➡ 🇫🇷"
+                android:textColor="@color/dark"
+                android:textSize="12sp"
+                android:onClick="switchTranslation"/>
+        </RadioGroup>
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <LinearLayout
                 android:id="@+id/SearchContainer"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
                 android:clipChildren="true"
-                android:measureWithLargestChild="true">
+                android:gravity="center_vertical"
+                android:measureWithLargestChild="true"
+                android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/WordSearchBar"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:autofillHints=""
                     android:background="@drawable/rounded_edittext"
                     android:drawablePadding="15dp"
-                    android:hint="Entez un mot"
-                    android:textColorHint="@color/dark_gray"
-                    android:textColor="@color/light_gray"
-                    android:textSize="10dp"
                     android:fontFamily="@font/megabyte_regular"
-                    android:paddingHorizontal="12dp"
-                    android:autofillHints=""
+                    android:hint="Entez un mot"
                     android:inputType="text"
-                    android:layout_weight="1"/>
+                    android:paddingHorizontal="12dp"
+                    android:textColor="@color/light_gray"
+                    android:textColorHint="@color/dark_gray"
+                    android:textSize="10dp" />
+
                 <RelativeLayout
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:layout_weight="0"
-                    android:layout_marginLeft="10dp">
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0">
+
                     <ImageView
                         android:id="@+id/imageView2"
                         android:layout_width="15dp"
@@ -142,7 +197,8 @@
                         android:background="@drawable/ic_ico_search"
                         android:backgroundTint="@color/dark"
                         android:contentDescription="Loupe"
-                        android:translationZ="10dp"/>
+                        android:translationZ="10dp" />
+
                     <Button
                         android:id="@+id/WordSearchBtn"
                         android:layout_width="40dp"
@@ -155,17 +211,19 @@
                 </RelativeLayout>
             </LinearLayout>
         </RelativeLayout>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_marginBottom="10dp"
-        android:layout_below="@+id/SearchContainer">
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_height="wrap_content"
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:id="@+id/recyclerView"
-            android:textColor="@color/white"
-            android:layout_marginTop="30dp"/>
-    </ScrollView>
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/SearchContainer"
+            android:layout_marginBottom="10dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/white" />
+        </ScrollView>
     </LinearLayout>
 </RelativeLayout>
