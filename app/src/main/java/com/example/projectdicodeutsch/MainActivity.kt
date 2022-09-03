@@ -2,12 +2,18 @@ package com.example.projectdicodeutsch
 
 import android.app.AlertDialog
 import android.app.Dialog
+import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
+import android.net.NetworkInfo
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -30,7 +36,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        APICallVersion().start()
+
+        if(if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                isOnline()
+            } else {
+                TODO("VERSION.SDK_INT < M")
+            }
+        ) {
+            APICallVersion().start()
+        }
 
         val versionText = findViewById<TextView>(R.id.versionText)
         versionText.text = "Version de l'application : " + BuildConfig.VERSION_NAME
@@ -89,5 +103,35 @@ class MainActivity : AppCompatActivity() {
         val pageNumber = Integer.valueOf(tagString)
         val intent = Intent(this, pageList[pageNumber])
         startActivity(intent)
+    }
+
+    fun isConnected(): Boolean {
+        var cm: ConnectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        var networdInfo: NetworkInfo? = cm.activeNetworkInfo
+
+        if(networdInfo!=null && networdInfo.isConnected) {
+            return true
+        }
+        return false
+    }
+
+    @RequiresApi(Build.VERSION_CODES.M)
+    fun isOnline(): Boolean {
+        val connectivityManager =
+            getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        if (connectivityManager != null) {
+            val capabilities =
+                connectivityManager.getNetworkCapabilities(connectivityManager.activeNetwork)
+            if (capabilities != null) {
+                if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)) {
+                    return true
+                } else if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
+                    return true
+                } else if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)) {
+                    return true
+                }
+            }
+        }
+        return false
     }
 }
