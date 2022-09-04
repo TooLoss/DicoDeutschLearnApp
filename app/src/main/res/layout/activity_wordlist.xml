@@ -109,6 +109,7 @@
                 android:id="@+id/hideTranslationSwitch"
                 android:textOff="cacher"
                 android:textOn="montrer"
+                android:textColor="@color/dark_gray"
                 android:fontFamily="@font/megabyte_regular"
                 android:background="@drawable/white_rounded"
                 android:backgroundTint="@color/primary"
