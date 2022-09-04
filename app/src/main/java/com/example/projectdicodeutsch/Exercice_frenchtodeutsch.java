@@ -265,7 +265,7 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
             ReturnWords[2] = "E";
         }
 
-        if(getRandomNumber(0,0) == 0 && failFrenchWordList.size() > 3) {
+        if(getRandomNumber(0,3) == 0 && failFrenchWordList.size() > 3) {
             // Remettre les mots raté avec une plus grande probabilité.
             int indexRecentFailWordRandom = getRandomNumber(0, failFrenchWordList.size() - 1);
 
