@@ -84,7 +84,11 @@ class MainActivity : AppCompatActivity() {
                 val name = request.tag_name
                 val url = request.html_url
 
-                if(name[1].toInt() > BuildConfig.VERSION_NAME[0].toInt() || name[3].toInt() > BuildConfig.VERSION_NAME[2].toInt() || name[3].toInt() > BuildConfig.VERSION_NAME[2].toInt()) {
+                if(name[1].toInt() > BuildConfig.VERSION_NAME[0].toInt()) {
+                    newUpdate(url)
+                } else if(name[1].toInt() == BuildConfig.VERSION_NAME[0].toInt() && name[3].toInt() > BuildConfig.VERSION_NAME[2].toInt()) {
+                    newUpdate(url)
+                } else if(name[1].toInt() == BuildConfig.VERSION_NAME[0].toInt() && name[3].toInt() == BuildConfig.VERSION_NAME[2].toInt() && name[5].toInt() > BuildConfig.VERSION_NAME[4].toInt()) {
                     newUpdate(url)
                 } else {
                     Toast.makeText(this, "Aucune mise à jour", Toast.LENGTH_SHORT).show()
