@@ -46,8 +46,6 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
 
     String[] ExercicesWords = new String[3];
     AnimationDrawable ColorAnimation;
-    String failWordFile = "fail_word_file";
-    ArrayList<String> recentFailWord = new ArrayList<String>();
 
     private boolean useVerbeFort = false;
     private boolean useVerbeConjugue = false;
@@ -86,7 +84,7 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
         wordRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         try {
-            ExercicesWords = RefindWord(WordFrench, "wordlist_dicodeutsch");
+            ExercicesWords = RefindWord(WordFrench);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -98,48 +96,56 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                // CHEAT
-                //Toast.makeText(getApplicationContext(), stripAccents(ExercicesWords[3].toLowerCase()), Toast.LENGTH_LONG).show();
                 String ContentValue = FindContent.getText().toString();
                 ContentValue = stripAccents(ContentValue).toLowerCase(Locale.ROOT);
                 boolean ContainDet = ContentValue.contains("Die ".toLowerCase()) || ContentValue.contains("Der ".toLowerCase()) || ContentValue.contains("Das ".toLowerCase());
-                String BaseValue = ExercicesWords[1].toLowerCase();
+                String BaseValue = stripAccents(ExercicesWords[1].toLowerCase());
 
                 if(ExercicesWords[2].contains("N")) {
                     if(BaseValue.equalsIgnoreCase(ContentValue) && ContainDet) {
                         ColorAnimation.stop();
-                        Win(FindContent,WordFrench, "wordlist_dicodeutsch");
+                        Win(FindContent,WordFrench);
                     }
                 }else if(BaseValue.equalsIgnoreCase(ContentValue)){
                     ColorAnimation.stop();
-                    Win(FindContent,WordFrench, "wordlist_dicodeutsch");
+                    Win(FindContent,WordFrench);
                 }
             }
         });
 
         Giveup.setOnClickListener(new View.OnClickListener() {
             //
-            //  ON CLICK
+            //  ON CLICK ABANDONNER ! FAIL !
             //
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), ExercicesWords[1] , Toast.LENGTH_SHORT).show();
                 try {
-                    recentFailWord.add(String.join(" > ", ExercicesWords));
+                    Collections.reverse(failFrenchWordList);
+                    Collections.reverse(failGermanWordList);
+                    Collections.reverse(failWordTypeList);
 
                     failFrenchWordList.add(ExercicesWords[0]);
                     failGermanWordList.add(ExercicesWords[1]);
                     failWordTypeList.add(ExercicesWords[2]);
 
+                    Collections.reverse(failFrenchWordList);
+                    Collections.reverse(failGermanWordList);
+                    Collections.reverse(failWordTypeList);
+
+                    //Toast.makeText(getApplicationContext()," First fail : "+ failWordTypeList.get(failWordTypeList.size()-1) + " : Type : "+ failFrenchWordList.get(failFrenchWordList.size()-1), Toast.LENGTH_SHORT).show();
+
+                    /*
                     List<String> recentFailWordFrenchReversed = failFrenchWordList;
                     List<String> recentFailWordGermanReversed = failGermanWordList;
                     Collections.reverse(recentFailWordFrenchReversed);
                     Collections.reverse(recentFailWordGermanReversed);
+                     */
 
-                    wordAdapter = new WordAdapter(thisActivity, recentFailWordFrenchReversed, recentFailWordGermanReversed, false);
+                    wordAdapter = new WordAdapter(thisActivity, failFrenchWordList, failGermanWordList, false);
                     wordRecyclerView.setAdapter(wordAdapter);
 
-                    ExercicesWords = RefindWord(WordFrench, "fail_word_file");
+                    ExercicesWords = RefindWord(WordFrench);
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -156,7 +162,7 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
                 useVerbeFort = toggleVerbeFort.isChecked();
                 toggleButtonSwitchColor(toggleVerbeFort);
                 try {
-                    ExercicesWords = RefindWord(WordFrench, "fail_word_file");
+                    ExercicesWords = RefindWord(WordFrench);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -175,7 +181,7 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
                 useReste = toggleWordRest.isChecked();
                 toggleButtonSwitchColor(toggleWordRest);
                 try {
-                    ExercicesWords = RefindWord(WordFrench, "fail_word_file");
+                    ExercicesWords = RefindWord(WordFrench);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -200,12 +206,11 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
         }
     }
 
-    private String[] GetRandomFrenchWord(String csvFileName) throws IOException {
+    private String[] GetRandomFrenchWord() throws IOException {
 
         List<String> FrenchLine = new ArrayList<>();
         List<String> DeutschLine = new ArrayList<>();
         List<String> Wordtype = new ArrayList<>();
-        List<String> WordConjugate = new ArrayList<>();
 
         String line = null;
         InputStream InputStream = getResources().openRawResource(R.raw.wordlist_trainmode);
@@ -223,22 +228,16 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
                         if (usePresent) {
                             DeutschLine.add(values[2]);
                             FrenchLine.add(values[1] + " > conjugé au présent : er ...");
+                            Wordtype.add(values[0]);
                         } else if (usePreterit) {
                             DeutschLine.add(values[3]);
                             FrenchLine.add(values[1] + " > conjugé au prétérit : er ...");
+                            Wordtype.add(values[0]);
                         } else if (useParfait) {
                             DeutschLine.add(values[4]);
                             FrenchLine.add(values[1] + " > conjugé au parfait : er ...");
+                            Wordtype.add(values[0]);
                         }
-                        Wordtype.add(values[0]);
-                        ++NumLine;
-                    }
-                    break;
-                case "VC":
-                    if (useVerbeConjugue) {
-                        FrenchLine.add(values[1]);
-                        DeutschLine.add(values[2]);
-                        Wordtype.add(values[0]);
                         ++NumLine;
                     }
                     break;
@@ -257,8 +256,8 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
         String[] ReturnWords = new String[3];
 
         if(NumLine > 0) {
-            ReturnWords[0] = stripAccents(FrenchLine.get(RandomLineInRange));
-            ReturnWords[1] = stripAccents(DeutschLine.get(RandomLineInRange));
+            ReturnWords[0] = FrenchLine.get(RandomLineInRange);
+            ReturnWords[1] = DeutschLine.get(RandomLineInRange);
             ReturnWords[2] = Wordtype.get(RandomLineInRange);
         } else {
             ReturnWords[0] = "Aucun mot ne correspond, activez une nature";
@@ -266,9 +265,11 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
             ReturnWords[2] = "E";
         }
 
-        if(getRandomNumber(0,4) == 0 && failFrenchWordList.size() > 3) {
+        if(getRandomNumber(0,0) == 0 && failFrenchWordList.size() > 3) {
             // Remettre les mots raté avec une plus grande probabilité.
             int indexRecentFailWordRandom = getRandomNumber(0, failFrenchWordList.size() - 1);
+
+            /*
 
             if ((!useVerbeFort && failWordTypeList.get(indexRecentFailWordRandom) != "VF") || (!useVerbeConjugue && failWordTypeList.get(indexRecentFailWordRandom) != "VC")) {
                 switch (failWordTypeList.get(indexRecentFailWordRandom)) {
@@ -307,6 +308,14 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
                         break;
                 }
             }
+            */
+            ReturnWords[0] = failFrenchWordList.get(indexRecentFailWordRandom);
+            ReturnWords[1] = failGermanWordList.get(indexRecentFailWordRandom);
+            ReturnWords[2] = failWordTypeList.get(indexRecentFailWordRandom);
+
+            failFrenchWordList.remove(indexRecentFailWordRandom);
+            failGermanWordList.remove(indexRecentFailWordRandom);
+            failWordTypeList.remove(indexRecentFailWordRandom);
         }
 
         return ReturnWords;
@@ -321,13 +330,13 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
         s = Normalizer.normalize(s, Normalizer.Form.NFD);
         s = s.replaceAll("[\\p{InCombiningDiacriticalMarks}]", "");
         if(s.contains("ß")) {
-            s.replaceAll("ß","s");
+            s.replace("ß","ss");
         }
         return s;
     }
 
-    private String[] RefindWord(TextView TextViewObject, String csvFileName) throws IOException {
-        String[] ExercicesWords = GetRandomFrenchWord(csvFileName);
+    private String[] RefindWord(TextView TextViewObject) throws IOException {
+        String[] ExercicesWords = GetRandomFrenchWord();
         String wordtype = "";
 
         // Ecrire le type de mot au début
@@ -350,11 +359,11 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
         return ExercicesWords;
     }
 
-    private void Win(EditText FindContent, TextView WordFrench, String csvFileName) {
+    private void Win(EditText FindContent, TextView WordFrench) {
        FindContent.setText("");
        ColorAnimation.start();
        try {
-           ExercicesWords = RefindWord(WordFrench, csvFileName);
+           ExercicesWords = RefindWord(WordFrench);
        } catch (IOException e) {
            e.printStackTrace();
        }
