@@ -22,7 +22,7 @@ class NewUpdateDialogFragment: DialogFragment() {
         var updateAppButton: Button = rootView.findViewById(R.id.updateAppButton)
         updateAppButton.setOnClickListener {
             val uri: Uri =
-                Uri.parse("github.com/TooLoss/DicoDeutschLearnApp/releases/latest") // missing 'http://' will cause crashed
+                Uri.parse("https://github.com/TooLoss/DicoDeutschLearnApp/releases/latest") // missing 'http://' will cause crashed
 
             val intent = Intent(Intent.ACTION_VIEW, uri)
             startActivity(intent)
