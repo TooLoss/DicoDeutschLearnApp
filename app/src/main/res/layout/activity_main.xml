@@ -64,11 +64,12 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/wordFoundTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/gilroy_bold"
                         android:gravity="start"
-                        android:text="0   (bientôt disponible)"
+                        android:text="0"
                         android:textColor="@color/dark"
                         android:textSize="20dp">
                     </TextView>
@@ -78,7 +79,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/megabyte_regular"
                         android:gravity="start"
-                        android:text="mot(s) trouvé(s) cette semaine"
+                        android:text="mot(s) trouvé(s) aujourd'hui"
                         android:textColor="@color/dark"
                         android:textSize="10dp">
                     </TextView>

@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
@@ -364,6 +366,13 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
        ColorAnimation.start();
        try {
            ExercicesWords = RefindWord(WordFrench);
+
+           SharedPreferences mPrefs = getSharedPreferences("DataFile", 0);
+           String mString = mPrefs.getString("appSave", "0");
+           SharedPreferences.Editor mEditor = mPrefs.edit();
+           mString = String.valueOf(Integer.parseInt(mString) + 1);
+           mEditor.putString("appSave", mString).apply();
+
        } catch (IOException e) {
            e.printStackTrace();
        }
@@ -381,6 +390,10 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
    }
 
     public void goToHomePage(View view) {
+
+        Intent i = getIntent();
+        i.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+        startActivity(new Intent(Exercice_frenchtodeutsch.this, MainActivity.class));
         finish();
     }
 

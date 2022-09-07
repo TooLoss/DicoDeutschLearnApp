@@ -1,10 +1,8 @@
 package com.example.projectdicodeutsch
 
-import android.app.AlertDialog
-import android.app.Dialog
 import android.content.Context
-import android.content.DialogInterface
 import android.content.Intent
+import android.content.SharedPreferences
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.net.NetworkInfo
@@ -15,16 +13,12 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.DialogFragment
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.google.android.material.snackbar.Snackbar
-import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.annotations.SerializedName
 import okhttp3.OkHttpClient
-import org.w3c.dom.Text
 import java.io.InputStreamReader
 import java.net.URL
+import java.util.*
 import javax.net.ssl.HttpsURLConnection
 
 
@@ -33,9 +27,28 @@ class MainActivity : AppCompatActivity() {
     private val client = OkHttpClient()
     private val apiResponse = ""
 
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val mPrefs: SharedPreferences = this.getSharedPreferences("DataFile", 0)
+        val wordFound = mPrefs.getString("appSave", "0")
+        val weekNum = mPrefs.getString("weekNumber", "0")
+
+        val cal = Calendar.getInstance()
+        val dayOfYear = cal[Calendar.DAY_OF_YEAR].toString()
+
+        var activityThis = this
+
+        if(weekNum != dayOfYear) {
+            val mEditor = mPrefs.edit()
+            mEditor.putString("appSave", "0").apply()
+            mEditor.putString("weekNumber", dayOfYear).apply()
+            mEditor.apply()
+        }
+
+        val wordFoundText: TextView = findViewById(R.id.wordFoundTextView)
 
         if(if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 isOnline()
@@ -45,6 +58,8 @@ class MainActivity : AppCompatActivity() {
         ) {
             APICallVersion().start()
         }
+
+        wordFoundText.text = wordFound
 
         val versionText = findViewById<TextView>(R.id.versionText)
         versionText.text = "Version de l'application : " + BuildConfig.VERSION_NAME
