@@ -33,13 +33,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val mPrefs: SharedPreferences = this.getSharedPreferences("DataFile", 0)
-        val wordFound = mPrefs.getString("appSave", "0")
         val weekNum = mPrefs.getString("weekNumber", "0")
 
         val cal = Calendar.getInstance()
         val dayOfYear = cal[Calendar.DAY_OF_YEAR].toString()
-
-        var activityThis = this
 
         if(weekNum != dayOfYear) {
             val mEditor = mPrefs.edit()
@@ -48,6 +45,7 @@ class MainActivity : AppCompatActivity() {
             mEditor.apply()
         }
 
+        val wordFound = mPrefs.getString("appSave", "0")
         val wordFoundText: TextView = findViewById(R.id.wordFoundTextView)
 
         if(if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
