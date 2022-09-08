@@ -16,8 +16,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="20dp"
-        android:textSize="20sp">
+        android:layout_marginTop="40dp"
+        android:textSize="25sp">
     </TextView>
     <TextView
         android:id="@+id/descriptionUpdateDialog"
@@ -33,7 +33,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="20dp"
         android:textAlignment="center"
-        android:textSize="15sp">
+        android:textSize="12sp">
     </TextView>
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,31 +42,33 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="30dp"
-        android:paddingBottom="30dp"
+        android:paddingBottom="40dp"
         android:weightSum="2"
-        android:paddingHorizontal="20dp">
+        android:paddingHorizontal="30dp">
         <Button
             android:id="@+id/updateSkipButton"
             android:layout_width="200dp"
             android:layout_height="45dp"
             android:layout_weight="1"
-            android:layout_marginEnd="2dp"
+            android:layout_marginEnd="5dp"
             android:background="@drawable/white_rounded"
             android:backgroundTint="@color/light_gray"
             android:textColor="@color/white"
             android:fontFamily="@font/megabyte_regular"
-            android:text="Ignorer">
+            android:text="Ignorer"
+            android:textSize="11dp">
         </Button>
         <Button
             android:id="@+id/updateAppButton"
             android:layout_width="200dp"
             android:layout_height="45dp"
             android:layout_weight="1"
-            android:layout_marginStart="2dp"
+            android:layout_marginStart="5dp"
             android:background="@drawable/white_rounded"
             android:fontFamily="@font/megabyte_bold"
             android:backgroundTint="@color/primary"
-            android:text="Mettre à jour">
+            android:text="Mettre à jour"
+            android:textSize="11dp">
         </Button>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
