@@ -3,16 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/dark_gray">
+    android:background="@color/backgroundColor">
 
     <TextView
         android:id="@+id/textUpdateDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="mise à jour"
-        android:textAllCaps="true"
         android:fontFamily="@font/megabyte_black_normal"
-        android:textColor="@color/white"
+        android:textColor="@color/primaryTextColor"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -26,7 +25,7 @@
         android:text="Une nouvelle mise à jour a été trouvée. Pour l'installer, cliquez sur le bouton mettre à jour. Supprimer la version précédente. Sur Github, en dessous de la page, télécharger et installer le fichier app-release Apk"
         android:lineSpacingExtra="5sp"
         android:fontFamily="@font/megabyte_regular"
-        android:textColor="@color/white"
+        android:textColor="@color/subTextColor"
         android:paddingHorizontal="40dp"
         app:layout_constraintTop_toBottomOf="@id/textUpdateDialog"
         app:layout_constraintRight_toRightOf="parent"
@@ -52,8 +51,8 @@
             android:layout_weight="1"
             android:layout_marginEnd="5dp"
             android:background="@drawable/white_rounded"
-            android:backgroundTint="@color/light_gray"
-            android:textColor="@color/white"
+            android:backgroundTint="@color/subBackgroundColor"
+            android:textColor="@color/primaryTextColor"
             android:fontFamily="@font/megabyte_regular"
             android:text="Ignorer"
             android:textSize="11dp">
@@ -66,9 +65,10 @@
             android:layout_marginStart="5dp"
             android:background="@drawable/white_rounded"
             android:fontFamily="@font/megabyte_bold"
-            android:backgroundTint="@color/primary"
+            android:backgroundTint="@color/primaryColor"
             android:text="Mettre à jour"
-            android:textSize="11dp">
+            android:textSize="11dp"
+            android:textColor="@color/dark">
         </Button>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

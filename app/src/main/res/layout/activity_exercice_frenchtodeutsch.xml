@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@color/dark_gray">
+    android:background="@color/subBackgroundColor">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -26,6 +26,7 @@
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:background="@drawable/white_rounded"
+                    android:backgroundTint="@color/subTextColor"
                     android:onClick="goToHomePage">
                 </Button>
             </RelativeLayout>
@@ -33,7 +34,7 @@
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 android:background="@drawable/ic_arrow"
-                android:backgroundTint="@color/dark_gray"
+                android:backgroundTint="@color/subBackgroundColor"
                 android:rotation="180"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true">
@@ -51,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:text="entrainement"
                 android:fontFamily="@font/megabyte_black_normal"
-                android:textColor="@color/white"
+                android:textColor="@color/primaryTextColor"
                 android:textAlignment="center"
                 android:textSize="23sp"
                 android:layout_marginVertical="28dp"/>
@@ -65,104 +66,117 @@
         android:layout_height="fill_parent"
         android:layout_below="@id/LogoContainer"
         android:background='@drawable/black_rounded_top'
+        android:backgroundTint="@color/backgroundColor"
         android:orientation="vertical"
-        app:layout_constraintWidth_max="10dp"
-        app:layout_constrainedWidth="true"
+        android:paddingHorizontal="18dp"
         android:translationZ="-10dp"
-        android:paddingHorizontal="18dp">
+        app:layout_constrainedWidth="true"
+        app:layout_constraintWidth_max="10dp">
+
         <RelativeLayout
+            android:id="@id/WordFrench"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:id="@id/WordFrench"
             android:layout_below="@id/LogoContainer"
             android:layout_margin="10dp"
-            android:gravity="center"
-            android:background="@drawable/rounded_edittext">
+            android:background="@drawable/rounded_edittext"
+            android:backgroundTint="@color/primaryTextColor"
+            android:gravity="center">
+
             <TextView
+                android:id="@id/SetWordFrench"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@id/SetWordFrench"
-                android:textSize="15sp"
+                android:fontFamily="@font/megabyte_regular"
                 android:gravity="center"
                 android:text="mot français"
-                android:textColor="@color/dark"
-                android:fontFamily="@font/megabyte_regular">
+                android:textColor="@color/backgroundColor"
+                android:textSize="15sp">
             </TextView>
         </RelativeLayout>
+
         <LinearLayout
             android:id="@+id/SearchContainer"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:weightSum="10"
-            android:orientation="vertical"
-            android:gravity="center_vertical"
-            android:layout_centerHorizontal="true"
             android:layout_below="@id/WordFrench"
-            android:layout_marginTop="10dp">
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:weightSum="10">
+
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
+
                 <EditText
                     android:id="@id/EditTextWord"
                     android:layout_width="fill_parent"
                     android:layout_height="40dp"
+                    android:autofillHints=""
                     android:background="@drawable/rounded_edittext"
+                    android:backgroundTint="@color/subBackgroundColor"
                     android:drawablePadding="15dp"
                     android:hint="Entez un mot allemand. ß = ss et particule séparale en 1e"
-                    android:textColorHint="@color/dark_gray"
-                    android:textStyle="italic"
-                    android:textColor="@color/black"
-                    android:textSize="12dp"
+                    android:inputType="text"
                     android:textAlignment="center"
-                    android:autofillHints=""
-                    android:inputType="text"/>
+                    android:textColor="@color/backgroundColor"
+                    android:textColorHint="@color/subTextColor"
+                    android:textSize="12dp"
+                    android:textStyle="italic" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal"
                 android:weightSum="2">
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:background="@drawable/rounded_edittext"
+                    android:layout_marginEnd="5dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/dark_gray"
-                    android:layout_marginEnd="5dp">
+                    android:background="@drawable/rounded_edittext"
+                    android:backgroundTint="@color/subBackgroundColor">
 
                     <Button
                         android:id="@+id/Giveup"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        android:textColor="@color/white"
                         android:background="#0000"
-                        android:text="Abandonner"
                         android:fontFamily="@font/gilroy_light"
-                        android:textStyle="italic"/>
+                        android:text="Abandonner"
+                        android:textColor="@color/primaryTextColor"
+                        android:textStyle="italic" />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="5dp">
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1">
 
                     <Button
                         android:id="@+id/WordSearchBtn"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:background="@drawable/rounded_edittext"
-                        android:backgroundTint="@color/yellow"
+                        android:backgroundTint="@color/primaryColor"
+                        android:fontFamily="@font/gilroy_bold"
                         android:forceDarkAllowed="false"
                         android:text="Valider"
-                        android:fontFamily="@font/gilroy_bold"/>
+                        android:textColor="@color/dark"/>
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -177,7 +191,7 @@
                 android:fontFamily="@font/megabyte_black_normal"
                 android:letterSpacing=".02"
                 android:text="nature des mots"
-                android:textColor="@color/white"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="23dp">
 
             </TextView>
@@ -187,7 +201,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/megabyte_regular"
                 android:text="séléctionnez le type de mot qui peut apparaitre"
-                android:textColor="@color/light_gray"
+                android:textColor="@color/subTextColor"
                 android:textSize="10dp">
             </TextView>
 
@@ -197,63 +211,70 @@
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal"
                 android:weightSum="2">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="5dp"
                     android:layout_weight="1"
-                    android:layout_marginEnd="5dp">
+                    android:orientation="horizontal">
+
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
                         android:layout_centerHorizontal="true"
                         android:clipChildren="true"
-                        android:measureWithLargestChild="true">
+                        android:gravity="center_vertical"
+                        android:measureWithLargestChild="true"
+                        android:orientation="horizontal">
+
                         <ToggleButton
                             android:id="@+id/toggleVerbesForts"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_weight="1"
                             android:background="@drawable/rounded_edittext"
                             android:backgroundTint="@color/red"
+                            android:fontFamily="@font/megabyte_regular"
+                            android:onClick="disableWordVerbeFort"
+                            android:tag="0"
+                            android:textColor="@color/primaryTextColor"
                             android:textOff="verbes forts"
                             android:textOn="verbes forts (Incomplet)"
-                            android:textColor="@color/white"
-                            android:textSize="10sp"
-                            android:fontFamily="@font/megabyte_regular"
-                            android:tag="0"
-                            android:onClick="disableWordVerbeFort"
-                            android:layout_weight="1"
-                            android:layout_marginEnd="3dp"/>
+                            android:textSize="10sp" />
+
                         <RelativeLayout
                             android:layout_width="30dp"
                             android:layout_height="30dp">
+
                             <Button
                                 android:layout_width="fill_parent"
                                 android:layout_height="fill_parent"
-                                android:gravity="center"
                                 android:alpha="0"
+                                android:gravity="center"
                                 android:onClick="openConjugationMenu">
                             </Button>
+
                             <ImageView
                                 android:layout_width="25dp"
                                 android:layout_height="25dp"
-                                android:background="@drawable/ic_baseline_settings_24"
-                                android:backgroundTint="@color/white"
+                                android:layout_centerHorizontal="true"
                                 android:layout_centerVertical="true"
-                                android:layout_centerHorizontal="true">
+                                android:background="@drawable/ic_baseline_settings_24"
+                                android:backgroundTint="@color/primaryTextColor">
                             </ImageView>
                         </RelativeLayout>
                     </LinearLayout>
                 </LinearLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="10dp">
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1">
 
                     <ToggleButton
                         android:id="@+id/toggleWordRest"
@@ -261,30 +282,33 @@
                         android:layout_height="40dp"
                         android:background="@drawable/rounded_edittext"
                         android:backgroundTint="@color/green"
+                        android:checked="true"
+                        android:fontFamily="@font/megabyte_regular"
+                        android:textColor="@color/primaryTextColor"
                         android:textOff="NOM / ADJ / ..."
                         android:textOn="NOM / ADJ / ..."
-                        android:checked="true"
-                        android:textColor="@color/white"
-                        android:textSize="10sp"
-                        android:fontFamily="@font/megabyte_regular"/>
+                        android:textSize="10sp" />
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="-1">
+
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="fill_parent"
                 android:layout_below="@+id/SearchContainer"
                 android:layout_weight="-1">
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@id/fail_word"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="40dp"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/primaryTextColor" />
             </ScrollView>
         </LinearLayout>
     </LinearLayout>

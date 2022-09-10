@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="primaryColor">#F5D10D</color>
-    <color name="backgroundColor">#FFFEF5</color>
-    <color name="subBackgroundColor">#EAEAEA</color>
-    <color name="primaryTextColor">#FF000000</color>
-    <color name="subTextColor">#1B1B1B</color>
+    <color name="backgroundColor">#FF000000</color>
+    <color name="subBackgroundColor">#1B1B1B</color>
+    <color name="primaryTextColor">#FFFEF5</color>
+    <color name="subTextColor">#EAEAEA</color>
     <color name="secondaryColor">#430FFC</color>
     <color name="red">#EC3838</color>
     <color name="green">#3AE378</color>

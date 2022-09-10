@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@color/dark_gray">
+    android:background="@color/subBackgroundColor">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -26,6 +26,7 @@
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:background="@drawable/white_rounded"
+                    android:backgroundTint="@color/primaryTextColor"
                     android:onClick="goToHomePage">
                 </Button>
             </RelativeLayout>
@@ -33,7 +34,7 @@
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 android:background="@drawable/ic_arrow"
-                android:backgroundTint="@color/dark_gray"
+                android:backgroundTint="@color/subBackgroundColor"
                 android:rotation="180"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true">
@@ -51,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:text="traduction"
                 android:fontFamily="@font/megabyte_black_normal"
-                android:textColor="@color/white"
+                android:textColor="@color/primaryTextColor"
                 android:textAlignment="center"
                 android:textSize="23sp"
                 android:layout_marginVertical="28dp"/>
@@ -65,6 +66,7 @@
         android:layout_height="fill_parent"
         android:layout_below="@id/LogoContainer"
         android:background='@drawable/black_rounded_top'
+        android:backgroundTint="@color/backgroundColor"
         android:orientation="vertical"
         android:paddingHorizontal="10dp"
         android:translationZ="-10dp"
@@ -84,7 +86,7 @@
                 android:fontFamily="@font/megabyte_black_normal"
                 android:letterSpacing=".02"
                 android:text="rechercher un mot"
-                android:textColor="@color/white"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="23dp">
 
             </TextView>
@@ -94,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/megabyte_regular"
                 android:text="choisir entre une traduction en français ou allemand."
-                android:textColor="@color/light_gray"
+                android:textColor="@color/subTextColor"
                 android:textSize="10dp">
 
             </TextView>
@@ -107,7 +109,7 @@
             android:layout_marginHorizontal="30dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/white_rounded"
-            android:backgroundTint="@color/dark_gray"
+            android:backgroundTint="@color/subBackgroundColor"
             android:checkedButton="@+id/offer"
             android:orientation="horizontal"
             android:padding="2dp">
@@ -122,7 +124,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/white_rounded"
-                android:backgroundTint="@color/primary"
+                android:backgroundTint="@color/primaryColor"
                 android:button="@null"
                 android:fontFamily="@font/megabyte_regular"
                 android:gravity="center"
@@ -140,7 +142,7 @@
                 android:layout_marginBottom="1dp"
                 android:layout_weight="1"
                 android:background="@drawable/white_rounded"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="@color/subTextColor"
                 android:button="@null"
                 android:fontFamily="@font/megabyte_regular"
                 android:gravity="center"
@@ -173,13 +175,14 @@
                     android:layout_weight="1"
                     android:autofillHints=""
                     android:background="@drawable/rounded_edittext"
+                    android:backgroundTint="@color/subBackgroundColor"
                     android:drawablePadding="15dp"
                     android:fontFamily="@font/megabyte_regular"
                     android:hint="Entez un mot"
                     android:inputType="text"
                     android:paddingHorizontal="12dp"
                     android:textColor="@color/light_gray"
-                    android:textColorHint="@color/dark_gray"
+                    android:textColorHint="@color/primaryTextColor"
                     android:textSize="10dp" />
 
                 <RelativeLayout
@@ -223,7 +226,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/primaryTextColor" />
         </ScrollView>
     </LinearLayout>
 </RelativeLayout>

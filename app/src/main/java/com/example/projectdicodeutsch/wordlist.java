@@ -67,7 +67,7 @@ public class wordlist extends AppCompatActivity {
                 int colorInt;
                 ColorStateList csl;
                 if(isChecked)  {
-                    colorInt = getResources().getColor(R.color.white);
+                    colorInt = getResources().getColor(R.color.primaryTextColor);
                     csl = ColorStateList.valueOf(colorInt);
                     hideTranslationSwitch.setBackgroundTintList(csl);
 
@@ -75,7 +75,7 @@ public class wordlist extends AppCompatActivity {
                     wordAdapter = new WordAdapter(thisActvity, frenchListComplete, emptyList, true);
                     wordRecyclerView.setAdapter(wordAdapter);
                 } else {
-                    colorInt = getResources().getColor(R.color.primary);
+                    colorInt = getResources().getColor(R.color.primaryColor);
                     csl = ColorStateList.valueOf(colorInt);
                     hideTranslationSwitch.setBackgroundTintList(csl);
 

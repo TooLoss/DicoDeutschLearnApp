@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@color/primary">
+    android:background="@color/primaryColor">
 
     <RelativeLayout
         android:id="@+id/LogoContainer"
@@ -30,6 +30,7 @@
         android:layout_height="fill_parent"
         android:layout_below="@id/LogoContainer"
         android:background='@drawable/black_rounded_top'
+        android:backgroundTint="@color/backgroundColor"
         android:orientation="vertical"
         app:layout_constraintWidth_max="10dp"
         app:layout_constrainedWidth="true"
@@ -50,6 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:background="@drawable/white_rounded"
+                android:backgroundTint="@color/subBackgroundColor"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingVertical="5dp"
@@ -70,7 +72,7 @@
                         android:fontFamily="@font/gilroy_bold"
                         android:gravity="start"
                         android:text="0"
-                        android:textColor="@color/dark"
+                        android:textColor="@color/primaryTextColor"
                         android:textSize="20dp">
                     </TextView>
 
@@ -79,8 +81,8 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/megabyte_regular"
                         android:gravity="start"
-                        android:text="mot(s) trouvé(s) aujourd'hui"
-                        android:textColor="@color/dark"
+                        android:text="mot(s) trouvé(s) cette semaine"
+                        android:textColor="@color/subTextColor"
                         android:textSize="10dp">
                     </TextView>
                 </LinearLayout>
@@ -90,24 +92,28 @@
                     android:layout_height="fill_parent"
                     android:layout_gravity="end"
                     android:layout_weight="1"
-                    android:background="@drawable/black_rounded"
-                    android:gravity="end">
-
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="#0000"
-                        android:onClick="goToPage"
-                        android:tag="1">
-                    </Button>
-
-                    <ImageView
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:background="@drawable/ic_arrow">
-                    </ImageView>
+                    android:gravity="center_vertical">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/black_rounded"
+                        android:layout_marginVertical="4dp">
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#0000"
+                            android:onClick="goToPage"
+                            android:layout_marginVertical="4dp"
+                            android:tag="1">
+                        </Button>
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/ic_arrow">
+                        </ImageView>
+                    </RelativeLayout>
                 </RelativeLayout>
             </LinearLayout>
 
@@ -124,7 +130,7 @@
                     android:fontFamily="@font/megabyte_black_normal"
                     android:letterSpacing=".02"
                     android:text="apprendre l'allemand"
-                    android:textColor="@color/white"
+                    android:textColor="@color/primaryTextColor"
                     android:textSize="20dp">
 
                 </TextView>
@@ -135,7 +141,7 @@
                     android:fontFamily="@font/megabyte_regular"
                     android:letterSpacing=".3"
                     android:text="outlis disponibles"
-                    android:textColor="@color/light_gray"
+                    android:textColor="@color/subTextColor"
                     android:textSize="10dp">
 
                 </TextView>
@@ -165,7 +171,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="60dp"
                         android:background="@drawable/black_rounded"
-                        android:backgroundTint="@color/dark_gray"
+                        android:backgroundTint="@color/subBackgroundColor"
                         android:layout_row="0"
                         android:layout_column="0">
 
@@ -186,7 +192,7 @@
                                     android:layout_height="20dp"
                                     android:layout_gravity="center"
                                     android:background="@drawable/ic_translate"
-                                    android:backgroundTint="@color/white">
+                                    android:backgroundTint="@color/primaryTextColor">
                                 </ImageView>
                             </RelativeLayout>
 
@@ -204,7 +210,7 @@
                                     android:gravity="center"
                                     android:text="traduire un mot"
                                     android:textAlignment="center"
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/primaryTextColor"
                                     android:textSize="12sp">
                                 </TextView>
                             </RelativeLayout>
@@ -228,7 +234,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="60dp"
                         android:background="@drawable/black_rounded"
-                        android:backgroundTint="@color/dark_gray"
+                        android:backgroundTint="@color/subBackgroundColor"
                         android:layout_row="2"
                         android:layout_column="0">
 
@@ -249,7 +255,7 @@
                                     android:layout_height="20dp"
                                     android:layout_gravity="center"
                                     android:background="@drawable/ic_ico_search"
-                                    android:backgroundTint="@color/white">
+                                    android:backgroundTint="@color/primaryTextColor">
                                 </ImageView>
                             </RelativeLayout>
 
@@ -267,7 +273,7 @@
                                     android:gravity="center"
                                     android:text="entrainement"
                                     android:textAlignment="center"
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/primaryTextColor"
                                     android:textSize="12sp">
                                 </TextView>
                             </RelativeLayout>
@@ -290,7 +296,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="60dp"
                         android:background="@drawable/black_rounded"
-                        android:backgroundTint="@color/dark_gray"
+                        android:backgroundTint="@color/subBackgroundColor"
                         android:layout_row="3"
                         android:layout_column="0">
 
@@ -311,7 +317,7 @@
                                     android:layout_height="20dp"
                                     android:layout_gravity="center"
                                     android:background="@drawable/ic_list"
-                                    android:backgroundTint="@color/white">
+                                    android:backgroundTint="@color/primaryTextColor">
                                 </ImageView>
                             </RelativeLayout>
 
@@ -329,7 +335,7 @@
                                     android:gravity="center"
                                     android:text="liste complète"
                                     android:textAlignment="center"
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/primaryTextColor"
                                     android:textSize="12sp">
                                 </TextView>
                             </RelativeLayout>
@@ -360,7 +366,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Version de la liste de mots : 2022-08-31"
-                android:textColor="@color/light_gray"
+                android:textColor="@color/subTextColor"
                 android:fontFamily="@font/megabyte_regular"
                 android:textSize="10sp"
                 android:padding="5dp"

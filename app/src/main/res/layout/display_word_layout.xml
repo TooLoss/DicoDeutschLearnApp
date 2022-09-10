@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     app:cardElevation="4dp"
     app:cardCornerRadius="8dp"
-    app:cardBackgroundColor="@color/dark_gray"
+    app:cardBackgroundColor="@color/subBackgroundColor"
     android:layout_marginHorizontal="8dp"
     android:layout_marginVertical="4dp">
 
@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:text="manger"
                 android:fontFamily="@font/megabyte_black_normal"
-                android:textColor="@color/white"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="12sp">
             </TextView>
             <TextView
@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:text="essen : er isst - er ass - er hat gegessen"
                 android:fontFamily="@font/megabyte_regular"
-                android:textColor="@color/white"
+                android:textColor="@color/subTextColor"
                 android:textSize="12sp">
             </TextView>
         </LinearLayout>
@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:text=""
                 android:fontFamily="@font/megabyte_black_normal"
-                android:textColor="@color/white"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="12sp"
                 android:gravity="center_vertical"
                 android:layout_marginStart="5dp">

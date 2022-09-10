@@ -153,10 +153,10 @@ public class translate_search extends AppCompatActivity {
                 useGermanTranslation = false;
                 rowFindWord = 2;
 
-                colorInt = getResources().getColor(R.color.primary);
+                colorInt = getResources().getColor(R.color.primaryColor);
                 csl = ColorStateList.valueOf(colorInt);
                 view.setBackgroundTintList(csl);
-                colorInt = getResources().getColor(R.color.white);
+                colorInt = getResources().getColor(R.color.primaryTextColor);
                 csl = ColorStateList.valueOf(colorInt);
                 useGermanTranslationSwitch.setBackgroundTintList(csl);
                 break;
@@ -165,10 +165,10 @@ public class translate_search extends AppCompatActivity {
                 useGermanTranslation = true;
                 rowFindWord = 1;
 
-                colorInt = getResources().getColor(R.color.primary);
+                colorInt = getResources().getColor(R.color.primaryColor);
                 csl = ColorStateList.valueOf(colorInt);
                 view.setBackgroundTintList(csl);
-                colorInt = getResources().getColor(R.color.white);
+                colorInt = getResources().getColor(R.color.primaryTextColor);
                 csl = ColorStateList.valueOf(colorInt);
                 useFrenchTranslationSwitch.setBackgroundTintList(csl);
                 break;
