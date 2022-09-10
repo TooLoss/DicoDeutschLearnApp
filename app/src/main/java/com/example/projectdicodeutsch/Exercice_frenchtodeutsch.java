@@ -66,6 +66,8 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
     public boolean useParfait = false;
     public boolean usePreterit = false;
 
+    TextView scoreTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,12 +80,18 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
         RelativeLayout FrenchBox = findViewById(R.id.WordFrench);
         EditText FindContent = findViewById(R.id.EditTextWord);
 
+        scoreTextView = findViewById(R.id.scoreText);
+
         FrenchBox.setBackgroundResource(R.drawable.color_animation);
         ColorAnimation = (AnimationDrawable) FrenchBox.getBackground();
 
         // Recycler View Init
         wordRecyclerView = findViewById(R.id.fail_word);
         wordRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        SharedPreferences mPrefs = getSharedPreferences("DataFile", 0);
+        String mString = mPrefs.getString("appSave", "0");
+        scoreTextView.setText("Score : " + mString);
 
         try {
             ExercicesWords = RefindWord(WordFrench);
@@ -271,46 +279,6 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
             // Remettre les mots raté avec une plus grande probabilité.
             int indexRecentFailWordRandom = getRandomNumber(0, failFrenchWordList.size() - 1);
 
-            /*
-
-            if ((!useVerbeFort && failWordTypeList.get(indexRecentFailWordRandom) != "VF") || (!useVerbeConjugue && failWordTypeList.get(indexRecentFailWordRandom) != "VC")) {
-                switch (failWordTypeList.get(indexRecentFailWordRandom)) {
-                    case "VFC":
-                        if (useVerbeFort) {
-                            ReturnWords[0] = failFrenchWordList.get(indexRecentFailWordRandom);
-                            ReturnWords[1] = failGermanWordList.get(indexRecentFailWordRandom);
-                            ReturnWords[2] = failWordTypeList.get(indexRecentFailWordRandom);
-
-                            failFrenchWordList.remove(indexRecentFailWordRandom);
-                            failGermanWordList.remove(indexRecentFailWordRandom);
-                            failWordTypeList.remove(indexRecentFailWordRandom);
-                        }
-                        break;
-                    case "VC":
-                        if (useVerbeConjugue) {
-                            ReturnWords[0] = failFrenchWordList.get(indexRecentFailWordRandom);
-                            ReturnWords[1] = failGermanWordList.get(indexRecentFailWordRandom);
-                            ReturnWords[2] = failWordTypeList.get(indexRecentFailWordRandom);
-
-                            failFrenchWordList.remove(indexRecentFailWordRandom);
-                            failGermanWordList.remove(indexRecentFailWordRandom);
-                            failWordTypeList.remove(indexRecentFailWordRandom);
-                        }
-                        break;
-                    default:
-                        if (useReste) {
-                            ReturnWords[0] = failFrenchWordList.get(indexRecentFailWordRandom);
-                            ReturnWords[1] = failGermanWordList.get(indexRecentFailWordRandom);
-                            ReturnWords[2] = failWordTypeList.get(indexRecentFailWordRandom);
-
-                            failFrenchWordList.remove(indexRecentFailWordRandom);
-                            failGermanWordList.remove(indexRecentFailWordRandom);
-                            failWordTypeList.remove(indexRecentFailWordRandom);
-                        }
-                        break;
-                }
-            }
-            */
             ReturnWords[0] = failFrenchWordList.get(indexRecentFailWordRandom);
             ReturnWords[1] = failGermanWordList.get(indexRecentFailWordRandom);
             ReturnWords[2] = failWordTypeList.get(indexRecentFailWordRandom);
@@ -372,6 +340,7 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
            SharedPreferences.Editor mEditor = mPrefs.edit();
            mString = String.valueOf(Integer.parseInt(mString) + 1);
            mEditor.putString("appSave", mString).apply();
+           scoreTextView.setText("Score : " + mString);
 
        } catch (IOException e) {
            e.printStackTrace();
