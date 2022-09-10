@@ -36,12 +36,12 @@ class MainActivity : AppCompatActivity() {
         val weekNum = mPrefs.getString("weekNumber", "0")
 
         val cal = Calendar.getInstance()
-        val dayOfYear = cal[Calendar.DAY_OF_YEAR].toString()
+        val clearCalendar = cal[Calendar.WEEK_OF_YEAR].toString()
 
-        if(weekNum != dayOfYear) {
+        if(weekNum != clearCalendar) {
             val mEditor = mPrefs.edit()
             mEditor.putString("appSave", "0").apply()
-            mEditor.putString("weekNumber", dayOfYear).apply()
+            mEditor.putString("weekNumber", clearCalendar).apply()
             mEditor.apply()
         }
 
