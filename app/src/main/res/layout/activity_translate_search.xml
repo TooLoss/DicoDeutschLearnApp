@@ -181,7 +181,7 @@
                     android:hint="Entez un mot"
                     android:inputType="text"
                     android:paddingHorizontal="12dp"
-                    android:textColor="@color/light_gray"
+                    android:textColor="@color/primaryTextColor"
                     android:textColorHint="@color/primaryTextColor"
                     android:textSize="10dp" />
 
