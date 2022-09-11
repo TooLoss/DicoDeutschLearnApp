@@ -128,8 +128,8 @@
                 android:button="@null"
                 android:fontFamily="@font/megabyte_regular"
                 android:gravity="center"
-                android:text="🇫🇷 ➡ 🇩🇪"
-                android:textColor="@color/dark"
+                android:text="🇫🇷 → 🇩🇪"
+                android:textColor="@color/backgroundColor"
                 android:textSize="12sp"
                 android:onClick="switchTranslation"/>
 
@@ -146,8 +146,8 @@
                 android:button="@null"
                 android:fontFamily="@font/megabyte_regular"
                 android:gravity="center"
-                android:text="🇩🇪 ➡ 🇫🇷"
-                android:textColor="@color/dark"
+                android:text="🇩🇪 → 🇫🇷"
+                android:textColor="@color/backgroundColor"
                 android:textSize="12sp"
                 android:onClick="switchTranslation"/>
         </RadioGroup>
