@@ -406,4 +406,3 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
         });
     }
 }
-
