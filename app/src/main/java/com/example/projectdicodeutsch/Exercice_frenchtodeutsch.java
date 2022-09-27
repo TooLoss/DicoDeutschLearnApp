@@ -247,6 +247,10 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
                             DeutschLine.add(values[4]);
                             FrenchLine.add(values[1] + " > conjugé au parfait : er ...");
                             Wordtype.add(values[0]);
+                        } else {
+                            DeutschLine.add(values[5]);
+                            FrenchLine.add(values[1] + " > conjugé au parfait : er ...");
+                            Wordtype.add(values[0]);
                         }
                         ++NumLine;
                     }

@@ -16,15 +16,15 @@ V,agir,handeln : er handelt - handelte - hat gehandelt
 VF,aider,helfen : er hilft - half - hat geholfen
 V,aimer,lieben : er liebt - liebte - hat geliebt
 V,aimer bien,mögen : er mag - mochte - hat gemocht
-V,aller à pied,gehen : er geht - ging - ist gegangen
+VF,aller à pied,gehen : er geht - ging - ist gegangen
 VF,aller en vehicule,fahren : er fährt - fuhr - ist gefahren
 N,allié,Der Verbündete -n
 V,allumer,her vorheben
 V,améliorer,verbessern : er verbessert - verbesserte - hat verbessert
 N,amour,Die Liebe
 VF,appeler,rufen : er ruft - rief - hat gerufen
-V,apporter,beobachten : er bringt - brachte - hat gebracht
-V,apporter,bringen : er bringt - brachte - hat gebracht
+V,observer,beobachten
+VF,apporter,bringen : er bringt - brachte - hat gebracht
 V,apprendre une info,erfahren : er erfährt - erfuhr - hat erfahren
 N,argent,Das Geld
 N,art,Die Kunst -ü -e
@@ -82,7 +82,7 @@ V,confiance,vertrauen : er vertraut - vertraute - hat vertraut
 V,confirmer,bestätigen
 V,confondre,verwechseln : er verwechselt - verwechselte - hat verwechsekt
 N,congé,Der Urlaub
-V,connaître,kennen : er kennt - kannte - hat gekann
+VF,connaître,kennen : er kennt - kannte - hat gekannt
 V,conseiller deviner,raten : rät - riet - hat geraten
 N,consommation,Der Konsum
 V,consommer,verbrauchen : er verbraucht - verbrauchte - hat verbraucht
@@ -150,8 +150,8 @@ V,éspérer,hoffen
 V,essayer,versuchen : er versucht - versuchte - hat versucht
 V,éteindre,her unterfahren
 A,étrange,seltsam
-V,être,sein : er ist - war - ist geworden
-V,être assis,sitzen : er sitzt - saß - hat gesessen
+V,être,sein : er ist - war - ist gewesen
+VF,être assis,sitzen : er sitzt - saß - hat gesessen
 VF,être debout,stehen : er steht - stand - hat gestanden
 A,être là l'un pour l'autre,füreinander da sein
 N,évolution,Die Entwicklung
@@ -215,7 +215,7 @@ N,la réponse,Die Antwort -en
 VF,laisser / faire qqc,lassen : er lässt - ließ - hat gelassen
 VF,laver,waschen : er wäscht - wusch - hat gewaschen
 N,le membre,Das Mitglied -er
-N,le mérite,Das Verdienst : er ruft - rief - hat gerufen
+N,le mérite,Das Verdienst
 N,le monde,Die Welt
 N,le mouvement,Die Bewegung -en
 N,le passé,Die Vergangenheit
@@ -315,7 +315,7 @@ V,revenir,zurück kehren : er kehrt zurück - kehrte zurück - ist zurückgekehr
 N,revenue,Das Einkommen
 A,rigolo marrant,lustig
 V,s'amuser,Spaß haben : er hat Spaß
-V,s'appeller,heißen : er heißt - hieß - hat geheißen
+VF,s'appeller,heißen : er heißt - hieß - hat geheißen
 V,s'ennuyer,sich langweilen : er langweilt sich - langweilte sich - hat sich gelangweilt
 V,s'imaginer / se présenter,vorstellen
 V,s'occuper de,sich kümmern um : er kümmert - kümmerte - hat sich gekümmert +Acc
@@ -323,7 +323,7 @@ N,salaire,Der Lohn -ö -e
 A,salut au revoir,tschüss
 VF,sauter,springen : er springt - sprang - hat gesprungen
 V,sauver,retten : er rettet - rettete - hat gerettet
-V,savoir,wissen : er weiß - wusste - hat gewusst
+VF,savoir,wissen : er weißt - wusste - hat gewusst
 N,sculture,Die Skulptur -en
 V,se battre / lutter,kämpfen : er kämpft - kämpfte
 V,se détendre,chillen
@@ -366,7 +366,7 @@ V,utiliser mettre à profit,nutzen : er nutz - nutze - hat genutzt
 N,vacances,Die Ferien
 N,valeur,Der Wert -e
 VF,valoir,gelten : er gilt - galt - hat gegolten
-V,venir,kommen : er kommt - kam - ist gekommen
+VF,venir,kommen : er kommt - kam - ist gekommen
 N,victime,Das Opfer
 A,violent,gewalt
 V,visiter,besuchen : er besucht - besuchte - hat besucht
