@@ -19,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupMenu;
 import android.widget.RelativeLayout;
@@ -50,7 +51,7 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
     AnimationDrawable ColorAnimation;
 
     private boolean useVerbeFort = false;
-    private boolean useVerbeConjugue = false;
+    private boolean useNewWord = false;
     private boolean useReste = true;
 
     private RecyclerView wordRecyclerView;
@@ -166,11 +167,32 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
         // Toggle Verbes Forts
 
         ToggleButton toggleVerbeFort = (ToggleButton) findViewById(R.id.toggleVerbesForts);
+        RelativeLayout toggleVerbeFortColor = (RelativeLayout) findViewById(R.id.toggleVerbesFortsColor);
         toggleVerbeFort.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 useVerbeFort = toggleVerbeFort.isChecked();
-                toggleButtonSwitchColor(toggleVerbeFort);
+                toggleButtonSwitchColor(toggleVerbeFortColor, toggleVerbeFort);
+                try {
+                    ExercicesWords = RefindWord(WordFrench);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                failFrenchWordList.clear();
+                failGermanWordList.clear();
+                failWordTypeList.clear();
+                wordAdapter = new WordAdapter(thisActivity, failFrenchWordList, failGermanWordList, false);
+                wordRecyclerView.setAdapter(wordAdapter);
+            }
+        });;
+
+        ToggleButton toggleNewWord = (ToggleButton) findViewById(R.id.newWord);
+        RelativeLayout toggleNewWordColor = (RelativeLayout) findViewById(R.id.newWordColor);
+        toggleNewWord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                useNewWord = toggleNewWord.isChecked();
+                toggleButtonSwitchColor(toggleNewWordColor, toggleNewWord);
                 try {
                     ExercicesWords = RefindWord(WordFrench);
                 } catch (IOException e) {
@@ -185,11 +207,12 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
         });;
 
         ToggleButton toggleWordRest = (ToggleButton) findViewById(R.id.toggleWordRest);
+        RelativeLayout toggleWordRestColor = (RelativeLayout) findViewById(R.id.toggleWordRestColor);
         toggleWordRest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 useReste = toggleWordRest.isChecked();
-                toggleButtonSwitchColor(toggleWordRest);
+                toggleButtonSwitchColor(toggleWordRestColor, toggleWordRest);
                 try {
                     ExercicesWords = RefindWord(WordFrench);
                 } catch (IOException e) {
@@ -204,15 +227,25 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
         });;
     }
 
-    private void toggleButtonSwitchColor(ToggleButton button) {
+    private void toggleButtonSwitchColor(RelativeLayout layout,ToggleButton button) {
         if(button.isChecked()) {
-            int colorInt = getResources().getColor(R.color.green);
-            ColorStateList csl = ColorStateList.valueOf(colorInt);
-            button.setBackgroundTintList(csl);
+            int colorInt = getResources().getColor(R.color.selection);
+            ColorStateList cslBackground = ColorStateList.valueOf(colorInt);
+
+            int colorText = getResources().getColor(R.color.backgroundColor);
+            ColorStateList cslText = ColorStateList.valueOf(colorText);
+
+            layout.setBackgroundTintList(cslBackground);
+            button.setTextColor(cslText);
         } else {
-            int colorInt = getResources().getColor(R.color.red);
-            ColorStateList csl = ColorStateList.valueOf(colorInt);
-            button.setBackgroundTintList(csl);
+            int colorInt = getResources().getColor(R.color.subBackgroundColor);
+            ColorStateList cslBackground = ColorStateList.valueOf(colorInt);
+
+            int colorText = getResources().getColor(R.color.primaryTextColor);
+            ColorStateList cslText = ColorStateList.valueOf(colorText);
+
+            layout.setBackgroundTintList(cslBackground);
+            button.setTextColor(cslText);
         }
     }
 
@@ -221,6 +254,7 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
         List<String> FrenchLine = new ArrayList<>();
         List<String> DeutschLine = new ArrayList<>();
         List<String> Wordtype = new ArrayList<>();
+        List<String> WordDate = new ArrayList<>();
 
         String line = null;
         InputStream InputStream = getResources().openRawResource(R.raw.wordlist_trainmode);
@@ -235,32 +269,64 @@ public class Exercice_frenchtodeutsch extends AppCompatActivity {
             switch (values[0]) {
                 case "VFC":
                     if (useVerbeFort) {
-                        if (usePresent) {
-                            DeutschLine.add(values[2]);
-                            FrenchLine.add(values[1] + " > conjugé au présent : er ...");
-                            Wordtype.add(values[0]);
-                        } else if (usePreterit) {
-                            DeutschLine.add(values[3]);
-                            FrenchLine.add(values[1] + " > conjugé au prétérit : er ...");
-                            Wordtype.add(values[0]);
-                        } else if (useParfait) {
-                            DeutschLine.add(values[4]);
-                            FrenchLine.add(values[1] + " > conjugé au parfait : er ...");
-                            Wordtype.add(values[0]);
+                        if(useNewWord ) {
+                            if(values[6].equals("2022")) {
+                                if (usePresent) {
+                                    DeutschLine.add(values[2]);
+                                    FrenchLine.add(values[1] + " > conjugé au présent : er ...");
+                                    Wordtype.add(values[0]);
+                                } else if (usePreterit) {
+                                    DeutschLine.add(values[3]);
+                                    FrenchLine.add(values[1] + " > conjugé au prétérit : er ...");
+                                    Wordtype.add(values[0]);
+                                } else if (useParfait) {
+                                    DeutschLine.add(values[4]);
+                                    FrenchLine.add(values[1] + " > conjugé au parfait : er ...");
+                                    Wordtype.add(values[0]);
+                                } else {
+                                    DeutschLine.add(values[5]);
+                                    FrenchLine.add(values[1] + " > conjugé au parfait : er ...");
+                                    Wordtype.add(values[0]);
+                                }
+                                ++NumLine;
+                            }
                         } else {
-                            DeutschLine.add(values[5]);
-                            FrenchLine.add(values[1] + " > conjugé au parfait : er ...");
-                            Wordtype.add(values[0]);
+                            if (usePresent) {
+                                DeutschLine.add(values[2]);
+                                FrenchLine.add(values[1] + " > conjugé au présent : er ...");
+                                Wordtype.add(values[0]);
+                            } else if (usePreterit) {
+                                DeutschLine.add(values[3]);
+                                FrenchLine.add(values[1] + " > conjugé au prétérit : er ...");
+                                Wordtype.add(values[0]);
+                            } else if (useParfait) {
+                                DeutschLine.add(values[4]);
+                                FrenchLine.add(values[1] + " > conjugé au parfait : er ...");
+                                Wordtype.add(values[0]);
+                            } else {
+                                DeutschLine.add(values[5]);
+                                FrenchLine.add(values[1] + " > conjugé au parfait : er ...");
+                                Wordtype.add(values[0]);
+                            }
+                            ++NumLine;
                         }
-                        ++NumLine;
                     }
                     break;
                 default:
                     if (useReste) {
-                        FrenchLine.add(values[1]);
-                        DeutschLine.add(values[2]);
-                        Wordtype.add(values[0]);
-                        ++NumLine;
+                        if(useNewWord) {
+                            if(values[6].equals("2022")) {
+                                FrenchLine.add(values[1]);
+                                DeutschLine.add(values[2]);
+                                Wordtype.add(values[0]);
+                                ++NumLine;
+                            }
+                        } else {
+                            FrenchLine.add(values[1]);
+                            DeutschLine.add(values[2]);
+                            Wordtype.add(values[0]);
+                            ++NumLine;
+                        }
                     }
                     break;
             }

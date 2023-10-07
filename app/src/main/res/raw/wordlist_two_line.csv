@@ -1,8 +1,147 @@
+N,la direction,Die Richtung -en
+N,le médecin,Der Arzt -ä -e
+N,le tract,Das Flugblatt -ä -er
+N,le mémorial,Das Denkmal -ä -er
+V,imprimer,drucken : er druckt - druckte - hat gedruckt
+V,diffuser,verteilen : er verteilt - verteilte - hat verteilt
+V,étudier,studieren : er strudiert - studierte - hat studiert
+V,sensibilisé,sensibilisieren : er sensibilisiert - sensibilisierte - hat sensibilisiert
+N,l'acte,Die Tat -en
+V,faire de la résistance,Widerstand leisten gegen + Acc
+V,supprimer / éteindre,aus schalten
+V,intimider,ein schüchtern
+A,énorme,gewaltig
+A,public,öffentlich
+N,le cadre,Der Rahmen
+V,rêver,träumen : er träumt - träumte - hat geträumt
+A,venir à l'esprit,fällt ein
+A,controversé,umstritten
+A,suspect,verdächtig
+A,d'une part d'une autre,einerseits andererseits
+N,le député,Der Abgeordnete -n
+N,le crime,Das Verbrechen
+VF,faire le queue,Schlange stehen : er steht - stand - hat gestanden
+V,emprisonner,verhaften : er verhaftet - vergaftete - hat verhaftet
+V,se cacher,verstecken : er versteckt - versteckte - hat versteckt
+A,voter pour Bilèle,für Bilèle stimmen
+A,voter contre Bilèle,gegen Bilèle stimmen
+V,voter,stimmen : er stimmt - stimmte - hat gestimmt
+N,autodafé,Die Bücherverbrennung
+N,l'ambiance,Die Stimmung
+N,liberté d'expression,Die Meinungsfreiheit
+N,écrivain,Der Schriftsteller
+VF,interdire,verbieten : er verbietet - verbot - hat verboten
+V,haïr,hassen : er hasst - hasste - hat gehasst
+V,mettre en scène,inszenieren : er inszeniert - inszeniertet - hat inszeniert
+V,éliminer,beseitige : er beseitigen - beseitigte - hat beseitigt
+A,vide,leer
+N,la mort,Der Tod
+N,le livre,das Buch ü -er
+N,la Terre,Die Erde
+V,atteindre,erreichen : er erreicht - erreichte - hat erreicht
+V,relier,verbinden : es verbindet - verband - hat verbunden
+A,lentement,langsam
+N,l'évènement,Der Ereignis -e
+A,ensemble,gemeinsam
+N,la signification,Die Bedeutung
+N,l'attentat,Der Anschlag -ä -e
+A,perpétrer un attentat,ein Anschlag verüben auf + ACC
+A,fragile,zerbrechlich
+V,se souvenir,erinnern : er erinnert - erinnerte - hat erinnert
+VF,gérer,um gehen : er geht um - ging um - ist umgegangen
+V,marquer qqc,prägen : er prägt - prägte - hat geprägt
+V,échouer,scheitern : er scheitert - scheiterte - ist gescheitert
+N,le souci,Die Sorge -n
+N,modèle,Das Vorbild -er
+N,nostalgie,Die Sehnsucht
+V,originaire de,stammen aus + : er stammt - stammte - hat gestammt
+V,faire / rechercher,forschen über + : er forscht  - forschte - hat geforscht
+VF,quitter,verlassen : er verlässt - verließ - hat verlassen
+N,le discours,Die Rede -n
+VF,tenir un discours,eine Rede halten : er hält - hielt - hat gehalten
+N,le territoire,Das Gebiet -e
+V,défendre,versteidigen : er verteidigt - verteidigte - hat verteidigt
+A,clair,hell
+A,sombre,dunkel
+A,autrefois,damals
+N,réforme monaitaire,Die Währungsreform
+N,le pont,Die Brücke -n
+N,air,Die Luft
+N,l'avion,Das Flugzeug -e
+N,le train,Die Bahn
+N,le chemin,Der Weg
+A,approvisionner,versorgen : er versorgt - versorgte - hat versorgt
+V,bloquer,sperren : er sperrt - sperrte - hat gesperrt
+N,l'Homme,Der Mensch -en
+N,l'humanité,Die Menschheit
+N,le peuple,Das Volk -ö -er
+V,rejeter,ab lehnen : er lehnt ab - lehnte ab - hat abgelehnt
+V,détruire,zerstören : er zerstörft - zerstörfte - hat zerstörft
+N,le livre,Das Buch -ü -er
+N,l'Histoire,Die Geschiehte -n
+N,la science,Die Wissenschaft -en
+V,fonder,gründen : er gründet - gründete - hat gründetet
+N,la circulation,Der Verkehr
+A,suspect,verdächtig
+VF,interdire,verbieten : er verbietet - verbot - hat verboten
+N,économie,Die Wirtschaft
+N,le modèle,Das Vorbild -er
+N,le commerce,Der Handel
+N,le côté,Die Seite -n
+A,ancien,ehemalig
+A,SDF,obdachlos
+V,être fiable,verlässlich sein
+A,facile,einfach
+N,la force,Die Macht -ä -e
+N,le mur,Die Mauer -n
+N,le gouvernement,Die Regierung -en
+N,la capitale,Die Hauptstadt -ä -e
+N,l'Etat,Der Staat -en
+V,occuper,besetzen : er besetzt - besetzte - hat besetzt
+V,séparer,trennen : er trennt - trennte - hat getrennt
+V,construire,bauen : er baut - baute - hat gebaut
+V,immiter,ein schränken : er schränkt ein - schränkte ein - hat eingeschränkt
+V,soutenir,unterstützen : er unterstützt - unterstützte - hat unterstützt
+N,la guerre,Der Krieg -e
+N,la peur,Der Angst -ä -e
+N,le camp,Das Lager
+N,la propagande,Die Propaganda
+N,arme,Die Waffe -n
+N,ouest,Der Westen
+N,influence,Der Einfluss -ü -e
+N,leadership,Die Führung
+V,repousser,ab wehren : er wehrt ab - wehrte ab - hat abgewehrt
 N,la faute,Der Fehler
 N,le traité,Der Vertrag -ä -e
 V,exiger,fordern : er fordert - forderte - hat gefordert
 V,empêcher,vehindern : er vehindert - vehinderte - hat vehindert
+V,acheter,kaufen : er kauft - kaufte - hat gekauft
 V,signer,unterzeichnen : er unterzeichnet - unterzeichnete - hat unterzeichnet
+V,agir,handeln : er handelt - handelte - hat gehandelt
+VF,aller en vehicule,fahren : er fährt - fuhr - ist gefahren
+N,argent,Das Geld
+V,augmenter,steigen : er steigt - stieg - ist gestiegen
+N,choix éléction,Die Wahl -en
+V,comparer,vergleichen : er vergleicht - verglich - hat verglichen
+N,condition,Die Bedingung -en
+V,crée,schaffen : er schafft - schuf - hat geschaffen
+N,droit,Das Recht -e
+VF,être assis,sitzen : er sitzt - saß - hat gesessen
+V,exclure,aus schließen : er schließt aus - schloss aus - hat ausgeschlossen
+N,expérience,Die Erfahrung -en
+N,frontière,Die Grenze -n
+V,fuir,fliehen : er fliecht - floh - ist geflohen
+N,l'affiche,Das Plakat -e
+N,l'espoir,Die Hoffnung -en
+N,liberté,Die Freiheit -en
+VF,parler,sprechen : er spricht - sprach - hat gesprochen
+N,partie,Der Teil
+VF,perdre,verlieren : er verliert - verlor - hat verloren
+V,se battre / lutter,kämpfen : er kämpft - kämpfte
+N,société,Die Gesellschaft -en
+N,tension,Die Spannung -er
+V,utiliser mettre à profit,nutzen : er nutz - nutze - hat genutzt
+V,s'assurer,sicher stellen : er stellt sicher - stellte sicher - hat sichergestellt
 A,à l'exterieur,drauẞen
 A,à l'interieur,drinnen
 A,à mon avis,meiner Meinung nach
@@ -12,12 +151,10 @@ N,abus dérive,Der Miẞstand -ä -e
 V,acclamer,zujubeln
 V,accompagner,begleiten : er begleitet - begleitete - hat begleitet
 N,addition facture,Die Rechnung -en
-V,agir,handeln : er handelt - handelte - hat gehandelt
 VF,aider,helfen : er hilft - half - hat geholfen
 V,aimer,lieben : er liebt - liebte - hat geliebt
 V,aimer bien,mögen : er mag - mochte - hat gemocht
 VF,aller à pied,gehen : er geht - ging - ist gegangen
-VF,aller en vehicule,fahren : er fährt - fuhr - ist gefahren
 N,allié,Der Verbündete -n
 V,allumer,her vorheben
 V,améliorer,verbessern : er verbessert - verbesserte - hat verbessert
@@ -26,7 +163,6 @@ VF,appeler,rufen : er ruft - rief - hat gerufen
 V,observer,beobachten
 VF,apporter,bringen : er bringt - brachte - hat gebracht
 V,apprendre une info,erfahren : er erfährt - erfuhr - hat erfahren
-N,argent,Das Geld
 N,art,Die Kunst -ü -e
 A,artificiel,künstlich
 N,artiste,Der Künstler
@@ -34,7 +170,6 @@ N,artiste,Die Künstlerin
 A,assez,genug
 V,assoir,sich setzen : er setzt sich - setzte sich - hat gesetzt
 V,assurer,sichern
-V,augmenter,steigen : er steigt - stieg - ist gestiegen
 N,avantage,Der Vorteil -e
 N,avenir future,Die Zukunft
 N,avis opignon,Die Meinung
@@ -43,7 +178,7 @@ V,avoir besoin,brauchen
 V,avoir du goût,schmecken
 V,avoir honte,sich schämen : er schämt sich - schämte - hat sich geschämt für +acc
 V,avoir le droit,dürfen : er darf - durfte - hat gedurft
-VF,avoir lieu,Statt finden : es findet statt - fand statt - hat stattgefunden
+VF,avoir lieu,statt finden : es findet statt - fand statt - hat stattgefunden
 N,bar glacé,Das Eiskafé
 V,battre frapper,schlagen : er schlägt - schlug - hat geschlagen
 A,beau,schön
@@ -68,16 +203,13 @@ V,charger uploader,hoch laden : er lädt hoch - er lud hoch - et hat hochgeladen
 A,cher,teuer
 V,chercher,suchen : er sucht - suchte - hat gesucht
 V,choisir élire,wählen : er wählt - wählte - hat gewählt
-N,choix éléction,Die Wahl -en
 N,climat,Das Klima
 N,Coca,Die Cola
 N,combat,Der Kampf -ä -e
 V,combattre,kampfen : er kampft
 V,commander,bestellen
 VF,commencer,beginnen : er beginnt - begann - hat begonnen
-V,comparer,vergleichen : er vergleicht - verglich - hat verglichen
 V,comprendre,verstehen : er versteht - verstand - hat verstanden
-N,condition,Die Bedingung -en
 V,confiance,vertrauen : er vertraut - vertraute - hat vertraut
 V,confirmer,bestätigen
 V,confondre,verwechseln : er verwechselt - verwechselte - hat verwechsekt
@@ -93,7 +225,6 @@ N,courage,Der Mut
 VF,courir marcher,laufen : er läuft - lief - hat gelaufen
 N,cours,Der Unterricht
 V,coûter,kosten : es kostet - kostete - hat gekostet
-V,crée,schaffen : er schafft - schuf - hat geschaffen
 VF,crier,schreien : er schreit - schrie - hat geschrien
 VF,croître grandir,wachsen : er wächst - wuchs - ist gewachsen
 V,cuisiner bouillir,kochen : et kocht - kochte - hat gekocht
@@ -130,7 +261,6 @@ N,domaine,Der Bereich -e
 VF,donner,geben : er gibt - gab - hat gebeben
 V,dormir,schlafen : er schläft - schielf - hat geschlafen
 A,doucement,leise
-N,droit,Das Recht -e
 N,eau,Das Wasser
 N,eau gazeuse,Das Sprudelwasser
 V,échouer,scheitern : er scheitert - scheiterte - ist gescheiterte
@@ -151,12 +281,9 @@ V,essayer,versuchen : er versucht - versuchte - hat versucht
 V,éteindre,her unterfahren
 A,étrange,seltsam
 V,être,sein : er ist - war - ist gewesen
-VF,être assis,sitzen : er sitzt - saß - hat gesessen
 VF,être debout,stehen : er steht - stand - hat gestanden
 A,être là l'un pour l'autre,füreinander da sein
 N,évolution,Die Entwicklung
-V,exclure,aus schließen : er schließt aus - schloss aus - hat ausgeschlossen
-N,expérience,Die Erfahrung -en
 V,expliquer,erklären : er erklärt - erklärte - hat erklärt
 N,exploitation,Die Ausnutzung
 V,exprimer quelque chose,aus drücken : er drückt aus - er drückte aus - hat ausgedrückt
@@ -171,8 +298,6 @@ VF,fermer,schließen : er schließt - schloss - hat geschlossen
 A,fiable,zuverlässig
 A,fort,stark
 N,frère,Das Bruder
-N,frontière,Die Grenze -n
-V,fuir,fliehen : er fliecht - floh - ist geflohen
 N,fuite,Die Flucht
 VF,gagner,gewinnen : er gewinnt - gewann - hat gewonnen
 V,gagner (de l'argent),verdienen
@@ -204,9 +329,7 @@ N,jour,Der Tag -e
 N,jus,Der Saft
 N,justice,Die Gerechtigkeit
 N,l'acteur,Der Schauspieler
-N,l'affiche,Das Plakat -e
 N,l'aventure,Das Abenteuer
-N,l'espoir,Die Hoffnung -en
 N,l'exposition,Die Ausstellung -en
 N,l'oeuvre d'art,Das Kunstwerk -e
 N,la cohésion,Der zusammen halt
@@ -220,7 +343,6 @@ N,le monde,Die Welt
 N,le mouvement,Die Bewegung -en
 N,le passé,Die Vergangenheit
 N,le plat,Das Gericht -e
-N,liberté,Die Freiheit -en
 A,libre,frei
 VF,lire,lesen : er liest - las - hat gelesen
 A,lourd,schwer
@@ -252,10 +374,8 @@ A,original,ausgefallen
 VF,oublier,vergessen : er vergisst - vergass - hat vergessen
 V,ouvrir,öffnen : er öffnet - öffnete - hat geöffnet
 N,parents,Die Eltern
-VF,parler,sprechen : er spricht - sprach - hat gesprochen
 V,parler s'exprimer,reden : er reden - redete - hat geredet
 A,particulièrement,besonders
-N,partie,Der Teil
 A,partout,überall
 V,passer (du temps),verbringen : er verbringt - verbrachte - hat verbreitet
 A,pauvre,arm
@@ -269,7 +389,6 @@ N,peinture,Das Gemäld -n
 VF,penser,denken : er denkt - dachte - hat gedacht
 VF,penser à,denken an + ACC : er denkt an - dachte an - hat gedacht an
 A,pensif,nachdenklich
-VF,perdre,verlieren : er verliert - verlor - hat verloren
 N,père,Der Vater -ä
 N,performance,Die Leistung -en
 A,performant,leistrungfähig
@@ -291,7 +410,7 @@ VF,prendre au sérieux,ernst nehmen : er nimmt ernst - nahm ernst - hat ernstgen
 N,présent,Die Gegenwart
 VF,préter,leihen : er leiht - lieh - hat geliehen
 N,prix,Der Preis -e
-V,produire (un effet),bewirken : es bewirkt - bewirkte - hat bewirkt
+V,produire (un effet),bewirken auf + Acc : es bewirkt - bewirkte - hat bewirkt
 VF,profiter (de qqc),genießen : er genießt - genoss - hat genossen
 N,progrès,Der Fortschritt -e
 N,protection,Der schutz
@@ -325,7 +444,6 @@ VF,sauter,springen : er springt - sprang - hat gesprungen
 V,sauver,retten : er rettet - rettete - hat gerettet
 VF,savoir,wissen : er weißt - wusste - hat gewusst
 N,sculture,Die Skulptur -en
-V,se battre / lutter,kämpfen : er kämpft - kämpfte
 V,se détendre,chillen
 V,se mobiliser,sich für setzen : er setzt sich ein - er setzte sie ein - er hat sich eingesetzt
 V,se moquer,sich lustig machen
@@ -337,9 +455,8 @@ V,se tenir les coudes,zusammen halten : sie halten zusammen - sie hielten zusamm
 VF,se trouver / être couché,liegen : er liegt - lag - hat gelegen
 N,semaine,Die Woche -n
 A,sens,Sinn
-N,seul psycologique,einsam
+A,seul psycologique,einsam
 V,signifier,bedeuten : es bedeutet - bedeutete - hat bedeutet
-N,société,Die Gesellschaft -en
 N,soif,Der Durst
 N,souffrance,Das Leid
 V,souffrire,leiden
@@ -350,7 +467,6 @@ A,sûr / sûrement,sicher
 N,temps,Die Zeit -en
 VF,tenir s'arrêter,halten : er hält - hielt - hat gehalten
 V,tenir serré dans ses bras,fest halten : er hält fest - hielt fest - hat festgehalten
-N,tension,Die Spannung -er
 N,thé,Der Tee
 VF,tirer infuser,ziehen : er zieht - zog - hat gezogen
 VF,tomber,fallen : er fällt - field - ist gefallen
@@ -362,7 +478,6 @@ V,travailler,arbeiten
 N,tribunal,Das Gericht -e
 A,triste,traurig
 VF,trouver,finden : er findet - fand - hat gefunden
-V,utiliser mettre à profit,nutzen : er nutz - nutze - hat genutzt
 N,vacances,Die Ferien
 N,valeur,Der Wert -e
 VF,valoir,gelten : er gilt - galt - hat gegolten

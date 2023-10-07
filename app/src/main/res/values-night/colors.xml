@@ -3,6 +3,7 @@
     <color name="primaryColor">#F5D10D</color>
     <color name="backgroundColor">#FF000000</color>
     <color name="subBackgroundColor">#1B1B1B</color>
+    <color name="selection">#F1F1F1</color>
     <color name="primaryTextColor">#FFFEF5</color>
     <color name="subTextColor">#EAEAEA</color>
     <color name="secondaryColor">#430FFC</color>

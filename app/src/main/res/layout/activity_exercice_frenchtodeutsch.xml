@@ -103,8 +103,7 @@
                 android:gravity="center"
                 android:text="mot français"
                 android:textColor="@color/backgroundColor"
-                android:textSize="15sp">
-            </TextView>
+                android:textSize="15sp"></TextView>
         </RelativeLayout>
 
         <LinearLayout
@@ -184,7 +183,7 @@
                         android:fontFamily="@font/gilroy_bold"
                         android:forceDarkAllowed="false"
                         android:text="Valider"
-                        android:textColor="@color/dark"/>
+                        android:textColor="@color/dark" />
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
@@ -214,94 +213,139 @@
                 android:fontFamily="@font/megabyte_regular"
                 android:text="séléctionnez le type de mot qui peut apparaitre"
                 android:textColor="@color/subTextColor"
-                android:textSize="10dp">
-            </TextView>
+                android:textSize="10dp"></TextView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:weightSum="2">
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="5dp"
-                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:clipChildren="true"
-                        android:gravity="center_vertical"
-                        android:measureWithLargestChild="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
                         android:orientation="horizontal">
 
-                        <ToggleButton
-                            android:id="@+id/toggleVerbesForts"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_marginEnd="3dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/rounded_edittext"
-                            android:backgroundTint="@color/red"
-                            android:fontFamily="@font/megabyte_regular"
-                            android:onClick="disableWordVerbeFort"
-                            android:tag="0"
-                            android:textColor="@color/primaryTextColor"
-                            android:textOff="verbes forts"
-                            android:textOn="verbes forts (Incomplet)"
-                            android:textSize="10sp" />
-
                         <RelativeLayout
-                            android:layout_width="30dp"
-                            android:layout_height="30dp">
+                            android:id="@+id/toggleVerbesFortsColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_edittext"
+                            android:backgroundTint="@color/subBackgroundColor"
+                            android:paddingVertical="5dp">
 
-                            <Button
+                            <LinearLayout
                                 android:layout_width="fill_parent"
-                                android:layout_height="fill_parent"
-                                android:alpha="0"
-                                android:gravity="center"
-                                android:onClick="openConjugationMenu">
-                            </Button>
-
-                            <ImageView
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
+                                android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:background="@drawable/ic_baseline_settings_24"
-                                android:backgroundTint="@color/primaryTextColor">
-                            </ImageView>
+                                android:clipChildren="true"
+                                android:gravity="center_vertical"
+                                android:measureWithLargestChild="true"
+                                android:orientation="horizontal">
+
+                                <ToggleButton
+                                    android:id="@+id/toggleVerbesForts"
+                                    android:layout_width="65dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginEnd="3dp"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/subBackgroundColor"
+                                    android:backgroundTint="#00000000"
+                                    android:fontFamily="@font/megabyte_regular"
+                                    android:onClick="disableWordVerbeFort"
+                                    android:shadowRadius="0"
+                                    android:outlineSpotShadowColor="#00000000"
+                                    android:paddingLeft="10dp"
+                                    android:tag="0"
+                                    android:textColor="@color/primaryTextColor"
+                                    android:textOff="V. FORT"
+                                    android:textOn="V. FORT"
+                                    android:textSize="10sp" />
+
+                                <RelativeLayout
+                                    android:layout_width="40dp"
+                                    android:layout_height="30dp">
+
+                                    <Button
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:alpha="0"
+                                        android:gravity="center"
+                                        android:onClick="openConjugationMenu"></Button>
+
+                                    <ImageView
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/ic_baseline_settings_24"
+                                        android:backgroundTint="@color/primaryTextColor"></ImageView>
+                                </RelativeLayout>
+                            </LinearLayout>
                         </RelativeLayout>
                     </LinearLayout>
-                </LinearLayout>
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="10dp"
-                    android:layout_weight="1">
-
-                    <ToggleButton
-                        android:id="@+id/toggleWordRest"
+                    <RelativeLayout
+                        android:id="@+id/toggleWordRestColor"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
                         android:background="@drawable/rounded_edittext"
-                        android:backgroundTint="@color/green"
-                        android:checked="true"
-                        android:fontFamily="@font/megabyte_regular"
-                        android:textColor="@color/primaryTextColor"
-                        android:textOff="NOM / ADJ / ..."
-                        android:textOn="NOM / ADJ / ..."
-                        android:textSize="10sp" />
-                </RelativeLayout>
-            </LinearLayout>
+                        android:backgroundTint="@color/selection"
+                        android:layout_weight="1">
+
+                        <ToggleButton
+                            android:id="@+id/toggleWordRest"
+                            android:layout_width="103dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/rounded_edittext"
+                            android:backgroundTint="#00000000"
+                            android:checked="true"
+                            android:fontFamily="@font/megabyte_regular"
+                            android:outlineSpotShadowColor="#00000000"
+                            android:shadowRadius="0"
+                            android:textColor="@color/backgroundColor"
+                            android:textOff="NOM / ADJ / ..."
+                            android:textOn="NOM / ADJ / ..."
+                            android:textSize="10sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/newWordColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/rounded_edittext"
+                        android:backgroundTint="@color/subBackgroundColor"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1">
+
+                        <ToggleButton
+                            android:id="@+id/newWord"
+                            android:layout_width="103dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/rounded_edittext"
+                            android:backgroundTint="#00000000"
+                            android:shadowRadius="0"
+                            android:outlineSpotShadowColor="#00000000"
+                            android:checked="false"
+                            android:fontFamily="@font/megabyte_regular"
+                            android:textColor="@color/primaryTextColor"
+                            android:textOff="NOUV. MOTS"
+                            android:textOn="NOUV. MOTS"
+                            android:textSize="10sp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
         </LinearLayout>
 
         <LinearLayout

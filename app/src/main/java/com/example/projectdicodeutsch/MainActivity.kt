@@ -1,5 +1,6 @@
 package com.example.projectdicodeutsch
 
+
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     private val client = OkHttpClient()
     private val apiResponse = ""
+
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -83,6 +85,27 @@ class MainActivity : AppCompatActivity() {
             } else {
                 println("TEST")
             }
+            /*
+            val Id = "1OyNhWVyPK6DDhMizasi2_eRiE7W0yRnPsqJU-3vNXLw"
+            val sheetKey = "AIzaSyB7F7jbtxqESFPyIzvuFNjSSkmsSyQnoOg"
+            val downloadManager = getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
+
+            val spreadsheet = Sheets.Builder(NetHttpTransport(), GsonFactory(), null).build().spreadsheets().get(Id).execute()
+            val sheets = spreadsheet.getSheets()
+
+            val sheetId = sheets[1].properties.sheetId.toString()
+            val sheetName = sheets[1].properties.title.replace(" ","_")
+            val sheetRange = "A1:Z" // Specify the range of cells you want to download
+            //val sheetUrl = "https://docs.google.com/spreadsheets/d/$sheetId/gviz/tq?tqx=out:csv&sheet=$sheetRange??key=AIzaSyB7F7jbtxqESFPyIzvuFNjSSkmsSyQnoOg"
+            val sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/1OyNhWVyPK6DDhMizasi2_eRiE7W0yRnPsqJU-3vNXLw?key=AIzaSyB7F7jbtxqESFPyIzvuFNjSSkmsSyQnoOg"
+            //val request = DownloadManager.Request(Uri.parse(sheetUrl))
+            val request = DownloadManager.Request(Uri.parse(sheetUrl))
+            request.setTitle("Sheet Download")
+            request.setDescription("Downloading sheet data")
+            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+            request.setDestinationInExternalFilesDir(this, Environment.DIRECTORY_DOWNLOADS, "$sheetName.csv")
+            val downloadId = downloadManager.enqueue(request)
+             */
         }
     }
 

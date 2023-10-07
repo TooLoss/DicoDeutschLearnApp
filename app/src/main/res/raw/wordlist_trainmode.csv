@@ -1,380 +1,495 @@
-N,la faute,Der Fehler,,,
-N,le traité,Der Vertrag,,,
-V,exiger,fordern,,,
-V,empêcher,vehindern,,,
-V,signer,unterzeichnen,,,
-A,à l'exterieur,drauẞen,,,
-A,à l'interieur,drinnen,,,
-A,à mon avis,meiner Meinung nach,,,
-V,à partir de / faire partie de,gehören zu,,,
-N,absurdité,Der Unsinn,,,
-N,abus dérive,Der Miẞstand,,,
-V,acclamer,zujubeln,,,
-V,accompagner,begleiten,,,
-N,addition facture,Die Rechnung,,,
-V,agir,handeln,,,
-VFC,aider,hilft,half,hat geholfen,helfen
-V,aimer,lieben,,,
-V,aimer bien,mögen,,,
-VFC,aller à pied,geht,ging,ist gegangen,gehen
-VFC,aller en vehicule,fährt,fuhr,ist gefahren,fahren
-N,allié,Der Verbündete,,,
-V,allumer,her vorheben,,,
-V,améliorer,verbessern,,,
-N,amour,Die Liebe,,,
-VFC,appeler,ruft,rief,hat gerufen,rufen
-V,observer,beobachten,,,
-VFC,apporter,bringt,brachte,hat gebracht,bringen
-V,apprendre une info,erfahren,,,
-N,argent,Das Geld,,,
-N,art,Die Kunst,,,
-A,artificiel,künstlich,,,
-N,artiste,Der Künstler,,,
-N,artiste,Die Künstlerin,,,
-A,assez,genug,,,
-V,assoir,sich setzen,,,
-V,assurer,sichern,,,
-V,augmenter,steigen,,,
-N,avantage,Der Vorteil,,,
-N,avenir future,Die Zukunft,,,
-N,avis opignon,Die Meinung,,,
-V,avoir,haben,,,
-V,avoir besoin,brauchen,,,
-V,avoir du goût,schmecken,,,
-V,avoir honte,sich schämen,,,
-V,avoir le droit,dürfen,,,
-VFC,avoir lieu,findet statt,fand statt,hat stattgefunden,Statt finden
-N,bar glacé,Das Eiskafé,,,
-V,battre frapper,schlagen,,,
-A,beau,schön,,,
-A,beaucoup,viel,,,
-VFC,boire,trinkt,trank,hat getrunken,trinken
-N,boisson,Das Getrank,,,
-A,bon,gut,,,
-N,bouteille,Die Flasche,,,
-VFC,briller paraître,scheint,schien,hat geschienen,scheinen
-A,bruyant,laut,,,
-N,but,Das Ziel,,,
-A,c'est pourquoi,deshalb,,,
-A,c'est pourquoi,deswegen,,,
-N,café,Das Café,,,
-VFC,casser,bricht,brach,hat gebrochen,brechen
-N,cause chose,Die Sache,,,
-A,célèbre,berühmt,,,
-V,changer,ändern,,,
-V,changer transformer,verändern,,,
-V,chanter,singen,,,
-V,charger uploader,hoch laden,,,
-A,cher,teuer,,,
-V,chercher,suchen,,,
-V,choisir élire,wählen,,,
-N,choix éléction,Die Wahl,,,
-N,climat,Das Klima,,,
-N,Coca,Die Cola,,,
-N,combat,Der Kampf,,,
-V,combattre,kampfen,,,
-V,commander,bestellen,,,
-VFC,commencer,beginnt,begann,hat begonnen,beginnen
-V,comparer,vergleichen,,,
-V,comprendre,verstehen,,,
-N,condition,Die Bedingung,,,
-V,confiance,vertrauen,,,
-V,confirmer,bestätigen,,,
-V,confondre,verwechseln,,,
-N,congé,Der Urlaub,,,
-VFC,connaître,kennt,kannte,hat gekannt,kennen
-V,conseiller deviner,raten,,,
-N,consommation,Der Konsum,,,
-V,consommer,verbrauchen,,,
-A,constamment,ständig,,,
-V,copier,kopieren,,,
-N,couleur,Die Farbe,,,
-N,courage,Der Mut,,,
-VFC,courir marcher,läuft,lief,hat gelaufen,laufen
-N,cours,Der Unterricht,,,
-V,coûter,kosten,,,
-V,crée,schaffen,,,
-VFC,crier,schreit,schrie,hat geschrien,schreien
-VFC,croître grandir,wächst,wuchs,ist gewachsen,wachsen
-V,cuisiner bouillir,kochen,,,
-A,curieux,neugierig,,,
-N,danger,Die Gefahr,,,
-N,début,Der Anfang,,,
-N,décision,Die Entscheidung,,,
-V,découvrir,entdecken,,,
-A,déçu,enttäuscht,,,
-V,demander,fragen ,,,
-V,dénoncer,an prangern,,,
-V,désavantager,benachteiligen,,,
-A,désespéré,verzweifelt,,,
-V,désirer aimer,möchte,,,
-V,développer,entwickeln,,,
-V,devenir,werden,,,
-N,devoir,Die Pflicht,,,
-V,devoir,müssen,,,
-V,devoir,sollen,,,
-N,devoir (physique),Die Aufgabe,,,
-A,différament,unterschiedlich,,,
-A,différent par rapport aux autres,anders,,,
-A,différent relatif à un fait,verschieden,,,
-V,diffuser répondre,verbreiten,,,
-V,diminuer,sinken,,,
-V,dire,sagen,,,
-V,diriger,steuern,,,
-V,discuter papoter,unterhalten,,,
-VFC,disparaître,verschwindet,verschwand,ist verschwunden,verschwinden
-A,disponible,verfügbar,,,
-V,disputer,streiten,,,
-A,diversité,Die Vielfalt,,,
-N,domaine,Der Bereich,,,
-VFC,donner,gibt,gab,hat gebeben,geben
-V,dormir,schlafen,,,
-A,doucement,leise,,,
-N,droit,Das Recht,,,
-N,eau,Das Wasser,,,
-N,eau gazeuse,Das Sprudelwasser,,,
-V,échouer,scheitern,,,
-V,écouter,hören,,,
-V,écrire,schreiben,,,
-N,effet,Der Wirkung,,,
-A,égalité des droits,Gleichberechtigung,,,
-A,en colère contre,wütend auf,,,
-A,en fait,eigentlich,,,
-N,endroit,Der Ort,,,
-V,énerver,nerven,,,
-A,ennuyeux,langweilig,,,
-V,enseigner,unterrichten,,,
-A,enthousiaste,begeistert,,,
-N,environnement,Die Umwelt,,,
-V,éspérer,hoffen,,,
-V,essayer,versuchen,,,
-V,éteindre,her unterfahren,,,
-A,étrange,seltsam,,,
-V,être,sein,,,
-VFC,être assis,sitzt,saß,hat gesessen,sitzen
-VFC,être debout,steht,stand,hat gestanden,stehen
-A,être là l'un pour l'autre,füreinander da sein,,,
-N,évolution,Die Entwicklung,,,
-V,exclure,aus schließen,,,
-N,expérience,Die Erfahrung,,,
-V,expliquer,erklären,,,
-N,exploitation,Die Ausnutzung,,,
-V,exprimer quelque chose,aus drücken,,,
-A,faible,schwach,,,
-V,faire,machen,,,
-VFC,faire,tut,tat,hat getan,tun
-VFC,faire de la pub,wirbt,warb,hat geworben,werben
-N,famille,Die Familie,,,
-N,fatigue,Die Müdigkeit,,,
-A,fatigué,müde,,,
-VFC,fermer,schließt,schloss,hat geschlossen,schließen
-A,fiable,zuverlässig,,,
-A,fort,stark,,,
-N,frère,Das Bruder,,,
-N,frontière,Die Grenze,,,
-V,fuir,fliehen,,,
-N,fuite,Die Flucht,,,
-VFC,gagner,gewinnt,gewann,hat gewonnen,gewinnen
-V,gagner (de l'argent),verdienen,,,
-A,gentil,nett,,,
-N,graffiti,Das Graffito,,,
-N,grêve,Der Streik,,,
-V,grever,streiken,,,
-A,gros,dick,,,
-V,habiter,wohnen,,,
-V,harceler,mobben,,,
-N,histoire,Die Geschichte,,,
-V,il s'agit de,es handelt sich,,,
-A,important,wichtig,,,
-V,impressioner,beeindrucken,,,
-N,inaction,Die Untätigkeit,,,
-N,inconvénient,Der Nachteil,,,
-A,indépendant,unabhänigig,,,
-V,influencer,beeinflussen,,,
-N,information,Die Nachricht,,,
-VFC,insister signaler,hebt hervor,er hob hervor,hat hervorgehoben,hervor heben
-V,insulter,beleidigen,,,
-N,Intelligence Artificiel IA,Künstliche Intelligenz,,,
-V,inventer,erfinden,,,
-N,invention,Die Erfindung,,,
-A,jaloux,eifersüchtig,,,
-VFC,jeter,wirft,warf,hat geworfen,werfen
-V,jouer,spielen,,,
-N,jour,Der Tag,,,
-N,jus,Der Saft,,,
-N,justice,Die Gerechtigkeit,,,
-N,l'acteur,Der Schauspieler,,,
-N,l'affiche,Das Plakat,,,
-N,l'aventure,Das Abenteuer,,,
-N,l'espoir,Die Hoffnung,,,
-N,l'exposition,Die Ausstellung,,,
-N,l'oeuvre d'art,Das Kunstwerk,,,
-N,la cohésion,Der zusammen halt,,,
-N,la position,Die Stellung,,,
-N,la réponse,Die Antwort,,,
-VFC,laisser / faire qqc,lässt,ließ,hat gelassen,lassen
-VFC,laver,wäscht,wusch,hat gewaschen,waschen
-N,le membre,Das Mitglied,,,
-N,le mérite,Das Verdienst,,,
-N,le monde,Die Welt,,,
-N,le mouvement,Die Bewegung,,,
-N,le passé,Die Vergangenheit,,,
-N,le plat,Das Gericht,,,
-N,liberté,Die Freiheit,,,
-A,libre,frei,,,
-VFC,lire,liest,las,hat gelesen,lesen
-A,lourd,schwer,,,
-A,mal mauvais,böse,,,
-VFC,manger,isst,er ass,er hat gegessen,essen
-N,manifestant,Der Demonstrant,,,
-N,manifestation,Die Demonstration,,,
-V,manifester,demonstrieren,,,
-A,mauvais,schlecht,,,
-A,même égale,gleich,,,
-V,menacer,bedrohen,,,
-VFC,mentir,lügt,log,hat gelogen,lügen
-A,merci bien,danke shöne,,,
-N,mère,Die Mutter,,,
-N,message,Die Botschaft,,,
-V,mettre en avant,hochfahren,,,
-A,mince,dünn,,,
-A,moins,weniger,,,
-VFC,monter,steigt,stieg,ist gestiegen,steigen
-V,montrer,zeigen,,,
-VFC,mourir,stirbt,starb,ist gestorben,sterben
-VFC,nager,schwimmt,schwamm,ist geschwommen,schwimmen
-VFC,obliger,zwingt,zwang,hat gezwungen,zwingen
-V,occuper,sich kümmern um,,,
-VFC,offrir enchérir,bietet,bot,hat geboten,bieten
-N,ordinateur,Der Computer,,,
-VFC,ordonner,befiehlt,befahl,hat befohlen,befehlen
-A,original,ausgefallen,,,
-VFC,oublier,vergisst,vergass,hat vergessen,vergessen
-V,ouvrir,öffnen,,,
-N,parents,Die Eltern,,,
-VFC,parler,spricht,sprach,hat gesprochen,sprechen
-V,parler s'exprimer,reden,,,
-A,particulièrement,besonders,,,
-N,partie,Der Teil,,,
-A,partout,überall,,,
-V,passer (du temps),verbringen,,,
-A,pauvre,arm,,,
-N,pauvreté,Die Armut,,,
-V,payer,bezahlen,,,
-N,paysage,Die Landschaft,,,
-V,peindre,malen,,,
-N,peintre,Der Maler,,,
-N,peinture,Das Bild,,,
-N,peinture,Das Gemäld,,,
-VFC,penser,denkt,dachte,hat gedacht,denken
-VFC,penser à,denkt an,dachte an,hat gedacht an,denken
-A,pensif,nachdenklich,,,
-VFC,perdre,verliert,verlor,hat verloren,verlieren
-N,père,Der Vater,,,
-N,performance,Die Leistung,,,
-A,performant,leistrungfähig,,,
-A,performant,leistungsfähig,,,
-A,peu,wenig,,,
-A,peut-être,vielleicht,,,
-N,photo,Das Foto,,,
-V,photographier,fotografieren,,,
-VFC,plaire,gefällt,gefiel,hat gefallen,gefallen
-V,planifier,planen,,,
-V,porter,tragen,,,
-V,poser,stellen,,,
-V,poser une question,fragen stellen,,,
-N,possibilité,Die Möglichkeit,,,
-A,possible,möglich,,,
-V,pouvoir,können,,,
-VFC,prendre,nimmt,nahm,hat genommen,nehmen
-VFC,prendre au sérieux,nimmt ernst,nahm ernst,hat ernstgenommen,ernst nehmen
-N,présent,Die Gegenwart,,,
-VFC,préter,leiht,lieh,hat geliehen,leihen
-N,prix,Der Preis,,,
-V,produire (un effet),bewirken,,,
-VFC,profiter (de qqc),genießt,genoss,hat genossen,genießen
-N,progrès,Der Fortschritt,,,
-N,protection,Der schutz,,,
-V,protéger,schützen,,,
-N,question,Die Frage,,,
-N,quotidien,Der Alltag,,,
-A,racoller,reißerisch,,,
-V,raconter,erzählen,,,
-N,récit rapport,Der Bericht,,,
-V,recommander,empfehlen,,,
-V,regarder,schauen,,,
-VFC,rencontrer / cibler,trifft,traf,hat getroffen,treffen
-V,répondre,antworten,,,
-V,représenter,dar stellen,,,
-VFC,ressentir,empfindet,empfand,hat empfunden,empfinden
-N,restaurant,Das Gasthaus,,,
-N,restaurant,Das Restaurant,,,
-VFC,rester,bleibt,blieb,ist geblieben,bleiben
-N,retraite,Die Rente,,,
-V,revenir,zurück kehren,,,
-N,revenue,Das Einkommen,,,
-A,rigolo marrant,lustig,,,
-V,s'amuser,Spaß haben,,,
-VFC,s'appeller,heißt,hieß,hat geheißen,heißen
-V,s'ennuyer,sich langweilen,,,
-V,s'imaginer / se présenter,vorstellen,,,
-V,s'occuper de,sich kümmern um,,,
-N,salaire,Der Lohn,,,
-A,salut au revoir,tschüss,,,
-VFC,sauter,springt,sprang,hat gesprungen,springen
-V,sauver,retten,,,
-VFC,savoir,weißt,wusste,hat gewusst,wissen
-N,sculture,Die Skulptur,,,
-V,se battre / lutter,kämpfen,,,
-V,se détendre,chillen,,,
-V,se mobiliser,sich für setzen,,,
-V,se moquer,sich lustig machen,,,
-V,se passer,geschehen,,,
-V,se rappeler,sich erinnern an,,,
-V,se sentir,sich fühlen,,,
-VFC,se taire,schweigt,schwieg,hat geschwiegen,schweigen
-V,se tenir les coudes,zusammen halten,,,
-VFC,se trouver / être couché,liegt,lag,hat gelegen,liegen
-N,semaine,Die Woche,,,
-A,sens,Sinn,,,
-N,seul psycologique,einsam,,,
-V,signifier,bedeuten,,,
-N,société,Die Gesellschaft,,,
-N,soif,Der Durst,,,
-N,souffrance,Das Leid,,,
-V,souffrire,leiden,,,
-A,souvent,oft,,,
-N,spectateur,Der Zuschauer,,,
-N,succès,Der Erfolg,,,
-A,sûr / sûrement,sicher,,,
-N,temps,Die Zeit,,,
-VFC,tenir s'arrêter,hält,hielt,hat gehalten,halten
-V,tenir serré dans ses bras,fest halten,,,
-N,tension,Die Spannung,,,
-N,thé,Der Tee,,,
-VFC,tirer infuser,zieht,zog,hat gezogen,ziehen
-VFC,tomber,fällt,field,ist gefallen,fallen
-A,toujours,immer,,,
-V,transformer,verwandeln,,,
-V,transmettre,vermitteln,,,
-N,travail,Die Arbeit,,,
-V,travailler,arbeiten,,,
-N,tribunal,Das Gericht,,,
-A,triste,traurig,,,
-VFC,trouver,findet,fand,hat gefunden,finden
-V,utiliser mettre à profit,nutzen,,,
-N,vacances,Die Ferien,,,
-N,valeur,Der Wert,,,
-VFC,valoir,gilt,galt,hat gegolten,gelten
-VFC,venir,kommt,kam,ist gekommen,kommen
-N,victime,Das Opfer,,,
-A,violent,gewalt,,,
-V,visiter,besuchen,,,
-N,visiteur,Der Besucher,,,
-V,vivre (une expérience),erleben,,,
-V,voir,sehen,,,
-N,voisin,Der Nachbar,,,
-VFC,voler (halal),fliegt,flog,hat geflogen,fliegen
-V,voler (haram),stehlen,,,
-V,voyager,reisen,,,
-A,vrai réel,echt,,,
+N,la direction,Die Richtung,,,,2022
+N,le médecin,Der Arzt,,,,2022
+N,le tract,Das Flugblatt,,,,2022
+N,le mémorial,Das Denkmal,,,,2022
+V,imprimer,drucken,,,,2022
+V,diffuser,verteilen,,,,2022
+V,étudier,studieren,,,,2022
+V,sensibilisé,sensibilisieren,,,,2022
+N,l'acte,Die Tat,,,,2022
+V,faire de la résistance,Widerstand leisten,,,,2022
+V,supprimer / éteindre,aus schalten,,,,2022
+V,intimider,ein schüchtern,,,,2022
+A,énorme,gewaltig,,,,2022
+A,public,öffentlich,,,,2022
+N,le cadre,Der Rahmen,,,,2022
+V,rêver,träumen,,,,2022
+A,venir à l'esprit,fällt ein,,,,2022
+A,controversé,umstritten,,,,2022
+A,suspect,verdächtig,,,,2022
+A,d'une part d'une autre,einerseits andererseits,,,,2022
+N,le député,Der Abgeordnete,,,,2022
+N,le crime,Das Verbrechen,,,,2022
+VFC,faire le queue,steht,stand,hat gestanden,Schlange stehen,2022
+V,emprisonner,verhaften,,,,2022
+V,se cacher,verstecken,,,,2022
+A,voter pour Bilèle,für Bilèle stimmen,,,,2022
+A,voter contre Bilèle,gegen Bilèle stimmen,,,,2022
+V,voter,stimmen,,,,2022
+N,autodafé,Die Bücherverbrennung,,,,2022
+N,l'ambiance,Die Stimmung,,,,2022
+N,liberté d'expression,Die Meinungsfreiheit,,,,2022
+N,écrivain,Der Schriftsteller,,,,2022
+VFC,interdire,verbietet,verbot,hat verboten,verbieten,2022
+V,haïr,hassen,,,,2022
+V,mettre en scène,inszenieren,,,,2022
+V,éliminer,beseitige,,,,2022
+A,vide,leer,,,,2022
+N,la mort,Der Tod,,,,2022
+N,le livre,das Buch,,,,2022
+N,la Terre,Die Erde,,,,2022
+V,atteindre,erreichen,,,,2022
+V,relier,verbinden,,,,2022
+A,lentement,langsam,,,,2022
+N,l'évènement,Der Ereignis,,,,2022
+A,ensemble,gemeinsam,,,,2022
+N,la signification,Die Bedeutung,,,,2022
+N,l'attentat,Der Anschlag,,,,2022
+A,perpétrer un attentat,ein Anschlag verüben,,,,2022
+A,fragile,zerbrechlich,,,,2022
+V,se souvenir,erinnern,,,,2022
+VFC,gérer,geht um,ging um,ist umgegangen,um gehen,2022
+V,marquer qqc,prägen,,,,2022
+V,échouer,scheitern,,,,2022
+N,le souci,Die Sorge,,,,2022
+N,modèle,Das Vorbild,,,,2022
+N,nostalgie,Die Sehnsucht,,,,2022
+V,originaire de,stammen,,,,2022
+V,faire / rechercher,forschen,,,,2022
+VFC,quitter,verlässt,verließ,hat verlassen,verlassen,2022
+N,le discours,Die Rede,,,,2022
+VFC,tenir un discours,hält,hielt,hat gehalten,eine Rede halten,2022
+N,le territoire,Das Gebiet,,,,2022
+V,défendre,versteidigen,,,,2022
+A,clair,hell,,,,2022
+A,sombre,dunkel,,,,2022
+A,autrefois,damals,,,,2022
+N,réforme monaitaire,Die Währungsreform,,,,2022
+N,le pont,Die Brücke,,,,2022
+N,air,Die Luft,,,,2022
+N,l'avion,Das Flugzeug,,,,2022
+N,le train,Die Bahn,,,,2022
+N,le chemin,Der Weg,,,,2022
+A,approvisionner,versorgen,,,,2022
+V,bloquer,sperren,,,,2022
+N,l'Homme,Der Mensch,,,,2022
+N,l'humanité,Die Menschheit,,,,2022
+N,le peuple,Das Volk,,,,2022
+V,rejeter,ab lehnen,,,,2022
+V,détruire,zerstören,,,,2022
+N,le livre,Das Buch,,,,2022
+N,l'Histoire,Die Geschiehte,,,,2022
+N,la science,Die Wissenschaft,,,,2022
+V,fonder,gründen,,,,2022
+N,la circulation,Der Verkehr,,,,2022
+A,suspect,verdächtig,,,,2022
+VFC,interdire,verbietet,verbot,hat verboten,verbieten,2022
+N,économie,Die Wirtschaft,,,,2022
+N,le modèle,Das Vorbild,,,,2022
+N,le commerce,Der Handel,,,,2022
+N,le côté,Die Seite,,,,2022
+A,ancien,ehemalig,,,,2022
+A,SDF,obdachlos,,,,2022
+V,être fiable,verlässlich sein,,,,2022
+A,facile,einfach,,,,2022
+N,la force,Die Macht,,,,2022
+N,le mur,Die Mauer,,,,2022
+N,le gouvernement,Die Regierung,,,,2022
+N,la capitale,Die Hauptstadt,,,,2022
+N,l'Etat,Der Staat,,,,2022
+V,occuper,besetzen,,,,2022
+V,séparer,trennen,,,,2022
+V,construire,bauen,,,,2022
+V,immiter,ein schränken,,,,2022
+V,soutenir,unterstützen,,,,2022
+N,la guerre,Der Krieg,,,,2022
+N,la peur,Der Angst,,,,2022
+N,le camp,Das Lager,,,,2022
+N,la propagande,Die Propaganda,,,,2022
+N,arme,Die Waffe,,,,2022
+N,ouest,Der Westen,,,,2022
+N,influence,Der Einfluss,,,,2022
+N,leadership,Die Führung,,,,2022
+V,repousser,ab wehren,,,,2022
+N,la faute,Der Fehler,,,,2022
+N,le traité,Der Vertrag,,,,2022
+V,exiger,fordern,,,,2022
+V,empêcher,vehindern,,,,2022
+V,acheter,kaufen,,,,2022
+V,signer,unterzeichnen,,,,2022
+V,agir,handeln,,,,2022
+VFC,aller en vehicule,fährt,fuhr,ist gefahren,fahren,2022
+N,argent,Das Geld,,,,2022
+V,augmenter,steigen,,,,2022
+N,choix éléction,Die Wahl,,,,2022
+V,comparer,vergleichen,,,,2022
+N,condition,Die Bedingung,,,,2022
+V,crée,schaffen,,,,2022
+N,droit,Das Recht,,,,2022
+VFC,être assis,sitzt,saß,hat gesessen,sitzen,2022
+V,exclure,aus schließen,,,,2022
+N,expérience,Die Erfahrung,,,,2022
+N,frontière,Die Grenze,,,,2022
+V,fuir,fliehen,,,,2022
+N,l'affiche,Das Plakat,,,,2022
+N,l'espoir,Die Hoffnung,,,,2022
+N,liberté,Die Freiheit,,,,2022
+VFC,parler,spricht,sprach,hat gesprochen,sprechen,2022
+N,partie,Der Teil,,,,2022
+VFC,perdre,verliert,verlor,hat verloren,verlieren,2022
+V,se battre / lutter,kämpfen,,,,2022
+N,société,Die Gesellschaft,,,,2022
+N,tension,Die Spannung,,,,2022
+V,utiliser mettre à profit,nutzen,,,,2022
+V,s'assurer,sicher stellen,,,,2022
+A,à l'exterieur,drauẞen,,,,
+A,à l'interieur,drinnen,,,,
+A,à mon avis,meiner Meinung nach,,,,
+V,à partir de / faire partie de,gehören zu,,,,
+N,absurdité,Der Unsinn,,,,
+N,abus dérive,Der Miẞstand,,,,
+V,acclamer,zujubeln,,,,2022
+V,accompagner,begleiten,,,,
+N,addition facture,Die Rechnung,,,,
+VFC,aider,hilft,half,hat geholfen,helfen,
+V,aimer,lieben,,,,
+V,aimer bien,mögen,,,,
+VFC,aller à pied,geht,ging,ist gegangen,gehen,
+N,allié,Der Verbündete,,,,
+V,allumer,her vorheben,,,,
+V,améliorer,verbessern,,,,
+N,amour,Die Liebe,,,,
+VFC,appeler,ruft,rief,hat gerufen,rufen,2022
+V,observer,beobachten,,,,
+VFC,apporter,bringt,brachte,hat gebracht,bringen,
+V,apprendre une info,erfahren,,,,
+N,art,Die Kunst,,,,2022
+A,artificiel,künstlich,,,,
+N,artiste,Der Künstler,,,,
+N,artiste,Die Künstlerin,,,,
+A,assez,genug,,,,
+V,assoir,sich setzen,,,,
+V,assurer,sichern,,,,
+N,avantage,Der Vorteil,,,,
+N,avenir future,Die Zukunft,,,,2022
+N,avis opignon,Die Meinung,,,,
+V,avoir,haben,,,,
+V,avoir besoin,brauchen,,,,2022
+V,avoir du goût,schmecken,,,,
+V,avoir honte,sich schämen,,,,
+V,avoir le droit,dürfen,,,,
+VFC,avoir lieu,findet statt,fand statt,hat stattgefunden,statt finden,2022
+N,bar glacé,Das Eiskafé,,,,
+V,battre frapper,schlagen,,,,
+A,beau,schön,,,,
+A,beaucoup,viel,,,,
+VFC,boire,trinkt,trank,hat getrunken,trinken,
+N,boisson,Das Getrank,,,,
+A,bon,gut,,,,
+N,bouteille,Die Flasche,,,,
+VFC,briller paraître,scheint,schien,hat geschienen,scheinen,
+A,bruyant,laut,,,,
+N,but,Das Ziel,,,,
+A,c'est pourquoi,deshalb,,,,
+A,c'est pourquoi,deswegen,,,,
+N,café,Das Café,,,,
+VFC,casser,bricht,brach,hat gebrochen,brechen,2022
+N,cause chose,Die Sache,,,,
+A,célèbre,berühmt,,,,2022
+V,changer,ändern,,,,2022
+V,changer transformer,verändern,,,,2022
+V,chanter,singen,,,,
+V,charger uploader,hoch laden,,,,
+A,cher,teuer,,,,
+V,chercher,suchen,,,,
+V,choisir élire,wählen,,,,
+N,climat,Das Klima,,,,
+N,Coca,Die Cola,,,,
+N,combat,Der Kampf,,,,
+V,combattre,kampfen,,,,
+V,commander,bestellen,,,,
+VFC,commencer,beginnt,begann,hat begonnen,beginnen,
+V,comprendre,verstehen,,,,2022
+V,confiance,vertrauen,,,,
+V,confirmer,bestätigen,,,,
+V,confondre,verwechseln,,,,
+N,congé,Der Urlaub,,,,
+VFC,connaître,kennt,kannte,hat gekannt,kennen,
+V,conseiller deviner,raten,,,,
+N,consommation,Der Konsum,,,,
+V,consommer,verbrauchen,,,,
+A,constamment,ständig,,,,
+V,copier,kopieren,,,,
+N,couleur,Die Farbe,,,,
+N,courage,Der Mut,,,,
+VFC,courir marcher,läuft,lief,hat gelaufen,laufen,
+N,cours,Der Unterricht,,,,
+V,coûter,kosten,,,,
+VFC,crier,schreit,schrie,hat geschrien,schreien,
+VFC,croître grandir,wächst,wuchs,ist gewachsen,wachsen,
+V,cuisiner bouillir,kochen,,,,
+A,curieux,neugierig,,,,
+N,danger,Die Gefahr,,,,2022
+N,début,Der Anfang,,,,
+N,décision,Die Entscheidung,,,,
+V,découvrir,entdecken,,,,
+A,déçu,enttäuscht,,,,2022
+V,demander,fragen ,,,,
+V,dénoncer,an prangern,,,,
+V,désavantager,benachteiligen,,,,
+A,désespéré,verzweifelt,,,,
+V,désirer aimer,möchte,,,,
+V,développer,entwickeln,,,,
+V,devenir,werden,,,,
+N,devoir,Die Pflicht,,,,2022
+V,devoir,müssen,,,,
+V,devoir,sollen,,,,
+N,devoir (physique),Die Aufgabe,,,,
+A,différament,unterschiedlich,,,,
+A,différent par rapport aux autres,anders,,,,
+A,différent relatif à un fait,verschieden,,,,
+V,diffuser répondre,verbreiten,,,,
+V,diminuer,sinken,,,,
+V,dire,sagen,,,,
+V,diriger,steuern,,,,
+V,discuter papoter,unterhalten,,,,
+VFC,disparaître,verschwindet,verschwand,ist verschwunden,verschwinden,
+A,disponible,verfügbar,,,,
+V,disputer,streiten,,,,
+A,diversité,Die Vielfalt,,,,
+N,domaine,Der Bereich,,,,
+VFC,donner,gibt,gab,hat gebeben,geben,
+V,dormir,schlafen,,,,
+A,doucement,leise,,,,
+N,eau,Das Wasser,,,,
+N,eau gazeuse,Das Sprudelwasser,,,,
+V,échouer,scheitern,,,,2022
+V,écouter,hören,,,,
+V,écrire,schreiben,,,,
+N,effet,Der Wirkung,,,,
+A,égalité des droits,Gleichberechtigung,,,,
+A,en colère contre,wütend auf,,,,
+A,en fait,eigentlich,,,,
+N,endroit,Der Ort,,,,
+V,énerver,nerven,,,,
+A,ennuyeux,langweilig,,,,
+V,enseigner,unterrichten,,,,
+A,enthousiaste,begeistert,,,,2022
+N,environnement,Die Umwelt,,,,
+V,éspérer,hoffen,,,,
+V,essayer,versuchen,,,,2022
+V,éteindre,her unterfahren,,,,
+A,étrange,seltsam,,,,
+V,être,sein,,,,
+VFC,être debout,steht,stand,hat gestanden,stehen,
+A,être là l'un pour l'autre,füreinander da sein,,,,
+N,évolution,Die Entwicklung,,,,
+V,expliquer,erklären,,,,2022
+N,exploitation,Die Ausnutzung,,,,
+V,exprimer quelque chose,aus drücken,,,,
+A,faible,schwach,,,,
+V,faire,machen,,,,
+VFC,faire,tut,tat,hat getan,tun,
+VFC,faire de la pub,wirbt,warb,hat geworben,werben,
+N,famille,Die Familie,,,,
+N,fatigue,Die Müdigkeit,,,,
+A,fatigué,müde,,,,
+VFC,fermer,schließt,schloss,hat geschlossen,schließen,
+A,fiable,zuverlässig,,,,
+A,fort,stark,,,,2022
+N,frère,Das Bruder,,,,
+N,fuite,Die Flucht,,,,
+VFC,gagner,gewinnt,gewann,hat gewonnen,gewinnen,
+V,gagner (de l'argent),verdienen,,,,
+A,gentil,nett,,,,
+N,graffiti,Das Graffito,,,,
+N,grêve,Der Streik,,,,
+V,grever,streiken,,,,
+A,gros,dick,,,,
+V,habiter,wohnen,,,,
+V,harceler,mobben,,,,
+N,histoire,Die Geschichte,,,,
+V,il s'agit de,es handelt sich,,,,
+A,important,wichtig,,,,
+V,impressioner,beeindrucken,,,,
+N,inaction,Die Untätigkeit,,,,
+N,inconvénient,Der Nachteil,,,,
+A,indépendant,unabhänigig,,,,
+V,influencer,beeinflussen,,,,
+N,information,Die Nachricht,,,,
+VFC,insister signaler,hebt hervor,er hob hervor,hat hervorgehoben,hervor heben,
+V,insulter,beleidigen,,,,
+N,Intelligence Artificiel IA,Künstliche Intelligenz,,,,
+V,inventer,erfinden,,,,
+N,invention,Die Erfindung,,,,
+A,jaloux,eifersüchtig,,,,
+VFC,jeter,wirft,warf,hat geworfen,werfen,
+V,jouer,spielen,,,,
+N,jour,Der Tag,,,,
+N,jus,Der Saft,,,,
+N,justice,Die Gerechtigkeit,,,,2022
+N,l'acteur,Der Schauspieler,,,,
+N,l'aventure,Das Abenteuer,,,,
+N,l'exposition,Die Ausstellung,,,,
+N,l'oeuvre d'art,Das Kunstwerk,,,,
+N,la cohésion,Der zusammen halt,,,,
+N,la position,Die Stellung,,,,
+N,la réponse,Die Antwort,,,,
+VFC,laisser / faire qqc,lässt,ließ,hat gelassen,lassen,2022
+VFC,laver,wäscht,wusch,hat gewaschen,waschen,
+N,le membre,Das Mitglied,,,,2022
+N,le mérite,Das Verdienst,,,,2022
+N,le monde,Die Welt,,,,
+N,le mouvement,Die Bewegung,,,,
+N,le passé,Die Vergangenheit,,,,2022
+N,le plat,Das Gericht,,,,
+A,libre,frei,,,,
+VFC,lire,liest,las,hat gelesen,lesen,
+A,lourd,schwer,,,,
+A,mal mauvais,böse,,,,
+VFC,manger,isst,er ass,er hat gegessen,essen,
+N,manifestant,Der Demonstrant,,,,
+N,manifestation,Die Demonstration,,,,
+V,manifester,demonstrieren,,,,
+A,mauvais,schlecht,,,,
+A,même égale,gleich,,,,
+V,menacer,bedrohen,,,,
+VFC,mentir,lügt,log,hat gelogen,lügen,
+A,merci bien,danke shöne,,,,
+N,mère,Die Mutter,,,,
+N,message,Die Botschaft,,,,
+V,mettre en avant,hochfahren,,,,
+A,mince,dünn,,,,
+A,moins,weniger,,,,
+VFC,monter,steigt,stieg,ist gestiegen,steigen,
+V,montrer,zeigen,,,,
+VFC,mourir,stirbt,starb,ist gestorben,sterben,
+VFC,nager,schwimmt,schwamm,ist geschwommen,schwimmen,
+VFC,obliger,zwingt,zwang,hat gezwungen,zwingen,
+V,occuper,sich kümmern um,,,,
+VFC,offrir enchérir,bietet,bot,hat geboten,bieten,
+N,ordinateur,Der Computer,,,,
+VFC,ordonner,befiehlt,befahl,hat befohlen,befehlen,
+A,original,ausgefallen,,,,
+VFC,oublier,vergisst,vergass,hat vergessen,vergessen,2022
+V,ouvrir,öffnen,,,,2022
+N,parents,Die Eltern,,,,
+V,parler s'exprimer,reden,,,,
+A,particulièrement,besonders,,,,
+A,partout,überall,,,,
+V,passer (du temps),verbringen,,,,
+A,pauvre,arm,,,,
+N,pauvreté,Die Armut,,,,
+V,payer,bezahlen,,,,
+N,paysage,Die Landschaft,,,,
+V,peindre,malen,,,,
+N,peintre,Der Maler,,,,
+N,peinture,Das Bild,,,,
+N,peinture,Das Gemäld,,,,
+VFC,penser,denkt,dachte,hat gedacht,denken,
+VFC,penser à,denkt an,dachte an,hat gedacht an,denken,
+A,pensif,nachdenklich,,,,
+N,père,Der Vater,,,,
+N,performance,Die Leistung,,,,
+A,performant,leistrungfähig,,,,
+A,performant,leistungsfähig,,,,
+A,peu,wenig,,,,
+A,peut-être,vielleicht,,,,
+N,photo,Das Foto,,,,
+V,photographier,fotografieren,,,,
+VFC,plaire,gefällt,gefiel,hat gefallen,gefallen,
+V,planifier,planen,,,,
+V,porter,tragen,,,,
+V,poser,stellen,,,,
+V,poser une question,fragen stellen,,,,
+N,possibilité,Die Möglichkeit,,,,2022
+A,possible,möglich,,,,
+V,pouvoir,können,,,,
+VFC,prendre,nimmt,nahm,hat genommen,nehmen,
+VFC,prendre au sérieux,nimmt ernst,nahm ernst,hat ernstgenommen,ernst nehmen,
+N,présent,Die Gegenwart,,,,2022
+VFC,préter,leiht,lieh,hat geliehen,leihen,
+N,prix,Der Preis,,,,
+V,produire (un effet),bewirken,,,,2022
+VFC,profiter (de qqc),genießt,genoss,hat genossen,genießen,
+N,progrès,Der Fortschritt,,,,2022
+N,protection,Der schutz,,,,
+V,protéger,schützen,,,,
+N,question,Die Frage,,,,
+N,quotidien,Der Alltag,,,,
+A,racoller,reißerisch,,,,
+V,raconter,erzählen,,,,
+N,récit rapport,Der Bericht,,,,
+V,recommander,empfehlen,,,,
+V,regarder,schauen,,,,
+VFC,rencontrer / cibler,trifft,traf,hat getroffen,treffen,
+V,répondre,antworten,,,,
+V,représenter,dar stellen,,,,
+VFC,ressentir,empfindet,empfand,hat empfunden,empfinden,
+N,restaurant,Das Gasthaus,,,,
+N,restaurant,Das Restaurant,,,,
+VFC,rester,bleibt,blieb,ist geblieben,bleiben,
+N,retraite,Die Rente,,,,
+V,revenir,zurück kehren,,,,2022
+N,revenue,Das Einkommen,,,,
+A,rigolo marrant,lustig,,,,
+V,s'amuser,Spaß haben,,,,
+VFC,s'appeller,heißt,hieß,hat geheißen,heißen,
+V,s'ennuyer,sich langweilen,,,,
+V,s'imaginer / se présenter,vorstellen,,,,
+V,s'occuper de,sich kümmern um,,,,
+N,salaire,Der Lohn,,,,
+A,salut au revoir,tschüss,,,,
+VFC,sauter,springt,sprang,hat gesprungen,springen,
+V,sauver,retten,,,,2022
+VFC,savoir,weißt,wusste,hat gewusst,wissen,
+N,sculture,Die Skulptur,,,,
+V,se détendre,chillen,,,,
+V,se mobiliser,sich für setzen,,,,
+V,se moquer,sich lustig machen,,,,
+V,se passer,geschehen,,,,
+V,se rappeler,sich erinnern an,,,,
+V,se sentir,sich fühlen,,,,
+VFC,se taire,schweigt,schwieg,hat geschwiegen,schweigen,
+V,se tenir les coudes,zusammen halten,,,,
+VFC,se trouver / être couché,liegt,lag,hat gelegen,liegen,
+N,semaine,Die Woche,,,,
+A,sens,Sinn,,,,
+A,seul psycologique,einsam,,,,
+V,signifier,bedeuten,,,,2022
+N,soif,Der Durst,,,,
+N,souffrance,Das Leid,,,,
+V,souffrire,leiden,,,,
+A,souvent,oft,,,,
+N,spectateur,Der Zuschauer,,,,
+N,succès,Der Erfolg,,,,
+A,sûr / sûrement,sicher,,,,
+N,temps,Die Zeit,,,,
+VFC,tenir s'arrêter,hält,hielt,hat gehalten,halten,
+V,tenir serré dans ses bras,fest halten,,,,
+N,thé,Der Tee,,,,
+VFC,tirer infuser,zieht,zog,hat gezogen,ziehen,
+VFC,tomber,fällt,field,ist gefallen,fallen,2022
+A,toujours,immer,,,,
+V,transformer,verwandeln,,,,
+V,transmettre,vermitteln,,,,
+N,travail,Die Arbeit,,,,
+V,travailler,arbeiten,,,,
+N,tribunal,Das Gericht,,,,
+A,triste,traurig,,,,
+VFC,trouver,findet,fand,hat gefunden,finden,
+N,vacances,Die Ferien,,,,
+N,valeur,Der Wert,,,,2022
+VFC,valoir,gilt,galt,hat gegolten,gelten,
+VFC,venir,kommt,kam,ist gekommen,kommen,
+N,victime,Das Opfer,,,,
+A,violent,gewalt,,,,2022
+V,visiter,besuchen,,,,
+N,visiteur,Der Besucher,,,,
+V,vivre (une expérience),erleben,,,,
+V,voir,sehen,,,,
+N,voisin,Der Nachbar,,,,
+VFC,voler (halal),fliegt,flog,hat geflogen,fliegen,
+V,voler (haram),stehlen,,,,
+V,voyager,reisen,,,,
+A,vrai réel,echt,,,,
